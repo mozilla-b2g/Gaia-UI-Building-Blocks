@@ -1,0 +1,62 @@
+/*
+Syntax error: Invalid CSS after "  min-height:": expected pseudoclass or pseudoelement, was " 250px"
+        on line 4 of sass/tabs.scss
+
+1: /* blatantly stolen from http://css-tricks.com/examples/CSSTabs/ */
+2: 
+3: *[role=tablist] 
+4:   min-height: 250px
+5:   position: relative
+6:   width: 100%
+7:   margin: 0
+8:   padding: 0
+9: 
+
+Backtrace:
+sass/tabs.scss:4
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:1010:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:956:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:938:in `expr!'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:701:in `pseudo'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:591:in `simple_selector_sequence'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:573:in `_selector'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:546:in `selector'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:530:in `selector_sequence'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:455:in `ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:480:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:470:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:58:in `stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/scss/parser.rb:27:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/engine.rb:327:in `_to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/engine.rb:300:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/engine.rb:247:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:340:in `update_stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:202:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `each'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:298:in `watch'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:95:in `initialize_adapter'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `start'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `initialize'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `new'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/adapters/polling.rb:31:in `start'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/vendor/listen/lib/listen/multi_listener.rb:44:in `start'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin/compiler.rb:306:in `watch'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:431:in `watch_or_update'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:302:in `process_result'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.19/bin/sass:8
+/usr/bin/sass:19:in `load'
+/usr/bin/sass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"  min-height:\": expected pseudoclass or pseudoelement, was \" 250px\"\A         on line 4 of sass/tabs.scss\A \A 1: /* blatantly stolen from http://css-tricks.com/examples/CSSTabs/ */\A 2: \A 3: *[role=tablist] \A 4:   min-height: 250px\A 5:   position: relative\A 6:   width: 100%\A 7:   margin: 0\A 8:   padding: 0\A 9: "; }
