@@ -1,0 +1,119 @@
+hr {
+    border: none;
+    height:2rem;
+    margin: 0.5rem 0;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+/* Headers */
+header[role="toolbar"] {
+  height: 5rem;
+  border-bottom: 0.1rem solid #992f21;
+  background-image: -moz-linear-gradient(#cd6622, #bb482d);
+  box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+header[role="toolbar"] h1 {
+	display: inline-block;
+  font-family: 'FontRegular';
+  font-size: -moz-calc(10 * 0.226rem);
+  color: #fff;
+  height: 5rem;
+  line-height: 5rem;
+  margin-left: 3rem;
+}
+
+header[role="toolbar"] button {
+  float: left;
+  color: #fff;
+  font-size: -moz-calc(6 * 0.226rem);
+  font-family: 'FontSemiBold';
+	background: none;
+}
+
+header[role="toolbar"] button > span {
+	display: block;
+	line-height: 2rem;
+	border-left: 0.2rem solid;
+	border-right: 0.2rem solid;
+	-moz-border-left-colors: #eb884d #782f1b;
+	-moz-border-right-colors: transparent;
+	margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+header[role="toolbar"] button[class] > span {
+	width: 3.2rem;
+	height: 5rem;
+	font-size: 0;
+	-moz-border-left-colors: #782f1b #eb884d;
+	-moz-border-right-colors: transparent;
+	margin:0;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+header[role="toolbar"] div > button[class]:first-child > span {
+	-moz-border-left-colors: transparent;
+	-moz-border-right-colors: transparent;
+}
+
+.i-add > span {
+	background-image: url(images/icon-add.png);
+}
+
+.i-edit > span {
+	background-image: url(images/icon-edit.png);
+}
+
+.i-arrow-left {
+	width: auto;
+}
+
+header[role="toolbar"] button[class=i-arrow-left] span {
+	width: 1.6rem;
+	padding: 0;
+	border-left: 0.2rem solid;
+	border-right: 0.2rem solid;
+	-moz-border-left-colors: transparent;
+	-moz-border-right-colors: #eb884d #782f1b;
+  background: url(images/icon-arrow-left.png) -0.5rem 50% no-repeat,
+  						-moz-linear-gradient(#B75B1E, #A73F27);
+}
+
+header[role="toolbar"] [role="search"] {
+	float: left;
+  width: 23.6rem;
+  padding: 1.2rem 0 1.2rem 1rem;
+  position: relative;
+}
+
+header[role="toolbar"] [role="search"] input {
+  height: 2.6rem;
+  font-size: -moz-calc(6 * 0.226rem);
+  color: #000;
+  border-radius: 0.3rem;
+  -moz-background-clip: padding;
+  background-color: #f7f7f7; 
+  box-shadow: inset 0 0 0.5rem rgba(0,0,0,.7), 0 0 0 0.1rem #993315;
+  border: none;
+  padding: 0 3rem 0 1rem;
+}
+
+header[role="toolbar"] [role="search"] .hdr-clear-search {
+	position: absolute;
+	top:1rem;
+	right:0rem;
+	bottom:1rem;
+  width: 3rem;
+	background: url(images/icon-input-clear.png) no-repeat 50% 50%;
+}
+    
+.i-user {
+  width: 5.4rem;
+  height: 100%;
+  background: url(images/icon-user.png) no-repeat 50% 50%;
+  float: right;
+}

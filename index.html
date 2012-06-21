@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>GAIA Building Blogs</title>
+	<link href="style.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript">
+	
+		var iframe = document.getElementById("iframe");
+		
+		function changeURL(srcvalue)
+    {
+    	var url = srcvalue.href.replace("#", "");
+    	document.getElementById('iframe').src= url + "/";
+    }
+	
+	</script>
+</head>
+<body>
+	<nav>
+		<li><a href="#headers" onclick="changeURL(this)"><span>1</span>Headers</a></li>
+		<li><a href="#filters" onclick="changeURL(this)"><span>2</span>Filters</a></li>
+	</nav>
+	
+	<iframe id="iframe" src="" width="320" height="480" />
+
+</body>
+</html>

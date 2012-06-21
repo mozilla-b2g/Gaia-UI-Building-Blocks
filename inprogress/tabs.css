@@ -1,15 +1,18 @@
 /* blatantly stolen from http://css-tricks.com/examples/CSSTabs/ */
+
 *[role=tablist] {
   min-height: 250px;
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 *[role=tablist] > * {
   display: inline;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 *[role=tablist] > * *[role=tab] {
   position: relative;
@@ -19,14 +22,16 @@
   float: left;
   text-decoration: none;
   color: black;
-  background: -moz-linear-gradient(top, white, #eeeeee);
+  background: -moz-linear-gradient(top, white, #eee);
   padding: 5px 10px;
-  border: 1px solid #cccccc;
-  border-bottom: 1px solid white; }
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+}
 
 *[role=tablist] > *:target *[role=tab] {
   background: white;
-  z-index: 2; }
+  z-index: 2;
+}
 
 *[role=tablist] > * *[role=tabpanel] {
   position: absolute;
@@ -37,9 +42,11 @@
   bottom: 0;
   right: 0;
   padding: 20px;
-  border: 1px solid #cccccc;
-  visibility: hidden; }
+  border: 1px solid #ccc;
+  visibility: hidden;
+}
 
 *[role=tablist] > *:target *[role=tabpanel] {
   z-index: 1;
-  visibility: visible; }
+  visibility: visible;
+}
