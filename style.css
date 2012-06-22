@@ -16,7 +16,7 @@ nav {
 	top:20px;
 	left:20px;
 	font-size:12px;
-	width:400px;
+	width:260px;
 }
 
 nav li {
@@ -51,8 +51,8 @@ nav li a {
 	text-decoration: none;
 }
 
-nav li.current a {
-	color: hsl(79,54%,54%);
+nav li a.current {
+	color: #ff6800;
 }
 
 iframe {
