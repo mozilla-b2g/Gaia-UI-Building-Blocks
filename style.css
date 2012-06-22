@@ -12,42 +12,42 @@ html, body {
 }
 
 nav {
-  position:absolute;
-  top:20px;
-  left:20px;
-  font-size:12px;
-  width:260px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 12px;
+  width: 260px;
 }
 
 nav li {
-  margin:10px 0 0;
-  padding:0 0 0 30px;
-  overflow:hidden;
+  margin: 10px 0 0;
+  padding: 0 0 0 30px;
+  overflow: hidden;
 }
 
 nav li span {
-  float:left;
-  margin-left:-30px;
-  width:24px;
-  height:24px;
+  float: left;
+  margin-left: -30px;
+  width: 24px;
+  height: 24px;
   color: hsl(0,0%,100%);
-  line-height:24px;
+  line-height: 24px;
   font-size: 10px;
-  font-weight:700;
+  font-weight: 700;
   font-family: Verdana, Tahoma, Arial, sans-serif;
-  text-align:center;
-  border-radius:5px;
-  border-bottom:1px solid hsla(0,0%,100%,.25);
+  text-align: center;
+  border-radius: 5px;
+  border-bottom: 1px solid hsla(0,0%,100%,.25);
   background: hsl(220,7%,9%);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 nav li a {
   display: block;
-  font-size:14px;
+  font-size: 14px;
   color: hsl(0,0%,100%);
   text-shadow: 1px 1px 0 hsla(0,0%,0%,.5);
-  line-height:24px;
+  line-height: 24px;
   text-decoration: none;
 }
 
@@ -57,13 +57,13 @@ nav li a.current {
 
 iframe {
   position: absolute;
-  top:20px;
+  top: 20px;
   left: 300px;
-  width:320px;
-  height:480px;
-  border:0;
-  margin:0;
-  padding:0;
+  width: 320px;
+  height: 480px;
+  border: 0;
+  margin: 0;
+  padding: 0;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 

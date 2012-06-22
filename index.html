@@ -2,35 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>GAIA Building Blogs</title>
+  <title>Gaia-UI Building Blocks</title>
   <link href="style.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript">
-    var iframe = document.getElementById("iframe");
+    function loadURL(event) {
+      var el = event.target;
+      if (el.tagName.toLowerCase() == 'span')
+        el = el.parentNode;
+      if (el.tagName.toLowerCase() != 'a')
+        return;
 
-    function changeURL(el) {
-      var url = el.href.replace("#", ""),
-          link,
-          i = 0,
-          iframe = document.getElementById('iframe'),
-          links = document.getElementsByTagName('a');
+      var url = el.getAttribute('href').replace(/^#/, '');
+      if (/\/$/.test(url))
+        url += 'index.html';
+      document.getElementById('iframe').src = url;
 
-      iframe.src= url + "/";
-
-      while (link = links.item(i++)) {
-        if (link == el) {
-          link.className = 'current';
-        } else {
-          link.className = '';
-        }
-      }
+      var i = 0, link, links = document.getElementsByTagName('a');
+      while (link = links.item(i++))
+        link.className = (link == el) ? 'current' : '';
     }
   </script>
 </head>
 <body>
-  <nav>
-    <li><a href="#headers" onclick="changeURL(this)"><span>1</span>Headers</a></li>
-    <li><a href="#filters" onclick="changeURL(this)"><span>2</span>Filters</a></li>
-    <li><a href="#filters/tabs.html#" onclick="changeURL(this)"><span>3</span>Tabs</a></li>
+  <nav onclick="loadURL(event)">
+    <li><a href="#headers/"><span>1</span>Headers</a></li>
+    <li><a href="#filters/"><span>2</span>Filters</a></li>
+    <li><a href="#filters/tabs.html"><span>3</span>Tabs</a></li>
   </nav>
 
   <iframe id="iframe" src="" width="320" height="480" />
