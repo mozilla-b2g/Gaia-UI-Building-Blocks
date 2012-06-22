@@ -1,6 +1,6 @@
 hr {
   border: none;
-  height:1rem;
+  height: 1rem;
   margin: 0.5rem 0;
 }
 
@@ -55,7 +55,7 @@ header[role="toolbar"] button[class] > span {
   font-size: 0;
   -moz-border-left-colors: #782f1b #eb884d;
   -moz-border-right-colors: transparent;
-  margin:0;
+  margin: 0;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -153,12 +153,12 @@ header[role="toolbar"][role-context="media"] div > button[class]:only-child > sp
 header[role="toolbar"][role-context="media"] + [role-info] {
   padding: 0 3rem;
   color: rgba(255,255,255, 0.6);
-  line-height:2.6rem;
+  line-height: 2.6rem;
   background: -moz-linear-gradient(#7f7f7f, #666666);
 }
 
 header[role="toolbar"][role-context="media"] + [role-info] h2 {
-  font-size:1.8rem;
+  font-size: 1.8rem;
 }
 
 header[role="toolbar"][role-context="media"] + [role-info] h3 {
