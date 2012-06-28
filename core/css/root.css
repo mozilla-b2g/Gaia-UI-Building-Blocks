@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Open Sans';
-  font-weight: 100;
+  font-weight: 300;
   src: local('Open Sans Light'), url('../fonts/opensans-light-webfont.woff') format('woff');
 }
 @font-face {
@@ -15,7 +15,7 @@
 }
 @font-face {
   font-family: 'Open Sans';
-  font-weight: 900;
+  font-weight: bold;
   src: local('Open Sans Bold'), url('../fonts/opensans-bold-webfont.woff') format('woff');
 }
 
