@@ -17,7 +17,6 @@ header[role="toolbar"] {
 
 header[role="toolbar"] h1 {
   display: inline-block;
-  font-family: 'Open Sans';
   font-size: 2.2rem;
   color: #fff;
   height: 4.9rem;
@@ -34,7 +33,6 @@ header[role="toolbar"] button {
   float: left;
   color: #fff;
   font-size: 1.3rem;
-  font-family: 'Open Sans';
   font-weight: bold;
   background: none;
 }
