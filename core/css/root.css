@@ -1,17 +1,21 @@
 @font-face {
-  font-family: 'FontLight';
+  font-family: 'Open Sans';
+  font-weight: 300;
   src: local('Open Sans Light'), url('../fonts/opensans-light-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: 'FontRegular';
+  font-family: 'Open Sans';
+  font-weight: normal;
   src: local('Open Sans'), url('../fonts/opensans-regular-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: 'FontSemibold';
+  font-family: 'Open Sans';
+  font-weight: 600;
   src: local('Open Sans Semibold'), url('../fonts/opensans-semibold-webfont.woff') format('woff');
 }
 @font-face {
-  font-family: 'FontBold';
+  font-family: 'Open Sans';
+  font-weight: bold;
   src: local('Open Sans Bold'), url('../fonts/opensans-bold-webfont.woff') format('woff');
 }
 
@@ -25,7 +29,7 @@ html, body {
 body {
   background: #fff;
   color: #000;
-  font-family: FontRegular;
+  font-family: 'Open Sans';
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup,
@@ -60,7 +64,7 @@ button {
   background: none;
   border: none;
   outline: none;
-  font: 1.1rem/1.3rem FontRegular;
+  font: 1.1rem/1.3rem 'Open Sans';
   color: #666;
   cursor: pointer;
 }
@@ -72,7 +76,7 @@ button::-moz-focus-inner {
 
 
 input[type="text"], textarea {
-  font: 1.3rem/4rem FontRegular;
+  font: 1.3rem/4rem 'Open Sans';
   -moz-box-sizing: border-box;
   width: 100%;
 }

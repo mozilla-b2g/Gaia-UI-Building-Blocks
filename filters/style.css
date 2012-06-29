@@ -54,7 +54,7 @@ nav[data-role="tabs"] [role="tablist"] [role="search"] a {
   color: #2c323a;
   line-height: 3.5rem;
   font-size:1.5rem;
-  font-family: 'FontBold';
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
