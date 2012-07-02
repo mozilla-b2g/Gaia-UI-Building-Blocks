@@ -2,72 +2,118 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="../core/css/root.css">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- 
+      This <style> is only used for the demostration of the toolbars, is no needed for the real case use
+    -->
+    <style type="text/css">
+      .app-header, .app-header + hgroup { margin-bottom: 0.5rem; }
+      .dark-theme { margin-top: 2rem; }
+    </style>
+
+    <!-- 
+      This <style> is an ausmption that you have loaded the fonts and some basic styles, so this is only for getting work correctly the following examples
+    -->
+    <style type="text/css">
+      html, body { 
+        margin: 0; 
+        padding: 0; 
+        font-size: 10px;
+        background-color: #fff;
+      }
+      @font-face {
+        font-family: 'System Sans';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans'), local('OpenSans'), url('style/fonts/opensans-regular-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'System Sans Light';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans Light'), local('OpenSans-light'), url('style/fonts/opensans-light-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'System Sans Semibold';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans Semibold'), local('OpenSans-semibold'), url('style/fonts/opensans-semibold-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'System Sans Bold';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans Bold'), local('OpenSans-bold'), url('style/fonts/opensans-bold-webfont.woff') format('woff');
+      }
+    </style>
   <title>Headers</title>
 </head>
+
 <body>
-  <section role="region">
+  <header role="toolbar">
+    <menu>
+       <button><span class="icon icon-edit">edit</span></button>
+       <button><span class="icon icon-add">add</span></button>
+    </menu>
+    <h1>Messages</h1>
+  </header>
+
+  <header role="toolbar">
+    <button class="negative"><span class="icon icon-back">back</span></button>
+    <menu>
+       <button><span class="icon icon-edit">edit</span></button>
+    </menu>
+    <h1>Mark Alfenito <sup>favourite</sup></h1>
+  </header>
+
+  <header role="toolbar">
+    <button class="negative"><span class="icon icon-menu">menu</span></button>
+    <menu>
+       <button><span class="icon icon-edit">edit</span></button>
+       <button><span class="icon icon-add">add</span></button>
+    </menu>
+    <h1>Inbox <em>(2)</em></h1>
+  </header>
+
+  <header role="toolbar">
+    <button class="negative"><span class="icon icon-close">close</span></button>
+    <menu>
+       <button>done</button>
+    </menu>
+    <h1>Title</h1>
+  </header>
+
+  <header role="toolbar">
+    <button class="negative"><span class="icon icon-back">back</span></button>
+    <menu>
+      <button><span class="icon icon-user">user</span></button>
+    </menu>
+    <form action="#">
+      <label>
+        <input type="text">
+        <button class="clear">clear</button>
+      </label>
+    </form>
+  </header>
+
+  <section class="dark-theme">
     <header role="toolbar">
-      <button class="i-arrow-left"><span></span></button>
-      <h1 class="star">Mark Alfenito</h1>
-      <div class="right">
-        <button class="i-add"><span></span></button>
-        <button class="i-edit"><span></span></button>
-      </div>
+      <button class="negative"><span class="icon icon-back">back</span></button>
+      <h1>Song title</h1>
     </header>
 
-    <hr />
+    <hgroup>
+      <h2>Artist name</h2>
+      <h3>Album name</h3>
+    </hgroup>
 
     <header role="toolbar">
-      <h1>Timeline</h1>
-      <div class="right">
-        <button><span>Action</span></button>
-        <button><span>Action</span></button>
-      </div>
+      <h1>Song title</h1>
     </header>
-
-    <hr />
-
-    <header role="toolbar">
-      <h1>Mark Alfenito</h1>
-      <div class="right">
-        <button class="i-edit"><span>edit message</span></button>
-        <button class="i-add"><span>new message</span></button>
-      </div>
-    </header>
-
-    <hr />
-
-    <header role="toolbar">
-      <button class="i-arrow-left"><span></span></button>
-      <div role="search">
-        <input type="text" />
-        <button class="hdr-clear-search"></button>
-      </div>
-      <div class="right">
-        <button class="i-user"><span></span></button>
-      </div>
-    </header>
-
-    <hr />
-
-    <header role="toolbar" role-context="media">
-      <button class="i-arrow-left"><span></span></button>
-      <h1>Mark Alfenito</h1>
-    </header>
-
-    <div role-info="song">
-      <h2>Artist Name</h2>
-      <h3>Album Name</h3>
-    </div>
-
-    <hr />
-
-    <header role="toolbar" role-context="media">
-      <h1>Mark Alfenito</h1>
-    </header>
-
   </section>
+
 </body>
 </html>
