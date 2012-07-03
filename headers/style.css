@@ -100,7 +100,7 @@
           height: 4.9rem;
           background: #9d3d26 url(images/ui/negative.png) repeat-x left top;
       }
-   *[role="application"] > header .negative .icon.icon-menu[type="toolbar"] { background-position: -0.6rem center; }
+   *[role="application"] > header .negative .icon.icon-menu { background-position: -0.6rem center; }
 
 
 
@@ -140,7 +140,7 @@
      *[role="application"] > header .icon.icon-edit { background-image: url(images/icons/edit.png); }
      *[role="application"] > header .icon.icon-close { background-image: url(images/icons/close.png); }
      *[role="application"] > header .icon.icon-back { background-image: url(images/icons/back.png); }
-     *[role="application"] > header .icon.icon-menu[type="toolbar"] { background-image: url(images/icons/menu[type="toolbar"].png); }
+     *[role="application"] > header .icon.icon-menu { background-image: url(images/icons/menu.png); }
      *[role="application"] > header .icon.icon-user { background-image: url(images/icons/user.png); }
 
 /* ----------------------------------
