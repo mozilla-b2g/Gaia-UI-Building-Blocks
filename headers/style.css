@@ -2,7 +2,7 @@
  * HEADERS: default
  * ---------------------------------- */
 
-*[role="application"] > header {
+body[role="application"] section[role="region"] > header {
   position: relative;
   z-index: 10;
   height: 5rem;
@@ -11,8 +11,9 @@
   /*background-image: -moz-linear-gradient(top, #cd6723, #bb492d);*/
   /*box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px -4px rgba(0, 0, 0, 0.99);*/
 }
-  /* Box shadow with images */
- *[role="application"] > header:after {
+
+/* Box shadow with images */
+body[role="application"] section[role="region"] > header:after {
     content: "";
     position: absolute;
     left: 0;
@@ -21,7 +22,7 @@
     top: 100%;
     height: 0.5rem;
   }
- *[role="application"] > header h1 {
+body[role="application"] section[role="region"] > header h1 {
     font: 2.2rem/4.8rem System Sans, Sans-serif;
     text-align: left;
     white-space: nowrap;
@@ -31,7 +32,7 @@
     margin: 0 0 0 3rem;
     height: 100%
   }
-   *[role="application"] > header h1 sup {
+body[role="application"] section[role="region"] > header h1 sup {
       background: url(images/icons/fav-star.png) no-repeat center center;
       background-size: 100% auto;
       width: 1.2rem;
@@ -41,16 +42,20 @@
       text-indent: 100%;
       overflow: hidden;
     }
-   *[role="application"] > header h1 em { font: 1.5rem/1em System Sans Bold, Sans-serif; }
+   body[role="application"] section[role="region"] > header h1 em
+   { font: 1.5rem/1em System Sans Bold, Sans-serif; }
 
- *[role="application"] > header form {
+body[role="application"] section[role="region"] > header form {
     display: block;
     overflow: hidden;
     padding: 1.1rem;
     margin-left: 2.5rem;
   }
-   *[role="application"] > header label { position: relative; display: block; }
-     *[role="application"] > header input[type=text] {
+   body[role="application"] section[role="region"] > header label
+    { position: relative; display: block; }
+
+     body[role="application"] section[role="region"] > header input[type=text]
+     {
         width: 100%;
         height: 2.7rem;
         -moz-box-sizing: border-box;
@@ -62,7 +67,7 @@
         /*box-shadow: inset 0 2px 1px -1px rgba(0, 0, 0, 0.3);*/
         font: 1.35rem/1em System Sans, Sans-serif;
       }
-     *[role="application"] > header form .clear {
+     body[role="application"] section[role="region"] > header form .clear {
         text-indent: 100%;
         overflow: hidden;
         position: absolute;
@@ -75,7 +80,7 @@
 
 
   /* Negative action (back, cancel, etc) */
- *[role="application"] > header .negative {
+ body[role="application"] section[role="region"] > header .negative {
     position: absolute;
     left: 0;
     width: 4rem;
@@ -84,13 +89,13 @@
     background: url(images/ui/separator-large.png) no-repeat 2rem center;
     overflow: visible;
   }
-   *[role="application"] > header .negative .icon {
+   body[role="application"] section[role="region"] > header .negative .icon {
         overflow: visible;
         text-indent: -9999px;
         position: static;
         margin-left: -3rem;
     }
-     *[role="application"] > header .negative .icon:after {
+     body[role="application"] section[role="region"] > header .negative .icon:after {
           content: "";
           position: absolute;
           left: 0;
@@ -100,21 +105,30 @@
           height: 4.9rem;
           background: #9d3d26 url(images/ui/negative.png) repeat-x left top;
       }
-   *[role="application"] > header .negative .icon.icon-menu { background-position: -0.6rem center; }
-
+   body[role="application"] section[role="region"] > header .negative .icon.icon-menu
+   { background-position: -0.6rem center; }
 
 
   /* Generic set of actions in toolbar */
- *[role="application"] > header menu[type="toolbar"] { height: 100%; float: right; }
- *[role="application"] > header menu[type="toolbar"] button { height: 100%; float: left; }
-   *[role="application"] > header menu[type="toolbar"] button { background: none; padding: 0 1.75rem; }
-   *[role="application"] > header menu[type="toolbar"] button ,*[role="application"] > header menu[type="toolbar"] button:last-child {
+ body[role="application"] section[role="region"] > header menu[type="toolbar"]
+  { height: 100%; float: right; }
+
+ body[role="application"] section[role="region"] > header menu[type="toolbar"] button
+ { height: 100%; float: left; }
+
+   body[role="application"] section[role="region"] > header menu[type="toolbar"] button
+   { background: none; padding: 0 1.75rem; }
+
+   body[role="application"] section[role="region"] > header menu[type="toolbar"] button:last-child
+   {
       background: url(images/ui/separator.png) no-repeat left center;
-      padding: 0 1.75rem;
     }
 
- *[role="application"] > header menu[type="toolbar"] { padding: 0; margin: 0; }
-   *[role="application"] > header button {
+ body[role="application"] section[role="region"] > header menu[type="toolbar"]
+ { padding: 0; margin: 0; }
+
+   body[role="application"] section[role="region"] > header button
+   {
       border: none;
       background: none;
       padding: 0;
@@ -122,10 +136,12 @@
       font: 1.4rem/1.1em System Sans Semibold, Sans-serif;
       color: #fff;
     }
-     *[role="application"] > header button:first-letter { text-transform: uppercase; }
+     body[role="application"] section[role="region"] > header button:first-letter {
+      text-transform: uppercase;
+     }
 
       /* Icon definitions */
-     *[role="application"] > header .icon {
+     body[role="application"] section[role="region"] > header .icon {
         display: inline-block;
         width: 3rem;
         height: 3rem;
@@ -136,12 +152,24 @@
         overflow: hidden;
         position: relative;
       }
-     *[role="application"] > header .icon.icon-add { background-image: url(images/icons/add.png); }
-     *[role="application"] > header .icon.icon-edit { background-image: url(images/icons/edit.png); }
-     *[role="application"] > header .icon.icon-close { background-image: url(images/icons/close.png); }
-     *[role="application"] > header .icon.icon-back { background-image: url(images/icons/back.png); }
-     *[role="application"] > header .icon.icon-menu { background-image: url(images/icons/menu.png); }
-     *[role="application"] > header .icon.icon-user { background-image: url(images/icons/user.png); }
+
+     body[role="application"] section[role="region"] > header .icon.icon-add
+     { background-image: url(images/icons/add.png); }
+
+     body[role="application"] section[role="region"] > header .icon.icon-edit
+     { background-image: url(images/icons/edit.png); }
+
+     body[role="application"] section[role="region"] > header .icon.icon-close
+     { background-image: url(images/icons/close.png); }
+
+     body[role="application"] section[role="region"] > header .icon.icon-back
+     { background-image: url(images/icons/back.png); }
+
+     body[role="application"] section[role="region"] > header .icon.icon-menu
+     { background-image: url(images/icons/menu.png); }
+
+     body[role="application"] section[role="region"] > header .icon.icon-user
+     { background-image: url(images/icons/user.png); }
 
 /* ----------------------------------
  * HEADERS: dark
