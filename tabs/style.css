@@ -1,0 +1,68 @@
+/* ----------------------------------
+ * TABS
+ * ---------------------------------- */
+
+body[role="application"] section[role="region"] > [role="tablist"] {
+  width: 100%;
+  background: #000;
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+}
+  body[role="application"] section[role="region"] > [role="tablist"] li {
+    float: left;
+    height: 4rem;
+    list-style: none;
+  }
+  body[role="application"] section[role="region"] > [role="tablist"] li:active {
+    background: url(images/ui/tab_active.png) no-repeat center top;
+  }
+  body[role="application"] section[role="region"] > [role="tablist"] li[aria-pressed="true"],
+  body[role="application"] section[role="region"] > [role="tablist"] li[aria-pressed="true"]:active {
+    background: #295b66;
+  }
+  body[role="application"] section[role="region"] > [role="tablist"] li[aria-disabled="true"]:active {
+    background: none;
+  }
+  body[role="application"] section[role="region"] > [role="tablist"][data-tabs="2"] li {
+    width: -moz-calc(100% / 2);
+  }
+  body[role="application"] section[role="region"] > [role="tablist"][data-tabs="3"] li {
+    width: -moz-calc(100% / 3);
+  }
+  body[role="application"] section[role="region"] > [role="tablist"][data-tabs="4"] li {
+    width: -moz-calc(100% / 4);
+  }
+  body[role="application"] section[role="region"] > [role="tablist"][data-tabs="5"] li {
+    width: -moz-calc(100% / 5);
+  }
+    body[role="application"] section[role="region"] > [role="tablist"] li a {
+      font-size:-moz-calc(6 * 0.226rem);
+      text-decoration: none;
+      line-height: 4rem;
+      text-align: center;
+      color: #FFF;
+      height: 100%;
+      width: 100%;
+      float: left;
+    }
+    body[role="application"] section[role="region"] > [role="tablist"] li a.icon {
+      font: 0/0 a;
+    }
+    body[role="application"] section[role="region"] > [role="tablist"] li a.icon-comms {
+      background: url(images/icons/icon_comms.png) no-repeat center top;
+    }
+    body[role="application"] section[role="region"] > [role="tablist"] li a.icon-contacts {
+      background: url(images/icons/icon_contacts.png) no-repeat center top;
+    }
+    body[role="application"] section[role="region"] > [role="tablist"] li a.icon-dialer {
+      background: url(images/icons/icon_dialer.png) no-repeat center top;
+    }
+    body[role="application"] section[role="region"] > [role="tablist"] li:active a {
+      background-position: center -4rem;
+    }
+    body[role="application"] section[role="region"] > [role="tablist"] li[aria-disabled="true"] a {
+      background-position: center -8rem;
+    }
+
