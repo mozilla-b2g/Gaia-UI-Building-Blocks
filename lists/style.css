@@ -55,6 +55,10 @@ a[role="listitem"] {
 
 [role="listitem"] > div h2 {
   font: 1.8rem/1.2em FontRegular, Sans-serif;
+  white-space: nowrap;
+  height: 2.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 } 
 [role="listitem"] > div h2 em {
   font-size: 1.3rem;
@@ -64,6 +68,10 @@ a[role="listitem"] {
 [role="listitem"] > div .meta {
   font-size: 1.4rem;
   color: #5b5b5b;
+  white-space: nowrap;
+  height: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 [role="listitem"] > div .meta span {
