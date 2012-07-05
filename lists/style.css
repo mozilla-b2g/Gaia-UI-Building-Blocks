@@ -1,5 +1,92 @@
 /* ----------------------------------
  * LISTS: default
  * ---------------------------------- */
+[role="list"] {
+  list-style: none;
+}
 
+[role="listitem"] {
+  overflow: hidden;
+  border: solid 1px #dbd9d9;
+  border-right: none;
+  border-left: none;
+  margin: -1px 0;
+}
+
+[role="listitem"] > .media {
+  float: left;
+  display: inline;
+  width: 5.5rem;
+  height: 6rem;
+  text-align: center;
+}
+
+[role="listitem"] > .media:before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  margin-left: -1px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[role="listitem"] > img {
+  float: right;
+  display: inline;
+  width: 6rem;
+  height: 6rem;
+  background: transparent center center;
+  background-size: 100% auto;
+}
+[role="listitem"] > div {
+  display: block;
+  overflow: hidden;
+  padding: 1rem 0 0;
+}
+
+[role="listitem"] > div h2 {
+  font: 1.8rem/1.2em FontRegular, Sans-serif;
+} 
+[role="listitem"] > div h2 em {
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+[role="listitem"] > div .meta {
+  font-size: 1.4rem;
+  color: #5b5b5b;
+}
+
+[role="listitem"] > div .meta span {
+  margin-right: 0.3rem
+}
+
+[role="listitem"] > div .meta span:last-child {
+  margin: 0;
+}
+
+
+/* Icon definitions */
+[role="listitem"] .icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3rem;
+  height: 3rem;
+  background: transparent no-repeat center center;
+  background-size: 100% auto;
+  font: 0/0 a;
+  overflow: hidden;
+  position: relative;
+}
+
+[role="listitem"] .icon.icon-callout {
+  background-image: url(images/icons/callout.png);
+  width: 2.4rem;
+  height: 2rem;
+}
+
+/* New items */
+[role="listitem"].new .time {
+  color: #1d8399;
+}
 

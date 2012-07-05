@@ -3,54 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="style.css">
-
-    <!--
-      This <style> assumes
-      that you have loaded the fonts and some basic styles,
-      thus it is only aimed at making the examples work
-    -->
-    <style type="text/css">
-      html, body {
-        margin: 0;
-        padding: 0;
-        font-size: 10px;
-        background-color: #fff;
-      }
-      @font-face {
-        font-family: 'System Sans';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Open Sans'), local('OpenSans'), url('style/fonts/opensans-regular-webfont.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'System Sans Light';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Open Sans Light'), local('OpenSans-light'), url('style/fonts/opensans-light-webfont.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'System Sans Semibold';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Open Sans Semibold'), local('OpenSans-semibold'), url('style/fonts/opensans-semibold-webfont.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'System Sans Bold';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Open Sans Bold'), local('OpenSans-bold'), url('style/fonts/opensans-bold-webfont.woff') format('woff');
-      }
-    </style>
-  <title>Headers</title>
+  <link rel="stylesheet" type="text/css" href="../core/css/root.css">
+    
+  <title>Lists</title>
 </head>
 
 <body role="application">
   
   <section role="region">
-      
+      <ul role="list">
+          <li role="listitem">
+            <em class="media">
+              <span class="icon icon-callout">Outgoing call</span>
+            </em>
+            <img style="background-image: url(images/dummy.jpg);">
+            <div>
+              <h2>Mark Alfenito <em>(2)</em></h2>
+              <p class="meta">
+                <span class="time">5:43PM</span>
+                <span>Mobile, Vivo</span>
+              </p>
+            </div>
+          </li>
+      </ul>
   </section>
 
 </body>
