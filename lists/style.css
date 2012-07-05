@@ -11,6 +11,7 @@
   border-right: none;
   border-left: none;
   margin: -1px 0;
+  position: relative;
 }
 
 [role="listitem"] > .media {
@@ -85,7 +86,20 @@
   height: 2rem;
 }
 
-/* New items */
+
+/* State disabled */
+[role="listitem"].disabled:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e6e6e6;
+  opacity: 0.7;
+}
+
+/* State new */
 [role="listitem"].new .time {
   color: #1d8399;
 }
