@@ -6,6 +6,7 @@
 }
 
 [role="listitem"] {
+  display: block;
   overflow: hidden;
   border: solid 1px #dbd9d9;
   border-right: none;
@@ -13,13 +14,20 @@
   margin: -1px 0;
   position: relative;
 }
-
+a[role="listitem"] {
+  text-decoration: none;
+  color: #000;
+}
 [role="listitem"] > .media {
   float: left;
   display: inline;
   width: 5.5rem;
   height: 6rem;
   text-align: center;
+}
+
+[role="listitem"] > .media.end {
+  float: right;
 }
 
 [role="listitem"] > .media:before {
@@ -80,15 +88,29 @@
   position: relative;
 }
 
+[role="listitem"] .icon.icon-arrowaction {
+  background-image: url(images/icons/arrowaction.png);
+  width:1rem;
+  height: 1rem;
+  vertical-align: bottom;
+  margin-bottom: 1.3rem;
+}
+
 [role="listitem"] .icon.icon-callout {
   background-image: url(images/icons/callout.png);
   width: 2.4rem;
   height: 2rem;
 }
 
+[role="listitem"][data-state="new"] .icon.icon-smsin {
+  background-image: url(images/icons/smsin-new.png);
+  width: 2.5rem;
+  height: 2.2rem;
+}
+
 
 /* State disabled */
-[role="listitem"].disabled:after {
+[role="listitem"][data-state="disabled"]:after {
   content: "";
   position: absolute;
   left: 0;
@@ -100,7 +122,7 @@
 }
 
 /* State new */
-[role="listitem"].new .time {
+[role="listitem"][data-sate="new"] .time {
   color: #1d8399;
 }
 
