@@ -6,12 +6,13 @@
 }
 
 [role="listitem"] {
-  display: block;
-  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  -moz-box-sizing: border-box;
   border: solid 1px #dbd9d9;
   border-right: none;
   border-left: none;
-  margin: -1px 0;
+  margin: -1px 0 0;
   position: relative;
 }
 a[role="listitem"] {
@@ -60,9 +61,18 @@ a[role="listitem"] {
   overflow: hidden;
   text-overflow: ellipsis;
 } 
+[role="listitem"] > div h2 strong {
+  font-weight: normal;
+  font-family: FontSemibold, Sans-serif;
+}
 [role="listitem"] > div h2 em {
   font-size: 1.3rem;
   font-style: normal;
+}
+
+[role="listitem"] > div .result {
+  background-color: #cfd3d7;
+  
 }
 
 [role="listitem"] > div .meta {
@@ -156,6 +166,19 @@ a[role="listitem"] {
   bottom: 0;
   background-color: #e6e6e6;
   opacity: 0.7;
+}
+
+/* State unread */
+[role="listitem"][data-state="unread"]:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 1.6rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-right: 0.5rem;
+  background: url(images/icons/dot.png) no-repeat center;
+  background-size: 100% auto;
 }
 
 /* State new */

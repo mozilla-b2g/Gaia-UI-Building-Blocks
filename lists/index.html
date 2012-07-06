@@ -6,11 +6,24 @@
   <link rel="stylesheet" type="text/css" href="../core/css/root.css">
     
   <title>Lists</title>
+
+  <style type="text/css">
+    h2.bb-docs {
+      font-size: 1.8rem;
+      font-family: FontLight, Sans-serif;
+      color: #666;
+      margin: -1px 0 0;
+      background-color: #f5f5f5;
+      padding: 0.4rem 0.4rem 0.4rem 3rem;
+      border: solid 1px #e8e8e8;
+    }
+  </style>
 </head>
 
 <body role="application">
   
   <section role="region">
+      <h2 class="bb-docs">Timeline</h2>
       <ul role="list">
           <li role="listitem">
             <em class="media">
@@ -96,6 +109,69 @@
             </div>
           </li>
       </ul>
+        <h2 class="bb-docs">Contacts</h2>
+       <ul role="list" style="padding: 0 2.5rem;">
+          <li role="listitem" data-state="unread">
+            <img style="background-image: url(images/dummy.jpg);">
+            <div>
+              <h2>Margherita <strong>Gomez</strong></h2>
+              <p class="meta">
+                <span>Family</span>
+              </p>
+            </div>
+          </li>
+
+           <li role="listitem">
+            <img style="background-image: url(images/dummy.jpg);">
+            <div>
+              <h2>Margherita <strong>Gomez</strong></h2>
+              <p class="meta">
+                <span>Family</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+        <h2 class="bb-docs">Search results</h2>
+         <ul role="list">
+           <li>
+            <a href="#" role="listitem" data-state="new">
+              <em class="media">
+                <span class="icon icon-smsin">Missed call</span>
+              </em>
+              <em class="media end">
+                <span class="icon icon-arrowaction">Missed call</span>              
+              </em>
+              <div>
+                <h2><span class="result">Mark</span> Alfenito <em>(2)</em></h2>
+                <p class="meta">
+                  <span class="time">5:43PM</span>
+                  <span>Mobile, <span class="result">Vivo</span></span>
+                </p>
+              </div>
+            </a>
+          </li>
+
+          <li role="listitem" data-state="unread" style="padding: 0 2.5rem;">
+            <img style="background-image: url(images/dummy.jpg);">
+            <div>
+              <h2><span class="result">Marg</span>herita <strong>Gomez</strong></h2>
+              <p class="meta">
+                <span>Family</span>
+              </p>
+            </div>
+          </li>
+
+           <li role="listitem"  style="padding: 0 2.5rem;">
+            <img style="background-image: url(images/dummy.jpg);">
+            <div>
+              <h2><span class="result">Ma</span>rgherita <strong><span class="result">Go</span>mez</strong></h2>
+              <p class="meta">
+                <span><span class="result">Fa</span>mily</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+
   </section>
 
 </body>
