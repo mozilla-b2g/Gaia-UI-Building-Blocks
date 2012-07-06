@@ -41,7 +41,7 @@ a[role="listitem"] {
   vertical-align: middle;
 }
 
-[role="listitem"] > .media time {
+[role="listitem"] > .media .time {
   font-style: normal;
   display: inline-block;
   vertical-align: super;
@@ -180,8 +180,8 @@ a[role="listitem"] {
   opacity: 0.7;
 }
 
-/* State unread */
-[role="listitem"][data-state="unread"]:after {
+/* State new */
+[role="listitem"][data-state="new"]:after {
   content: "";
   position: absolute;
   right: 100%;
@@ -192,11 +192,10 @@ a[role="listitem"] {
   background: url(images/icons/dot.png) no-repeat center;
   background-size: 100% auto;
 }
-
-/* State new */
-[role="listitem"][data-sate="new"] .time {
+[role="listitem"][data-state="new"] .time {
   color: #1d8399;
 }
+
 
 /* State tagged */ 
 [role="listitem"][data-state="tagged"]:after {
