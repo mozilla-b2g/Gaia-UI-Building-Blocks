@@ -29,10 +29,14 @@ body {
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup,
-menu, nav, section, video, audio, canvas, progress, meter, time {
+menu, nav, section, video, audio, canvas, progress, meter {
   display: block;
   padding: 0;
   margin: 0;
+}
+
+mark,time {
+  display: inline;
 }
 
 /* Text conventions */
@@ -85,4 +89,3 @@ body > section[role=region] {
   width: 32rem;
   height: 48rem;
 }
-
