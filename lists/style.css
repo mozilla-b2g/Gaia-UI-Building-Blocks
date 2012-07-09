@@ -85,12 +85,12 @@ body[role="application"] li > dl dt em, [role="listitem"] > dl dt em {
   font-style: normal;
 }
 
-body[role="application"] li > dl .result, [role="listitem"] > dl .result {
+body[role="application"] li > dl mark, [role="listitem"] > dl mark {
   background-color: #cfd3d7;
 
 }
 
-body[role="application"] li > dl .meta, [role="listitem"] > dl .meta {
+body[role="application"] li > dl dd, [role="listitem"] > dl dd {
   font-size: 1.4rem;
   color: #5b5b5b;
   white-space: nowrap;
@@ -99,19 +99,20 @@ body[role="application"] li > dl .meta, [role="listitem"] > dl .meta {
   text-overflow: ellipsis;
 }
 
-body[role="application"] li > dl .meta span, [role="listitem"] > dl .meta span {
+body[role="application"] li > dl dd span, [role="listitem"] > dl dd span {
   margin-right: 0.3rem
 }
 
-body[role="application"] li > dl .meta span:last-child,
-[role="listitem"] > dl .meta span:last-child {
+body[role="application"] li > dl dd span:last-child,
+[role="listitem"] > dl dd span:last-child {
   margin: 0;
 }
 
+/*
 time {
   margin-right:0.3rem;
-  display:inline !important;
 }
+*/
 
 
 /* Icon definitions */
