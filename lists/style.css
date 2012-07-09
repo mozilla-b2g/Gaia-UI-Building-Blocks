@@ -1,11 +1,11 @@
 /* ----------------------------------
  * LISTS: default
  * ---------------------------------- */
-[role="list"] {
+ul,ol {
   list-style: none;
 }
 
-[role="listitem"] {
+body[role="application"] li, [role="listitem"] {
   display: inline-block;
   width: 100%;
   -moz-box-sizing: border-box;
@@ -20,7 +20,7 @@ a[role="listitem"] {
   color: #000;
 }
 
-[role="listitem"] > .media {
+body[role="application"] li > .media, [role="listitem"] > .media {
   float: left;
   display: inline;
   width: 5.5rem;
@@ -28,11 +28,11 @@ a[role="listitem"] {
   text-align: center;
 }
 
-[role="listitem"] > .media.end {
+body[role="application"] li > .media.end, [role="listitem"] > .media.end {
   float: right;
 }
 
-[role="listitem"] > .media:before {
+body[role="application"] li > .media:before, [role="listitem"] > .media:before {
   content: "";
   height: 100%;
   width: 1px;
@@ -41,7 +41,7 @@ a[role="listitem"] {
   vertical-align: middle;
 }
 
-[role="listitem"] > .media .time {
+body[role="application"] li > .media time, [role="listitem"] > .media time {
   font-style: normal;
   display: inline-block;
   vertical-align: super;
@@ -52,7 +52,7 @@ a[role="listitem"] {
   text-align: right;
 }
 
-[role="listitem"] > img {
+body[role="application"] li > img, [role="listitem"] > img {
   float: right;
   display: inline;
   width: 6rem;
@@ -60,34 +60,37 @@ a[role="listitem"] {
   background: transparent center center;
   background-size: 100% auto;
 }
-[role="listitem"] > div {
+
+body[role="application"] li > dl, [role="listitem"] > dl {
   display: block;
   overflow: hidden;
   padding: 1rem 0 0;
 }
 
-[role="listitem"] > div h2 {
+body[role="application"] li > dl dt, [role="listitem"] > dl dt {
   font: 1.8rem/1.2em FontRegular, Sans-serif;
   white-space: nowrap;
   height: 2.2rem;
   overflow: hidden;
   text-overflow: ellipsis;
-} 
-[role="listitem"] > div h2 strong {
+}
+
+body[role="application"] li > dl dt strong, [role="listitem"] > dl dt strong {
   font-weight: normal;
   font-family: FontSemibold, Sans-serif;
 }
-[role="listitem"] > div h2 em {
+
+body[role="application"] li > dl dt em, [role="listitem"] > dl dt em {
   font-size: 1.3rem;
   font-style: normal;
 }
 
-[role="listitem"] > div .result {
+body[role="application"] li > dl .result, [role="listitem"] > dl .result {
   background-color: #cfd3d7;
 
 }
 
-[role="listitem"] > div .meta {
+body[role="application"] li > dl .meta, [role="listitem"] > dl .meta {
   font-size: 1.4rem;
   color: #5b5b5b;
   white-space: nowrap;
@@ -96,17 +99,23 @@ a[role="listitem"] {
   text-overflow: ellipsis;
 }
 
-[role="listitem"] > div .meta span {
+body[role="application"] li > dl .meta span, [role="listitem"] > dl .meta span {
   margin-right: 0.3rem
 }
 
-[role="listitem"] > div .meta span:last-child {
+body[role="application"] li > dl .meta span:last-child,
+[role="listitem"] > dl .meta span:last-child {
   margin: 0;
+}
+
+time {
+  margin-right:0.3rem;
+  display:inline !important;
 }
 
 
 /* Icon definitions */
-[role="listitem"] .icon {
+body[role="application"] li .icon , [role="listitem"] .icon {
   display: inline-block;
   vertical-align: middle;
   width: 3rem;
@@ -118,7 +127,7 @@ a[role="listitem"] {
   position: relative;
 }
 
-[role="listitem"] .icon.icon-arrowaction {
+body[role="application"] li .icon.icon-arrowaction, [role="listitem"] .icon.icon-arrowaction {
   background-image: url(images/icons/arrowaction.png);
   width:1rem;
   height: 1rem;
@@ -126,32 +135,32 @@ a[role="listitem"] {
   margin-bottom: 1.3rem;
 }
 
-[role="listitem"] .icon.icon-callout {
+body[role="application"] li .icon.icon-callout, [role="listitem"] .icon.icon-callout {
   background-image: url(images/icons/callout.png);
   width: 2.4rem;
   height: 2rem;
 }
 
-[role="listitem"][data-state="new"] .icon.icon-smsin {
+body[role="application"] li .icon.icon-smsin, [role="listitem"][data-state="new"] .icon.icon-smsin {
   background-image: url(images/icons/smsin-new.png);
   width: 2.5rem;
   height: 2.2rem;
 }
 
-[role="listitem"] .checkbox {
+[body[role="application"] li .checkbox, role="listitem"] .checkbox {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   width: 4rem;
   height: 4rem;
 }
-[role="listitem"] .checkbox input {
+body[role="application"] li .checkbox input, [role="listitem"] .checkbox input {
   width: 100%;
   height: 100%;
   margin: 0;
   opacity: 0;
 }
-[role="listitem"] .checkbox span {
+body[role="application"] li .checkbox span, [role="listitem"] .checkbox span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -162,14 +171,14 @@ a[role="listitem"] {
   background: url(images/icons/check-delete.png) no-repeat center top;
   background-size: 100% auto;
 }
-[role="listitem"] .checkbox input:checked + span {
+body[role="application"] li .checkbox input:checked + span, [role="listitem"] .checkbox input:checked + span {
   background-position: center bottom;
 }
 
 
 
 /* State disabled */
-[role="listitem"][data-state="disabled"]:before {
+body[role="application"] li[disabled]:before, [role="listitem"][disabled]:before {
   content: "";
   position: absolute;
   left: 0;
@@ -181,6 +190,7 @@ a[role="listitem"] {
 }
 
 /* State new */
+body[role="application"] li[data-state="new"]:after,
 [role="listitem"][data-state="new"]:after {
   content: "";
   position: absolute;
@@ -192,12 +202,15 @@ a[role="listitem"] {
   background: url(images/icons/dot.png) no-repeat center;
   background-size: 100% auto;
 }
-[role="listitem"][data-state="new"] .time {
+
+body[role="application"] li[data-state="new"] time,
+[role="listitem"][data-state="new"] time {
   color: #1d8399;
 }
 
 
-/* State tagged */ 
+/* State tagged */
+body[role="application"] li[data-state="tagged"]:after,
 [role="listitem"][data-state="tagged"]:after {
   content: "";
   position: absolute;
@@ -206,6 +219,5 @@ a[role="listitem"] {
   bottom: 0;
   width: 0.4rem;
 }
-[role="listitem"][data-tag="A"]:after { background-color: #e7a300; }
-[role="listitem"][data-tag="B"]:after { background-color: #954fa7; }
-
+body[role="application"] li[data-tag="A"]:after, [role="listitem"][data-tag="A"]:after { background-color: #e7a300; }
+body[role="application"] li[data-tag="B"]:after, [role="listitem"][data-tag="B"]:after { background-color: #954fa7; }

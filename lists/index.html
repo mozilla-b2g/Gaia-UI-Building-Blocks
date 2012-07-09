@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="../core/css/root.css">
-    
+
   <title>Lists</title>
 
   <style type="text/css">
@@ -21,58 +21,58 @@
 </head>
 
 <body role="application">
-  
+
   <section role="region">
        <h2 class="bb-docs">Calendar</h2>
-      <ul role="list">
-          <li role="listitem" data-state="tagged" data-tag="A">
+      <ul>
+          <li data-state="tagged" data-tag="A">
             <em class="media">
-                <span class="time">9AM</span>
+                <time>9AM</time>
             </em>
-            <div>
-              <h2>Paper Due</h2>
-            </div>
+            <dl>
+              <dt>Paper Due</dt>
+            </dl>
           </li>
 
-          <li role="listitem" data-state="tagged" data-tag="B">
+          <li data-state="tagged" data-tag="B">
             <em class="media">
-                <span class="time">11AM</span>
+                <time>11AM</time>
             </em>
-            <div>
-              <h2>Paper Due</h2>
+            <dl>
+              <dt>Paper Due</dt>
               <p class="meta"><span>Madrid. Steve, Sergi, Victoria, Silvia, E...</span></p>
-            </div>
+            </dl>
           </li>
       </ul>
 
       <h2 class="bb-docs">Timeline</h2>
-      <ul role="list">
-          <li role="listitem">
+      <ul>
+          <li>
             <em class="media">
               <span class="icon icon-callout">Outgoing call</span>
             </em>
             <img style="background-image: url(images/dummy.jpg);">
-            <div>
-              <h2>Mark Alfenito <em>(2)</em></h2>
+            <dl>
+              <dt>Mark Alfenito <em>(2)</em></dt>
               <p class="meta">
-                <span class="time">5:43PM</span>
+                <time>5:43PM</time>
                 <span>Mobile, Vivo</span>
               </p>
-            </div>
+            </dl>
           </li>
 
-          <li role="listitem" data-state="disabled">
+          <li disabled>
             <em class="media">
               <span class="icon icon-callout">Outgoing call</span>
             </em>
             <img style="background-image: url(images/dummy.jpg);">
-            <div>
-              <h2>Mark Alfenito <em>(2)</em></h2>
+            <dl>
+              <dt>Mark Alfenito <em>(2)</em></dt>
               <p class="meta">
-                <span class="time">5:43PM</span>
+                <time>5:43PM</time>
                 <span>Mobile, Vivo</span>
               </p>
-            </div>
+            </dl>
           </li>
 
           <li>
@@ -81,19 +81,19 @@
                 <span class="icon icon-smsin">Missed call</span>
               </em>
               <em class="media end">
-                <span class="icon icon-arrowaction">Missed call</span>              
+                <span class="icon icon-arrowaction">Missed call</span>
               </em>
-              <div>
-                <h2>Mark Alfenito <em>(2)</em></h2>
+              <dl>
+                <dt>Mark Alfenito <em>(2)</em></dt>
                 <p class="meta">
-                  <span class="time">5:43PM</span>
+                  <time>5:43PM</time>
                   <span>Mobile, Vivo</span>
                 </p>
-              </div>
+              </dl>
             </a>
           </li>
 
-          <li role="listitem">
+          <li>
             <em class="media">
               <span class="icon icon-callout">Missed call</span>
             </em>
@@ -101,18 +101,18 @@
               <label class="checkbox">
                 <input type="checkbox">
                 <span></span>
-              </label>             
+              </label>
             </em>
-            <div>
-              <h2>Mark Alfenito <em>(2)</em></h2>
+            <dl>
+              <dt>Mark Alfenito <em>(2)</em></dt>
               <p class="meta">
-                <span class="time">5:43PM</span>
+                <time>5:43PM</time>
                 <span>Mobile, Vivo</span>
               </p>
-            </div>
+            </dl>
           </li>
 
-          <li role="listitem">
+          <li>
             <em class="media">
               <span class="icon icon-callout">Missed call</span>
             </em>
@@ -120,77 +120,78 @@
               <label class="checkbox">
                 <input type="checkbox" checked="checked">
                 <span></span>
-              </label>             
+              </label>
             </em>
-            <div>
-              <h2>Mark Alfenito <em>(2)</em></h2>
+            <dl>
+              <dt>Mark Alfenito <em>(2)</em></dt>
               <p class="meta">
-                <span class="time">5:43PM</span>
+                <time>5:43PM</time>
                 <span>Mobile, Vivo</span>
               </p>
-            </div>
+            </dl>
           </li>
       </ul>
         <h2 class="bb-docs">Contacts</h2>
-       <ul role="list" style="padding: 0 2.5rem;">
+       <ul  style="padding: 0 2.5rem;">
           <li role="listitem" data-state="new">
             <img style="background-image: url(images/dummy.jpg);">
-            <div>
-              <h2>Margherita <strong>Gomez</strong></h2>
+            <dl>
+              <dt>Margherita <strong>Gomez</strong></dt>
               <p class="meta">
                 <span>Family</span>
               </p>
-            </div>
+            </dl>
           </li>
 
-           <li role="listitem">
+           <li>
             <img style="background-image: url(images/dummy.jpg);">
-            <div>
-              <h2>Margherita <strong>Gomez</strong></h2>
+            <dl>
+              <dt>Margherita <strong>Gomez</strong></dt>
               <p class="meta">
                 <span>Family</span>
               </p>
-            </div>
+            </dl>
           </li>
         </ul>
         <h2 class="bb-docs">Search results</h2>
-         <ul role="list">
+         <ul>
            <li>
             <a href="#" role="listitem" data-state="new">
               <em class="media">
                 <span class="icon icon-smsin">Missed call</span>
               </em>
               <em class="media end">
-                <span class="icon icon-arrowaction">Missed call</span>              
+                <span class="icon icon-arrowaction">Missed call</span>
               </em>
-              <div>
-                <h2><span class="result">Mark</span> Alfenito <em>(2)</em></h2>
+              <dl>
+                <dt><span class="result">Mark</span> Alfenito <em>(2)</em></dt>
                 <p class="meta">
-                  <span class="time">5:43PM</span>
+                  <time>5:43PM</time>
                   <span>Mobile, <span class="result">Vivo</span></span>
                 </p>
-              </div>
+              </dl>
             </a>
           </li>
 
-          <li role="listitem" data-state="new" style="padding: 0 2.5rem;">
+          <li data-state="new" style="padding: 0 2.5rem;">
             <img style="background-image: url(images/dummy.jpg);">
-            <div>
-              <h2><span class="result">Marg</span>herita <strong>Gomez</strong></h2>
+            <dl>
+              <dt><span class="result">Marg</span>herita <strong>Gomez</strong></dt>
               <p class="meta">
                 <span>Family</span>
               </p>
-            </div>
+            </dl>
           </li>
 
-           <li role="listitem"  style="padding: 0 2.5rem;">
+           <li style="padding: 0 2.5rem;">
             <img style="background-image: url(images/dummy.jpg);">
-            <div>
-              <h2><span class="result">Ma</span>rgherita <strong><span class="result">Go</span>mez</strong></h2>
+            <dl>
+              <dt><span class="result">Ma</span>rgherita
+                    <strong><span class="result">Go</span>mez</strong></dt>
               <p class="meta">
                 <span><span class="result">Fa</span>mily</span>
               </p>
-            </div>
+            </dl>
           </li>
         </ul>
 
