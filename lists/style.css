@@ -1,7 +1,7 @@
 /* ----------------------------------
  * LISTS: default
  * ---------------------------------- */
-ul,ol {
+ul,ol, [role="list"] {
   list-style: none;
 }
 
@@ -28,7 +28,7 @@ body[role="application"] li > .media, [role="listitem"] > .media {
   text-align: center;
 }
 
-body[role="application"] li > .media.end, [role="listitem"] > .media.end {
+body[role="application"] li > .media.right, [role="listitem"] > .media.right {
   float: right;
 }
 
@@ -220,5 +220,6 @@ body[role="application"] li[data-state="tagged"]:after,
   bottom: 0;
   width: 0.4rem;
 }
+
 body[role="application"] li[data-tag="A"]:after, [role="listitem"][data-tag="A"]:after { background-color: #e7a300; }
 body[role="application"] li[data-tag="B"]:after, [role="listitem"][data-tag="B"]:after { background-color: #954fa7; }
