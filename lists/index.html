@@ -26,16 +26,20 @@
        <h2 class="bb-docs">Calendar</h2>
       <ul>
           <li data-state="tagged" data-tag="A">
+             <em class="aside">
+                <time>9AM</time>
+            </em>
             <dl>
               <dt>Paper Due</dt>
-              <dd><time>9AM</time></dd>
             </dl>
           </li>
 
           <li data-state="tagged" data-tag="B">
+            <em class="aside">
+              <time>11AM</time>
+            </em>
             <dl>
               <dt>Paper Due</dt>
-              <dd><time>11AM</time></dd>
               <dd><span>Madrid. Steve, Sergi, Victoria, Silvia, E...</span></dd>
             </dl>
           </li>
@@ -44,10 +48,10 @@
       <h2 class="bb-docs">Timeline</h2>
       <ul>
           <li>
-            <em class="media">
+            <em class="aside">
               <span class="icon icon-callout">Outgoing call</span>
             </em>
-            <img style="background-image: url(images/dummy.jpg);">
+            <img src="images/dummy.jpg">
             <dl>
               <dt>Mark Alfenito <em>(2)</em></dt>
               <dd>
@@ -58,10 +62,10 @@
           </li>
 
           <li disabled>
-            <em class="media">
+            <em class="aside">
               <span class="icon icon-callout">Outgoing call</span>
             </em>
-            <img style="background-image: url(images/dummy.jpg);">
+            <img src="images/dummy.jpg">
             <dl>
               <dt>Mark Alfenito <em>(2)</em></dt>
               <dd>
@@ -73,10 +77,10 @@
 
           <li>
             <a href="#" role="listitem" data-state="new">
-              <em class="media">
+              <em class="aside">
                 <span class="icon icon-smsin">Missed call</span>
               </em>
-              <em class="media right">
+              <em class="aside end">
                 <span class="icon icon-arrowaction">Missed call</span>
               </em>
               <dl>
@@ -90,14 +94,14 @@
           </li>
 
           <li>
-            <em class="media">
+            <em class="aside">
               <span class="icon icon-callout">Missed call</span>
             </em>
-            <em class="media right">
-              <label class="checkbox">
+            <em class="aside end">
+              <div role="presentation">
                 <input type="checkbox">
                 <span></span>
-              </label>
+              </div>
             </em>
             <dl>
               <dt>Mark Alfenito <em>(2)</em></dt>
@@ -109,14 +113,14 @@
           </li>
 
           <li>
-            <em class="media">
+            <em class="aside">
               <span class="icon icon-callout">Missed call</span>
             </em>
-            <em class="media right">
-              <label class="checkbox">
-                <input type="checkbox" checked="checked">
+            <em class="aside end">
+              <div role="presentation">
+                <input type="checkbox" checked>
                 <span></span>
-              </label>
+              </div>
             </em>
             <dl>
               <dt>Mark Alfenito <em>(2)</em></dt>
@@ -131,7 +135,7 @@
     <h2 class="bb-docs">Contacts</h2>
        <ul>
           <li data-state="new">
-            <img style="background-image: url(images/dummy.jpg);">
+            <img src="images/dummy.jpg">
             <dl style="padding-left: 2.5rem;">
               <dt>Margherita <strong>Gomez</strong></dt>
               <dd>
@@ -141,7 +145,7 @@
           </li>
 
            <li>
-            <img style="background-image: url(images/dummy.jpg);">
+            <img src="images/dummy.jpg">
             <dl style="padding-left: 2.5rem;">
               <dt>Margherita <strong>Gomez</strong></dt>
               <dd>
@@ -155,10 +159,10 @@
          <ul>
            <li>
             <a href="#" role="listitem" data-state="new">
-              <em class="media">
+              <em class="aside">
                 <span class="icon icon-smsin">Missed call</span>
               </em>
-              <em class="media right">
+              <em class="aside end">
                 <span class="icon icon-arrowaction">Missed call</span>
               </em>
               <dl>
@@ -172,7 +176,7 @@
           </li>
 
           <li data-state="new">
-            <img style="background-image: url(images/dummy.jpg);">
+            <img src="images/dummy.jpg">
             <dl style="padding-left: 2.5rem;">
               <dt><mark>Marg</mark>herita <strong>Gomez</strong></dt>
               <dd>
@@ -182,7 +186,7 @@
           </li>
 
            <li>
-            <img style="background-image: url(images/dummy.jpg);">
+            <img src="images/dummy.jpg">
             <dl style="padding-left: 2.5rem;">
               <dt><mark>Ma</mark>rgherita
                     <strong><mark>Go</mark>mez</strong></dt>
@@ -192,6 +196,48 @@
             </dl>
           </li>
         </ul>
+
+        <h2 class="bb-docs">Overlay theme</h2>
+        <!-- This div is only for example pruposal, basically is for having some background image
+                to getting work the alpha in the overlay theme -->
+        <div style="background: url(images/example-notifications.png),
+          url(images/dummy.jpg) no-repeat center center; background-size: 100% auto;">
+          <ul class="overlay">
+             <li data-state="new">
+              <a href="#">
+                <em class="aside">
+                  <span class="icon icon-smsin">Missed call</span>
+                </em>
+                <em class="aside end">
+                    <span class="time">5:43PM</span>
+                </em>
+                <dl>
+                  <dt>Mark Alfenito</dt>
+                  <dd>
+                    <span>Fancy a nice dinner?</span>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+
+           <li data-state="new">
+              <a href="#">
+                <em class="aside">
+                  <span class="icon icon-smsin">Missed call</span>
+                </em>
+                <em class="aside end">
+                    <span class="time">5:43PM</span>
+                </em>
+                <dl>
+                  <dt>Mark Alfenito</dt>
+                  <dd>
+                    <span>Fancy a nice dinner?</span>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+          </ul>
+        </div>
 
   </section>
 

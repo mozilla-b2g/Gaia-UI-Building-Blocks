@@ -1,7 +1,7 @@
 /* ----------------------------------
  * LISTS: default
  * ---------------------------------- */
-ul,ol, [role="list"] {
+body[role="application"] ul, body[role="application"] ol, [role="list"] {
   list-style: none;
 }
 
@@ -15,12 +15,13 @@ body[role="application"] li, [role="listitem"] {
   margin: -1px 0 0;
   position: relative;
 }
-a[role="listitem"] {
+
+body[role="application"] ul a, body[role="application"] ol a  {
   text-decoration: none;
   color: #000;
 }
 
-body[role="application"] li > .media, [role="listitem"] > .media {
+body[role="application"] li > .aside, [role="listitem"] > .aside {
   float: left;
   display: inline;
   width: 5.5rem;
@@ -28,11 +29,11 @@ body[role="application"] li > .media, [role="listitem"] > .media {
   text-align: center;
 }
 
-body[role="application"] li > .media.right, [role="listitem"] > .media.right {
+body[role="application"] li > .aside.end, [role="listitem"] > .aside.end {
   float: right;
 }
 
-body[role="application"] li > .media:before, [role="listitem"] > .media:before {
+body[role="application"] li > .aside:before, [role="listitem"] > .aside:before {
   content: "";
   height: 100%;
   width: 1px;
@@ -41,7 +42,7 @@ body[role="application"] li > .media:before, [role="listitem"] > .media:before {
   vertical-align: middle;
 }
 
-body[role="application"] li > .media time, [role="listitem"] > .media time {
+body[role="application"] li > .aside time, [role="listitem"] > .aside time {
   font-style: normal;
   display: inline-block;
   vertical-align: super;
@@ -148,20 +149,24 @@ body[role="application"] li .icon.icon-smsin, [role="listitem"][data-state="new"
   height: 2.2rem;
 }
 
-[body[role="application"] li .checkbox, role="listitem"] .checkbox {
+[body[role="application"] li div[role="presentation"], role="listitem"] div[role="presentation"] {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   width: 4rem;
   height: 4rem;
 }
-body[role="application"] li .checkbox input, [role="listitem"] .checkbox input {
+
+body[role="application"] li div[role="presentation"] input,
+[role="listitem"] div[role="presentation"] input {
   width: 100%;
   height: 100%;
   margin: 0;
   opacity: 0;
 }
-body[role="application"] li .checkbox span, [role="listitem"] .checkbox span {
+
+body[role="application"] li div[role="presentation"] span,
+[role="listitem"] .div[role="presentation"] span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -172,11 +177,11 @@ body[role="application"] li .checkbox span, [role="listitem"] .checkbox span {
   background: url(images/icons/check-delete.png) no-repeat center top;
   background-size: 100% auto;
 }
-body[role="application"] li .checkbox input:checked + span, [role="listitem"] .checkbox input:checked + span {
+
+body[role="application"] li div[role="presentation"] input:checked + span,
+[role="listitem"] div[role="presentation"] input:checked + span {
   background-position: center bottom;
 }
-
-
 
 /* State disabled */
 body[role="application"] li[disabled]:before, [role="listitem"][disabled]:before {
@@ -209,7 +214,6 @@ body[role="application"] li[data-state="new"] time,
   color: #1d8399;
 }
 
-
 /* State tagged */
 body[role="application"] li[data-state="tagged"]:after,
 [role="listitem"][data-state="tagged"]:after {
@@ -223,3 +227,27 @@ body[role="application"] li[data-state="tagged"]:after,
 
 body[role="application"] li[data-tag="A"]:after, [role="listitem"][data-tag="A"]:after { background-color: #e7a300; }
 body[role="application"] li[data-tag="B"]:after, [role="listitem"][data-tag="B"]:after { background-color: #954fa7; }
+
+
+/* ----------------------------------
+ * LISTS: Overlay theme
+ * ---------------------------------- */
+
+.overlay li {
+  border-top-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay li > dt {
+  color: #fff;
+}
+
+.overlay li > dd {
+  color: #ccc;
+}
+
+.overlay li .icon.icon-smsin {
+  background-image: url(images/icons/smsin-overlay.png);
+  width: 3.1rem;
+  height: 3.1rem;
+}
