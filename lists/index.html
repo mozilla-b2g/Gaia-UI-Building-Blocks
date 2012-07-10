@@ -26,12 +26,14 @@
        <h2 class="bb-docs">Calendar</h2>
       <ul>
           <li data-state="tagged" data-tag="A">
-             <em class="aside">
-                <time>9AM</time>
-            </em>
-            <dl>
-              <dt>Paper Due</dt>
-            </dl>
+            <a href="#">
+              <em class="aside">
+                 <time>9AM</time>
+             </em>
+             <dl>
+               <dt>Paper Due</dt>
+             </dl>
+            </a>
           </li>
 
           <li data-state="tagged" data-tag="B">
@@ -61,7 +63,7 @@
             </dl>
           </li>
 
-          <li disabled>
+          <li aria-disabled data-state="disabled">
             <em class="aside">
               <span class="icon icon-callout">Outgoing call</span>
             </em>
@@ -75,8 +77,8 @@
             </dl>
           </li>
 
-          <li>
-            <a href="#" role="listitem" data-state="new">
+          <li data-state="new">
+            <a href="#">
               <em class="aside">
                 <span class="icon icon-smsin">Missed call</span>
               </em>
@@ -97,12 +99,12 @@
             <em class="aside">
               <span class="icon icon-callout">Missed call</span>
             </em>
-            <em class="aside end">
-              <div role="presentation">
-                <input type="checkbox">
-                <span></span>
-              </div>
-            </em>
+
+            <div class="aside end" role="presentation">
+              <input type="checkbox">
+              <span></span>
+            </div>
+
             <dl>
               <dt>Mark Alfenito <em>(2)</em></dt>
               <dd>
@@ -116,12 +118,12 @@
             <em class="aside">
               <span class="icon icon-callout">Missed call</span>
             </em>
-            <em class="aside end">
-              <div role="presentation">
-                <input type="checkbox" checked>
-                <span></span>
-              </div>
-            </em>
+
+            <div class="aside end" role="presentation">
+              <input type="checkbox" checked>
+              <span></span>
+            </div>
+
             <dl>
               <dt>Mark Alfenito <em>(2)</em></dt>
               <dd>
@@ -158,7 +160,7 @@
         <h2 class="bb-docs">Search results</h2>
          <ul>
            <li>
-            <a href="#" role="listitem" data-state="new">
+            <a href="#" data-state="new">
               <em class="aside">
                 <span class="icon icon-smsin">Missed call</span>
               </em>
@@ -209,7 +211,7 @@
                   <span class="icon icon-smsin">Missed call</span>
                 </em>
                 <em class="aside end">
-                    <span class="time">5:43PM</span>
+                    <time>5:43PM</time>
                 </em>
                 <dl>
                   <dt>Mark Alfenito</dt>
@@ -226,7 +228,7 @@
                   <span class="icon icon-smsin">Missed call</span>
                 </em>
                 <em class="aside end">
-                    <span class="time">5:43PM</span>
+                    <time>5:43PM</time>
                 </em>
                 <dl>
                   <dt>Mark Alfenito</dt>

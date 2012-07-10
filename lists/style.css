@@ -1,11 +1,11 @@
 /* ----------------------------------
  * LISTS: default
  * ---------------------------------- */
-body[role="application"] ul, body[role="application"] ol, [role="list"] {
+body[role="application"] ul, body[role="application"] ol {
   list-style: none;
 }
 
-body[role="application"] li, [role="listitem"] {
+body[role="application"] li {
   display: inline-block;
   width: 100%;
   -moz-box-sizing: border-box;
@@ -16,12 +16,13 @@ body[role="application"] li, [role="listitem"] {
   position: relative;
 }
 
-body[role="application"] ul a, body[role="application"] ol a  {
+body[role="application"] ul > li > a:first-child,
+body[role="application"] ol > li > a:first-child  {
   text-decoration: none;
   color: #000;
 }
 
-body[role="application"] li > .aside, [role="listitem"] > .aside {
+body[role="application"] li .aside {
   float: left;
   display: inline;
   width: 5.5rem;
@@ -29,11 +30,13 @@ body[role="application"] li > .aside, [role="listitem"] > .aside {
   text-align: center;
 }
 
-body[role="application"] li > .aside.end, [role="listitem"] > .aside.end {
+body[role="application"] li .aside.end {
   float: right;
+  text-align:left;
 }
 
-body[role="application"] li > .aside:before, [role="listitem"] > .aside:before {
+
+body[role="application"] li .aside:before {
   content: "";
   height: 100%;
   width: 1px;
@@ -42,7 +45,7 @@ body[role="application"] li > .aside:before, [role="listitem"] > .aside:before {
   vertical-align: middle;
 }
 
-body[role="application"] li > .aside time, [role="listitem"] > .aside time {
+body[role="application"] li .aside time {
   font-style: normal;
   display: inline-block;
   vertical-align: super;
@@ -53,7 +56,7 @@ body[role="application"] li > .aside time, [role="listitem"] > .aside time {
   text-align: right;
 }
 
-body[role="application"] li > img, [role="listitem"] > img {
+body[role="application"] li img {
   float: right;
   display: inline;
   width: 6rem;
@@ -62,13 +65,13 @@ body[role="application"] li > img, [role="listitem"] > img {
   background-size: 100% auto;
 }
 
-body[role="application"] li > dl, [role="listitem"] > dl {
+body[role="application"] li dl {
   display: block;
   overflow: hidden;
-  padding: 1rem 0 0;
+  padding: 1rem 0.5rem 0;
 }
 
-body[role="application"] li > dl dt, [role="listitem"] > dl dt {
+body[role="application"] li dl > dt {
   font: 1.8rem/1.2em FontRegular, Sans-serif;
   white-space: nowrap;
   height: 2.2rem;
@@ -76,22 +79,21 @@ body[role="application"] li > dl dt, [role="listitem"] > dl dt {
   text-overflow: ellipsis;
 }
 
-body[role="application"] li > dl dt strong, [role="listitem"] > dl dt strong {
+body[role="application"] li dl > dt strong {
   font-weight: normal;
   font-family: FontSemibold, Sans-serif;
 }
 
-body[role="application"] li > dl dt em, [role="listitem"] > dl dt em {
+body[role="application"] li dl > dt em {
   font-size: 1.3rem;
   font-style: normal;
 }
 
-body[role="application"] li > dl mark, [role="listitem"] > dl mark {
+body[role="application"] li dl mark {
   background-color: #cfd3d7;
-
 }
 
-body[role="application"] li > dl dd, [role="listitem"] > dl dd {
+body[role="application"] li dl > dd {
   font-size: 1.4rem;
   color: #5b5b5b;
   white-space: nowrap;
@@ -100,24 +102,28 @@ body[role="application"] li > dl dd, [role="listitem"] > dl dd {
   text-overflow: ellipsis;
 }
 
-body[role="application"] li > dl dd span, [role="listitem"] > dl dd span {
-  margin-right: 0.3rem
+body[role="application"] li dl > dd strong {
+  font-weight: normal;
+  font-family: FontSemibold;
+  color: #000;
 }
 
-body[role="application"] li > dl dd span:last-child,
-[role="listitem"] > dl dd span:last-child {
+body[role="application"] li dl > dd time {
+  font-size: 1.4rem;
+  color: #5b5b5b;
+  margin-right: 0.3rem;
+}
+
+body[role="application"] li dl > dd span {
+  margin-right: 0.3rem;
+}
+
+body[role="application"] li dl > dd span:last-child {
   margin: 0;
 }
 
-/*
-time {
-  margin-right:0.3rem;
-}
-*/
-
-
 /* Icon definitions */
-body[role="application"] li .icon , [role="listitem"] .icon {
+body[role="application"] li .icon  {
   display: inline-block;
   vertical-align: middle;
   width: 3rem;
@@ -129,7 +135,7 @@ body[role="application"] li .icon , [role="listitem"] .icon {
   position: relative;
 }
 
-body[role="application"] li .icon.icon-arrowaction, [role="listitem"] .icon.icon-arrowaction {
+body[role="application"] li .icon.icon-arrowaction {
   background-image: url(images/icons/arrowaction.png);
   width:1rem;
   height: 1rem;
@@ -137,19 +143,19 @@ body[role="application"] li .icon.icon-arrowaction, [role="listitem"] .icon.icon
   margin-bottom: 1.3rem;
 }
 
-body[role="application"] li .icon.icon-callout, [role="listitem"] .icon.icon-callout {
+body[role="application"] li .icon.icon-callout {
   background-image: url(images/icons/callout.png);
   width: 2.4rem;
   height: 2rem;
 }
 
-body[role="application"] li .icon.icon-smsin, [role="listitem"][data-state="new"] .icon.icon-smsin {
+body[role="application"] li .icon.icon-smsin {
   background-image: url(images/icons/smsin-new.png);
   width: 2.5rem;
   height: 2.2rem;
 }
 
-[body[role="application"] li div[role="presentation"], role="listitem"] div[role="presentation"] {
+body[role="application"] li > div[role="presentation"] {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -157,16 +163,17 @@ body[role="application"] li .icon.icon-smsin, [role="listitem"][data-state="new"
   height: 4rem;
 }
 
-body[role="application"] li div[role="presentation"] input,
-[role="listitem"] div[role="presentation"] input {
+body[role="application"] li > div[role="presentation"] > input[type="checkbox"] {
   width: 100%;
   height: 100%;
   margin: 0;
   opacity: 0;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
-body[role="application"] li div[role="presentation"] span,
-[role="listitem"] .div[role="presentation"] span {
+body[role="application"] li > div[role="presentation"] > input[type="checkbox"] + span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -178,13 +185,13 @@ body[role="application"] li div[role="presentation"] span,
   background-size: 100% auto;
 }
 
-body[role="application"] li div[role="presentation"] input:checked + span,
-[role="listitem"] div[role="presentation"] input:checked + span {
+body[role="application"] li > div[role="presentation"] > input:checked + span {
   background-position: center bottom;
 }
 
 /* State disabled */
-body[role="application"] li[disabled]:before, [role="listitem"][disabled]:before {
+body[role="application"] li[aria-disabled]:before,
+body[role="application"] li[data-state="disabled"]:before {
   content: "";
   position: absolute;
   left: 0;
@@ -196,27 +203,24 @@ body[role="application"] li[disabled]:before, [role="listitem"][disabled]:before
 }
 
 /* State new */
-body[role="application"] li[data-state="new"]:after,
-[role="listitem"][data-state="new"]:after {
+body[role="application"] li[data-state="new"]:after {
   content: "";
   position: absolute;
-  right: 100%;
+  left: 0;
   top: 1.6rem;
   width: 0.9rem;
   height: 0.9rem;
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   background: url(images/icons/dot.png) no-repeat center;
   background-size: 100% auto;
 }
 
-body[role="application"] li[data-state="new"] time,
-[role="listitem"][data-state="new"] time {
-  color: #1d8399;
+body[role="application"] li[data-state="new"] time {
+  color: #52b6cc !important;
 }
 
 /* State tagged */
-body[role="application"] li[data-state="tagged"]:after,
-[role="listitem"][data-state="tagged"]:after {
+body[role="application"] li[data-state="tagged"]:after  {
   content: "";
   position: absolute;
   left: 0;
@@ -225,28 +229,32 @@ body[role="application"] li[data-state="tagged"]:after,
   width: 0.4rem;
 }
 
-body[role="application"] li[data-tag="A"]:after, [role="listitem"][data-tag="A"]:after { background-color: #e7a300; }
-body[role="application"] li[data-tag="B"]:after, [role="listitem"][data-tag="B"]:after { background-color: #954fa7; }
+body[role="application"] li[data-tag="A"]:after { background-color: #e7a300; }
+body[role="application"] li[data-tag="B"]:after { background-color: #954fa7; }
 
 
 /* ----------------------------------
  * LISTS: Overlay theme
  * ---------------------------------- */
 
-.overlay li {
+body[role="application"] ul.overlay li,
+body[role="application"] ol.overlay li {
   border-top-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: rgba(0, 0, 0, 0.6);
 }
 
-.overlay li > dt {
+body[role="application"] ul.overlay  li dl > dt,
+body[role="application"] ol.overlay  li dl > dt {
   color: #fff;
 }
 
-.overlay li > dd {
+body[role="application"] ul.overlay li dl > dd,
+body[role="application"] ol.overlay li dl > dd {
   color: #ccc;
 }
 
-.overlay li .icon.icon-smsin {
+body[role="application"] ul.overlay .icon.icon-smsin,
+body[role="application"] ol.overlay .icon.icon-smsin {
   background-image: url(images/icons/smsin-overlay.png);
   width: 3.1rem;
   height: 3.1rem;
