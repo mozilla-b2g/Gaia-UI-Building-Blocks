@@ -3,14 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- 
+    <!--
       This <style> is only used for the demostration of the toolbars, is no needed for the real case use
     -->
     <style type="text/css">
-      body[role="application"] section[role="region"] > [role="tablist"] { margin-bottom: 2rem; }
-      h2 { margin: 0 0 0.5rem 2rem;}
-    </style>
-
+      [role="tabpanel"] p { font-size: 2rem; margin: 2rem; }
+    </style> 
     <!-- 
       This <style> is an ausmption that you have loaded the fonts and some basic styles, so this is only for getting work correctly the following examples
     -->
@@ -55,29 +53,16 @@
 
   <section role="region">
     <ul role="tablist" data-tabs="4">
-      <li role="tab"><a href="#">All</a></li>
-      <li role="tab"><a class="icon icon-comms" href="#">comms</a></li>
-      <li role="tab"><a class="icon icon-contacts" href="#">contacts</a></li>
-      <li role="tab"><a class="icon icon-dialer" href="#">dialer</a></li>
+      <li><a role="tab" href="#panel1">First Tab</a></li>
+      <li aria-pressed="true"><a role="tab" href="#panel2" class="icon icon-comms">comms</a></li>
+      <li aria-disabled="true"><a role="tab" href="#panel3" class="icon icon-contacts">contacts</a></li>
+      <li><a role="tab" href="#panel4" class="icon icon-dialer">dialer</a></li>
     </ul>
-  </section>
 
-  <h2>Active State</h2>
-  <section role="region">
-    <ul role="tablist" data-tabs="3">
-      <li role="tab" aria-pressed="true"><a class="icon icon-comms" href="#">comms</a></li>
-      <li role="tab"><a class="icon icon-contacts" href="#">contacts</a></li>
-      <li role="tab"><a class="icon icon-dialer" href="#">dialer</a></li>
-    </ul>
-  </section>
-
-  <h2>Disabled State</h2>
-  <section role="region">
-    <ul role="tablist" data-tabs="3">
-      <li role="tab" aria-disabled="true"><a class="icon icon-comms" href="#">comms</a></li>
-      <li role="tab" aria-disabled="true"><a class="icon icon-contacts" href="#">contacts</a></li>
-      <li role="tab" aria-disabled="true"><a class="icon icon-dialer" href="#">dialer</a></li>
-    </ul>
+    <div id="panel1" role="tabpanel"><p>First tab panel.</p></div>
+    <div id="panel2" role="tabpanel"><p>Comms tab panel.</p></div>
+    <div id="panel3" role="tabpanel"><p>Contacts tab panel.</p></div>
+    <div id="panel4" role="tabpanel"><p>Dialer tab panel.</p></div>
   </section>
 
 </body>
