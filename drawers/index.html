@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="headers.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!--
+      This <style> is only used for the demostration of the toolbars, is no needed for the real case use
+    -->
+    <style type="text/css">
+      body[role="application"] {
+        width: 32rem;
+        display: block;
+        overflow: hidden;
+      }
+    </style>
+
+    <!--
+      This <style> assumes
+      that you have loaded the fonts and some basic styles,
+      thus it is only aimed at making the examples work
+    -->
+    <style type="text/css">
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+        background-color: #fff;
+      }
+      @font-face {
+        font-family: 'System Sans';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans'), local('OpenSans'), url('style/fonts/opensans-regular-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'System Sans Light';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans Light'), local('OpenSans-light'), url('style/fonts/opensans-light-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'System Sans Semibold';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans Semibold'), local('OpenSans-semibold'), url('style/fonts/opensans-semibold-webfont.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'System Sans Bold';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Open Sans Bold'), local('OpenSans-bold'), url('style/fonts/opensans-bold-webfont.woff') format('woff');
+      }
+    </style>
+  <title>Drawers</title>
+</head>
+
+<body role="application">
+  <section role="region" id="drawer-example">
+    <header>
+      <a href="#drawer-example"><span class="icon icon-menu">menu</span></a>
+      <h1>Inbox</h1>
+    </header>
+
+    <div role="main">
+    </div>
+
+    <nav>
+      <ul>
+        <li><h2>Largeeeeeee Title</h2></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+        <li><h3>Subtitle</h3></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+      </ul>
+    </nav>
+  </section>
+
+
+</body>
+</html>

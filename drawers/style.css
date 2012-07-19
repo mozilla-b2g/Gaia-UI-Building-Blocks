@@ -1,0 +1,94 @@
+/* ----------------------------------
+ * DRAWERS
+ * ---------------------------------- */
+
+  body[role="application"] section[role="region"] > nav { 
+    position: absolute;
+    width: 80%;
+    background: url(images/ui/drawer.png) repeat;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'System Sans';
+  }
+  body[role="application"] section[role="region"] > nav:after { 
+    content: '';
+    width: 1rem;
+    background: url(images/ui/drawer_shadow.png) right top repeat-y;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+    body[role="application"] section[role="region"] > nav > ul { 
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+      body[role="application"] section[role="region"] > nav > ul > li { 
+        color: #fff;
+        list-style: none;
+      } 
+        body[role="application"] section[role="region"] > nav > ul > li > h2, 
+        body[role="application"] section[role="region"] > nav > ul > li > h3 { 
+          margin: 0;
+          font-size: -moz-calc(10 * 0.226rem);
+          line-height: 5rem;
+          font-weight: normal;
+          padding-left: 3rem;
+          background: #303740;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        body[role="application"] section[role="region"] > nav > ul > li > h3 { 
+          border-bottom: 0.1rem solid #596068; 
+        }
+        body[role="application"] section[role="region"] > nav > ul > li > a { 
+          text-decoration: none;
+          color: #fff;
+          font-size: -moz-calc(7 * 0.226rem);
+          line-height: 4.4rem;
+          border-bottom: 0.1rem solid #596068; 
+          text-indent: 3rem;
+          width: 100%;
+          display: block;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }    
+
+  /* Overwrite header.css */      
+  body[role="application"] section[role="region"] > header { 
+    left: 80%;
+    position: absolute;
+    width: 34rem;
+  }
+    body[role="application"] section[role="region"] > header h1 {
+      margin: 0 0 0 5rem;
+    }
+    body[role="application"] section[role="region"] > header > button, 
+    body[role="application"] section[role="region"] > header > a {
+      width: 6rem;
+      background-position: 4rem center;
+    }
+      body[role="application"] section[role="region"] > header > a .icon.icon-menu, 
+      body[role="application"] section[role="region"] > header > button .icon.icon-menu { 
+        background-position: 0 center; 
+      }
+        body[role="application"] section[role="region"] > header > button .icon:after,
+        body[role="application"] section[role="region"] > header > a .icon:after {
+          width: 4rem;
+        }
+
+  /* Main content */ 
+  body[role="application"] section[role="region"] > [role="main"] { 
+    left: 80%;
+    top: 5rem;
+    width: 34rem;
+    position: absolute;
+    background: #f6f5f5;
+    height: -moz-calc(100% - 5rem);
+    z-index: 10;
+  }
