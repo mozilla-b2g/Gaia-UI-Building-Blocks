@@ -4,10 +4,6 @@
 
 body[role="application"] [role="dialog"] {
 	background: rgba(0,0,0,0.88);
-	margin-bottom: 0.1rem;
-	display: block;
-	overflow: hidden;
-	padding: 2.5rem 2.5rem 0 2.5rem;
 	position: absolute;
 	z-index: 100;
 	top: 0;
@@ -15,28 +11,66 @@ body[role="application"] [role="dialog"] {
 	right: 0;
 	bottom: 0;
 }
-	body[role="application"] [role="dialog"] h3 {
-		font-family: 'System Sans Semibold';
-		font-weight: normal;
-		font-size: -moz-calc(7 * 0.226rem);
-		height: 3rem;
-		line-height: 3rem;
-		background: red;
-		color: #fff;
-		border-bottom: 0.1rem solid #fff;
-		display: block;
-		margin: 0; 
+	body[role="application"] [role="dialog"] > .center {
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		-moz-box-pack: center;
+		width: -moz-calc(100% - 5rem);
+		height: -moz-calc(100% - 3rem);
+		padding: 1.5rem 2.5rem 0 2.5rem;
 	}
-	body[role="application"] [role="dialog"] ul {
-		margin: 0; 
-	}
-		body[role="application"] [role="dialog"] li {
-			margin: 0;
-			list-style: none;
-			height: 5.9rem;
-			line-height: 5.9rem;
+		body[role="application"] [role="dialog"] h3 {
+			font-family: 'System Sans Semibold';
+			font-weight: normal;
+			font-size: -moz-calc(7 * 0.226rem);
+			line-height: 4rem;
 			color: #fff;
+			border-bottom: 0.1rem solid #fff;
+			margin: 0;
+			display: -moz-box;
+			-moz-box-flex: 1;
+			-moz-box-pack: end;
+			-moz-box-orient: vertical;
 		}
+
+		body[role="application"] [role="dialog"] ul {
+			margin: 0;
+			padding: 0 0 7.5rem 0;
+			overflow: auto;
+			display: -moz-box;
+			-moz-box-flex: 1;
+			-moz-box-orient: vertical;
+		}
+			body[role="application"] [role="dialog"] ul li {
+				margin: 0;
+				list-style: none;
+				font-family: 'System Sans Light';
+				font-weight: normal;
+				font-size: -moz-calc(15 * 0.226rem);
+				height: 5.9rem;
+				line-height: 5.9rem;
+				color: #fff;
+				border-bottom: 0.1rem solid #777;
+				padding: 0 0.5rem;
+				position: relative;
+			}
+			body[role="application"] [role="dialog"] li[aria-checked="true"] {
+				color: #00abcd;
+			}
+			body[role="application"] [role="dialog"] li[aria-checked="true"]:after {
+				content: '';
+				width: 1.9rem;
+				height: 5.9rem;
+				display: block;
+				position: absolute;
+				right: 0.5rem;
+				top: 0;
+				background: url(images/ui/list_checked.png) left center no-repeat;
+			}
+				body[role="application"] [role="dialog"] ul li a {
+					color: #fff;
+					text-decoration: none;
+				}
 
 	body[role="application"] [role="dialog"] menu {
     margin: 0;
@@ -50,48 +84,50 @@ body[role="application"] [role="dialog"] {
     bottom: 0;
   }
 
-body[role="application"] [role="dialog"] button,
-body[role="application"] [role="dialog"] a[role="button"] {
-	background: url(images/ui/button_standard.png) repeat-x;
-	height: 4rem;
-	line-height: 4rem;
-	border: 0;
-	border-radius: 0.3rem;
-	width: 100%;
-	text-align: center;
-	color: #333;
-	font-size: -moz-calc(7 * 0.226rem);
-	font-family: 'System Sans Semibold';
-	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
-	text-decoration: none;
-	float: left;
-	margin-left: 1rem;
-	font-weight: normal;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-body[role="application"] [role="dialog"] button:first-child,
-body[role="application"] [role="dialog"] a[role="button"]:first-child {
-	background: url(images/ui/button_standard.png) repeat-x;
-	margin-left: 0;
-}
-body[role="application"] [role="dialog"] button.affirmative,
-body[role="application"] [role="dialog"] a[role="button"].affirmative {
-	background: url(images/ui/button_affirmative.png);
-}
-body[role="application"] [role="dialog"] button.negative,
-body[role="application"] [role="dialog"] a[role="button"].negative {
-	background-image: url(images/ui/button_negative.png);
-	color: #fff;
-	text-shadow: none;
-}
+  	/* Buttons */
 
-body[role="application"] [role="dialog"] [data-items="2"] button,
-body[role="application"] [role="dialog"] [data-items="2"] a[role="button"] {
-	width: -moz-calc((100% - 1rem) / 2);
-}
-body[role="application"] [role="dialog"] [data-items="3"] button,
-body[role="application"] [role="dialog"] [data-items="3"] a[role="button"] {
-	width: -moz-calc((100% - 2rem) / 3);
-}
+		body[role="application"] [role="dialog"] button,
+		body[role="application"] [role="dialog"] a[role="button"] {
+			background: url(images/ui/button_standard.png) repeat-x;
+			height: 4rem;
+			line-height: 4rem;
+			border: 0;
+			border-radius: 0.3rem;
+			width: 100%;
+			text-align: center;
+			color: #333;
+			font-size: -moz-calc(7 * 0.226rem);
+			font-family: 'System Sans Semibold';
+			text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+			text-decoration: none;
+			float: left;
+			margin-left: 1rem;
+			font-weight: normal;
+		  text-overflow: ellipsis;
+		  white-space: nowrap;
+		  overflow: hidden;
+		}
+		body[role="application"] [role="dialog"] button:first-child,
+		body[role="application"] [role="dialog"] a[role="button"]:first-child {
+			background: url(images/ui/button_standard.png) repeat-x;
+			margin-left: 0;
+		}
+		body[role="application"] [role="dialog"] button.affirmative,
+		body[role="application"] [role="dialog"] a[role="button"].affirmative {
+			background: url(images/ui/button_affirmative.png);
+		}
+		body[role="application"] [role="dialog"] button.negative,
+		body[role="application"] [role="dialog"] a[role="button"].negative {
+			background-image: url(images/ui/button_negative.png);
+			color: #fff;
+			text-shadow: none;
+		}
+
+		body[role="application"] [role="dialog"] [data-items="2"] button,
+		body[role="application"] [role="dialog"] [data-items="2"] a[role="button"] {
+			width: -moz-calc((100% - 1rem) / 2);
+		}
+		body[role="application"] [role="dialog"] [data-items="3"] button,
+		body[role="application"] [role="dialog"] [data-items="3"] a[role="button"] {
+			width: -moz-calc((100% - 2rem) / 3);
+		}
