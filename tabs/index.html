@@ -53,16 +53,26 @@
 
   <section role="region">
     <ul role="tablist" data-tabs="4">
-      <li><a role="tab" href="#panel1">First Tab</a></li>
-      <li aria-pressed="true"><a role="tab" href="#panel2" class="icon icon-comms">comms</a></li>
-      <li aria-disabled="true"><a role="tab" href="#panel3" class="icon icon-contacts">contacts</a></li>
-      <li><a role="tab" href="#panel4" class="icon icon-dialer">dialer</a></li>
+      <li id="panel1">
+        <a role="tab" href="#panel1">First Tab</a>
+        <div role="tabpanel"><p>First tab panel.</p></div>
+      </li>
+      <li id="panel2">
+        <a role="tab" href="#panel2" class="icon icon-comms">comms</a>
+        <div role="tabpanel"><p>Comms tab panel.</p></div>
+      </li>
+      <li id="panel3" aria-disabled="true">
+        <a role="tab" href="#panel3" class="icon icon-contacts">contacts</a>
+        <div role="tabpanel">
+          <p>Contacts tab panel.</p>
+          <p><small>This tab is disabled (but needs to be disabled with some extra javascript)</small></p>
+        </div>
+      </li>
+      <li id="panel4">
+        <a role="tab" href="#panel4" class="icon icon-dialer">dialer</a>
+        <div role="tabpanel"><p>Dialer tab panel.</p></div>
+      </li>
     </ul>
-
-    <div id="panel1" role="tabpanel"><p>First tab panel.</p></div>
-    <div id="panel2" role="tabpanel"><p>Comms tab panel.</p></div>
-    <div id="panel3" role="tabpanel"><p>Contacts tab panel.</p></div>
-    <div id="panel4" role="tabpanel"><p>Dialer tab panel.</p></div>
   </section>
 
 </body>

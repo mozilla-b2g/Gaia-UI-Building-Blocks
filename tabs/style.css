@@ -5,26 +5,29 @@
 body[role="application"] section[role="region"] > [role="tablist"] {
   margin: 0;
   padding: 0;
-  position: absolute;
   width: 100%;
-  bottom: 0;
-  background: #000;
+  height: 100%;
 }
   body[role="application"] section[role="region"] > [role="tablist"] li {
     list-style: none;
-    height: 4rem;
+    background: #000;
+    margin: 0;
+    padding: 0;
     float: left;
   }
   body[role="application"] section[role="region"] > [role="tablist"] li:active {
-    background: url(images/ui/tab_active.png) no-repeat center top;
+    background-image: url(images/ui/tab_active.png);
+    background-repeat: no-repeat;
+    background-position: center top;
   }
-  body[role="application"] section[role="region"] > [role="tablist"] li[aria-pressed="true"],
-  body[role="application"] section[role="region"] > [role="tablist"] li[aria-pressed="true"]:active {
+  body[role="application"] section[role="region"] > [role="tablist"] li:target {
     background: #295b66;
   }
-  body[role="application"] section[role="region"] > [role="tablist"] li[aria-disabled="true"]:active {
-    background: none;
+  body[role="application"] section[role="region"] > [role="tablist"] li[aria-disabled="true"]:active,
+  body[role="application"] section[role="region"] > [role="tablist"] li[aria-disabled="true"]:target {
+    background: #000;
   }
+
   body[role="application"] section[role="region"] > [role="tablist"][data-tabs="2"] li {
     width: -moz-calc(100% / 2);
   }
@@ -64,19 +67,18 @@ body[role="application"] section[role="region"] > [role="tablist"] {
     body[role="application"] section[role="region"] > [role="tablist"] li[aria-disabled="true"] [role="tab"] {
       background-position: center -8rem;
     }
-
-  body[role="application"] section[role="region"] > [role="tabpanel"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    width: 100%;
-    height: -moz-calc(100% - 4rem);
-    z-index: 10;
-    display: block;
-    overflow: auto;
-  }
-  body[role="application"] section[role="region"] > [role="tabpanel"]:target {
-    z-index: 1;
-    visibility: visible;
-  }
+    body[role="application"] section[role="region"] > [role="tablist"] [role="tabpanel"] {
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      visibility: hidden;
+      width: 100%;
+      height: -moz-calc(100% - 4rem);
+      z-index: 10;
+      display: block;
+      overflow: auto;
+    }
+    body[role="application"] section[role="region"] > [role="tablist"] :target [role="tabpanel"] {
+      z-index: 1;
+      visibility: visible;
+    }
