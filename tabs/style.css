@@ -95,16 +95,14 @@ body[role="application"] section[role="region"] > [role="tablist"] {
     }
 
 /* Position bottom */
-body[role="application"] section[role="region"] > [role="tablist"][data-position="bottom"] {
+body[role="application"] section[role="region"] > [role="tablist"][data-position="bottom"] li {
+  height: 100%;
 }
-  body[role="application"] section[role="region"] > [role="tablist"][data-position="bottom"] li {
-    height: 100%;
+  body[role="application"] section[role="region"] > [role="tablist"][data-position="bottom"] [role="tab"] {
+    position: relative;
+    height: 4rem;
+    top: -moz-calc(100% - 4rem);
   }
-    body[role="application"] section[role="region"] > [role="tablist"][data-position="bottom"] [role="tab"] {
-      position: relative;
-      height: 4rem;
-      top: -moz-calc(100% - 4rem);
-    }
-    body[role="application"] section[role="region"] > [role="tablist"][data-position="bottom"] [role="tabpanel"] {
-      top: 0;
-    }
+  body[role="application"] section[role="region"] > [role="tablist"][data-position="bottom"] [role="tabpanel"] {
+    top: 0;
+  }
