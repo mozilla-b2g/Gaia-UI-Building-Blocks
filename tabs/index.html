@@ -7,6 +7,7 @@
       This <style> is only used for the demostration of the toolbars, is no needed for the real case use
     -->
     <style type="text/css">
+      body[role="application"] { font-family: "System Sans"; }
       [role="tabpanel"] p { font-size: 2rem; margin: 2rem; }
     </style> 
     <!-- 
@@ -52,25 +53,28 @@
 <body role="application">
 
   <section role="region">
+    <!-- if your tabs are at the top, remove data-position="bottom" -->
     <ul role="tablist" data-tabs="4" data-position="bottom">
       <li id="panel1">
-        <a role="tab" href="#panel1">First Tab</a>
-        <div role="tabpanel"><p>First tab panel.</p></div>
-      </li>
-      <li id="panel2">
-        <a role="tab" href="#panel2" class="icon icon-comms">comms</a>
+        <a role="tab" href="#panel1" class="icon icon-comms">comms</a>
         <div role="tabpanel"><p>Comms tab panel.</p></div>
       </li>
-      <li id="panel3" aria-disabled="true">
-        <a role="tab" href="#panel3" class="icon icon-contacts">contacts</a>
+      <li id="panel2">
+        <a role="tab" href="#panel2" class="icon icon-contacts">contacts</a>
         <div role="tabpanel">
           <p>Contacts tab panel.</p>
-          <p><small>This tab is disabled (but needs to be disabled with some extra javascript)</small></p>
         </div>
       </li>
-      <li id="panel4">
-        <a role="tab" href="#panel4" class="icon icon-dialer">dialer</a>
-        <div role="tabpanel"><p>Dialer tab panel.</p></div>
+      <li id="panel3">
+        <a role="tab" href="#panel3" class="icon icon-dialer">dialer</a>
+        <div role="tabpanel">
+          <p>Dialer tab panel.</p>
+        </div>
+      </li>
+      <li id="panel4" aria-disabled="true">
+        <!-- no href to disabled tab -->
+        <a role="tab">Disabled tab</a>
+        <div role="tabpanel"><p>Content for disabled tab.</p></div>
       </li>
     </ul>
   </section>
