@@ -2,7 +2,9 @@
  * HEADERS: default
  * ---------------------------------- */
 
-body[role="application"] section[role="region"] > header {
+body[role="application"] section[role="region"] > header:first-child,
+body[role="application"] section[role="region"] > header[aria-level="1"]
+{
   position: relative;
   z-index: 10;
   height: 5.3rem;
@@ -12,8 +14,17 @@ body[role="application"] section[role="region"] > header {
   /*box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px -4px rgba(0, 0, 0, 0.99);*/
 }
 
-body[role="application"] section[role="region"] > header h1 {
-    font: 2.2rem/4.8rem System Sans, Sans-serif;
+body[role="application"] section[role="region"] > header[aria-level="2"] {
+    /*background: -moz-linear-gradient(top, #7f7f7f, #666);*/
+    background: #7f7f7f url(images/ui/dark/subheader.png) repeat-x left bottom !important;
+    padding: 0.4rem 0 !important;
+    height: 3.5rem;
+    top:-0.5rem;
+    position:relative;
+}
+
+body[role="application"] section[role="region"] > header h1,
+body[role="application"] section[role="region"] > header h2 {
     text-align: left;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -21,7 +32,18 @@ body[role="application"] section[role="region"] > header h1 {
     overflow: hidden;
     margin: 0 0 0 3rem;
     height: 100%
-  }
+}
+
+
+body[role="application"] section[role="region"] > header h1 {
+  font: 2.2rem/4.8rem System Sans, Sans-serif;
+}
+
+body[role="application"] section[role="region"] > header h2 {
+  font: 1.8rem/3.5rem System Sans, Sans-serif !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
 body[role="application"] section[role="region"] > header h1 sup {
       background: url(images/icons/fav-star.png) no-repeat center center;
       background-size: 100% auto;
@@ -72,7 +94,7 @@ body[role="application"] section[role="region"] > header form {
  body[role="application"] section[role="region"] > header menu[type="toolbar"]
   { height: 100%; float: right; }
 
- body[role="application"] section[role="region"] > header menu[type="toolbar"] a, 
+ body[role="application"] section[role="region"] > header menu[type="toolbar"] a,
  body[role="application"] section[role="region"] > header menu[type="toolbar"] button
  { height: 100%; float: left; }
 
@@ -165,7 +187,7 @@ body[role="application"] section[role="region"] > header form {
           height: 4.9rem;
           background: #9d3d26 url(images/ui/negative.png) repeat-x left top;
       }
-   body[role="application"] section[role="region"] > header > a .icon.icon-menu, 
+   body[role="application"] section[role="region"] > header > a .icon.icon-menu,
    body[role="application"] section[role="region"] > header > button .icon.icon-menu
    { background-position: -0.6rem center; }
 
@@ -189,7 +211,7 @@ body[role="application"] section[role="region"] > header form {
     background: #7f7f7f url(images/ui/dark/subheader.png) repeat-x left bottom !important;
     padding: 0.4rem 0 !important;
   }
-    body[role="application"] section[role="region"].dark-theme > header + hgroup h2, 
+    body[role="application"] section[role="region"].dark-theme > header + hgroup h2,
     body[role="application"] section[role="region"].dark-theme > header + hgroup h3 {
       font-family: System Sans Light, Sans-serif !important;
       font-weight: normal !important;
@@ -198,5 +220,3 @@ body[role="application"] section[role="region"] > header form {
     }
     body[role="application"] section[role="region"].dark-theme > header + hgroup h2 { font-size: 1.8rem !important; }
     body[role="application"] section[role="region"].dark-theme > header + hgroup h3 { font-size: 1.4rem !important; }
-
-  
