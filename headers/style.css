@@ -2,7 +2,9 @@
  * HEADERS: default
  * ---------------------------------- */
 
-body[role="application"] section[role="region"] > header {
+body[role="application"] section[role="region"] > header:first-child,
+body[role="application"] section[role="region"] > header[aria-level="1"]
+{
   position: relative;
   z-index: 10;
   height: 5.3rem;
@@ -12,7 +14,7 @@ body[role="application"] section[role="region"] > header {
   /*box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px -4px rgba(0, 0, 0, 0.99);*/
 }
 
-body[role="application"] section[role="region"] > header:nth-child(2) {
+body[role="application"] section[role="region"] > header[aria-level="2"] {
     /*background: -moz-linear-gradient(top, #7f7f7f, #666);*/
     background: #7f7f7f url(images/ui/dark/subheader.png) repeat-x left bottom !important;
     padding: 0.4rem 0 !important;
