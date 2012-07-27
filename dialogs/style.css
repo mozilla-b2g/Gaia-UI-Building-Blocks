@@ -112,23 +112,46 @@ body[role="application"] [role="dialog"] {
 					text-decoration: none;
 				}
 
-	body[role="application"] [role="dialog"] menu {
-    margin: 0;
-    padding: 1.5rem;
-    display: block;
-    overflow: hidden;
-    background: rgba(0,0,0,0.83);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+
+/* ----------------------------------
+ * ACTION MENU
+ * ---------------------------------- */
+
+body[role="application"] menu.action {
+	margin: 0;
+  padding: 1.5rem;
+  display: block;
+  overflow: hidden;
+  background: rgba(0,0,0,0.83);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* ----------------------------------
+ * OBJECT MENU
+ * ---------------------------------- */
+
+body[role="application"] menu.action {
+	margin: 0;
+  padding: 1.5rem;
+  display: block;
+  overflow: hidden;
+  background: rgba(0,0,0,0.83);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 
-/* Buttons */
+/* ----------------------------------
+ * BUTTONS
+ * ---------------------------------- */
 
-body[role="application"] [role="dialog"] button,
-body[role="application"] [role="dialog"] a[role="button"] {
+body[role="application"] menu.action button,
+body[role="application"] menu.action a[role="button"] {
 	background: url(images/ui/button_standard.png) repeat-x;
 	height: 4rem;
 	line-height: 4rem;
@@ -143,32 +166,32 @@ body[role="application"] [role="dialog"] a[role="button"] {
 	text-decoration: none;
 	float: left;
 	margin-left: 1rem;
-	font-weight: normal;
+	font-weigh/t: normal;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
 }
-body[role="application"] [role="dialog"] button:first-child,
-body[role="application"] [role="dialog"] a[role="button"]:first-child {
+body[role="application"] menu.action button:first-child,
+body[role="application"] menu.action a[role="button"]:first-child {
 	background: url(images/ui/button_standard.png) repeat-x;
 	margin-left: 0;
 }
-body[role="application"] [role="dialog"] button.affirmative,
-body[role="application"] [role="dialog"] a[role="button"].affirmative {
+body[role="application"] menu.action button.affirmative,
+body[role="application"] menu.action a[role="button"].affirmative {
 	background: url(images/ui/button_affirmative.png);
 }
-body[role="application"] [role="dialog"] button.negative,
-body[role="application"] [role="dialog"] a[role="button"].negative {
+body[role="application"] menu.action button.negative,
+body[role="application"] menu.action a[role="button"].negative {
 	background-image: url(images/ui/button_negative.png);
 	color: #fff;
 	text-shadow: none;
 }
 
-body[role="application"] [role="dialog"] [data-items="2"] button,
-body[role="application"] [role="dialog"] [data-items="2"] a[role="button"] {
+body[role="application"] menu.action[data-items="2"] button,
+body[role="application"] menu.action[data-items="2"] a[role="button"] {
 	width: -moz-calc((100% - 1rem) / 2);
 }
-body[role="application"] [role="dialog"] [data-items="3"] button,
-body[role="application"] [role="dialog"] [data-items="3"] a[role="button"] {
+body[role="application"] menu.action[data-items="3"] button,
+body[role="application"] menu.action[data-items="3"] a[role="button"] {
 	width: -moz-calc((100% - 2rem) / 3);
 }
