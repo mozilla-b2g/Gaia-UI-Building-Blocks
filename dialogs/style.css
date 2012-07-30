@@ -112,7 +112,25 @@ body[role="application"] [role="dialog"] {
 					text-decoration: none;
 				}
 
+/* ----------------------------------
+ * INLINE DIALOG
+ * ---------------------------------- */
 
+body[role="application"] [role="dialog"].inline {
+	position: relative;
+	margin: -0.4rem 0 0 0;
+	padding: 1rem 0 0 0;
+	background: rgba(0,0,0,0.83);
+}
+	body[role="application"] [role="dialog"].inline p {
+		border: 0;
+		padding: 1rem 1.5rem; 
+	}
+	body[role="application"] [role="dialog"].inline menu.action {
+	  position: relative;
+		background: none;
+	}
+	
 /* ----------------------------------
  * ACTION MENU
  * ---------------------------------- */
@@ -144,7 +162,23 @@ body[role="application"] menu.action {
   right: 0;
   bottom: 0;
 }
-
+	body[role="application"] menu.action ul.object {
+		list-style: none;
+		padding: 0.5rem 0;
+		margin: 0 0 1.5rem 0;
+		border-bottom: 0.1rem solid #dbd9d9;
+		display: block;
+		overflow: hidden;
+	}
+		body[role="application"] menu.action ul.object > li {
+			margin-bottom: 1rem;
+			display: block;
+			overflow: hidden;
+		}
+			body[role="application"] menu.action ul.object > li > button,
+			body[role="application"] menu.action ul.object > li > a[role="button"] {
+				width: 100%;
+			}
 
 /* ----------------------------------
  * BUTTONS
@@ -171,8 +205,8 @@ body[role="application"] menu.action a[role="button"] {
 	white-space: nowrap;
 	overflow: hidden;
 }
-body[role="application"] menu.action button:first-child,
-body[role="application"] menu.action a[role="button"]:first-child {
+body[role="application"] menu.action button:first-of-type,
+body[role="application"] menu.action a[role="button"]:first-of-type {
 	background: url(images/ui/button_standard.png) repeat-x;
 	margin-left: 0;
 }

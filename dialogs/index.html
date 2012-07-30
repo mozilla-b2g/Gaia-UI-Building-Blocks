@@ -229,8 +229,53 @@
     </div>
 
     <menu class="action">
-      <button>Cancel</button>
-    </menu>
+      <ul class="object">
+        <li><button>Action 1</button></li>
+        <li><button>Action 2</button></li>
+        <li><button>Action 3</button></li>
+      </ul>
+        <button>Cancel</button>
+      </menu>
+  </section>
+
+  <h2>8. Object Menu with multiple main actions</h2>
+  <section role="region">
+    <header>
+      <h1>Title</h1>
+    </header>
+    <div class="content">
+      <p>Some content here...</p>
+    </div>
+
+    <menu class="action" data-items="2">
+      <ul class="object">
+        <li><button>Action 1</button></li>
+        <li><button>Action 2</button></li>
+        <li><button>Action 3</button></li>
+      </ul>
+        <button>Cancel</button>
+        <button class="negative">Delete</button>
+      </menu>
+  </section>
+
+  <h2>9. Inline Dialog</h2>
+  <section role="region">
+    <header>
+      <h1>Title</h1>
+    </header>
+
+    <div role="dialog" class="inline">
+      <p>Do you want to perform this action?</p>
+      <menu class="action" data-items="3">
+        <button class="affirmative">Yes</button>
+        <button>No</button>
+        <button>Never</button>
+      </menu>
+    </div>
+
+    <div class="content">
+      <p>Some content here...</p>
+    </div>
   </section>
 
 </body>
