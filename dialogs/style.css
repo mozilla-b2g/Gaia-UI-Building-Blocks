@@ -38,7 +38,6 @@ body[role="application"] [role="dialog"] {
 			font-weight: normal;
 			font-size: -moz-calc(10 * 0.226rem);
 			color: #fff;
-			border-bottom: 0.1rem solid #777;
 			margin: 0;
 			padding: 1rem 0;
 		}
@@ -112,8 +111,20 @@ body[role="application"] [role="dialog"] {
 					text-decoration: none;
 				}
 
+	body[role="application"] menu {
+	  margin: 0;
+	  padding: 1.5rem;
+	  background: rgba(0,0,0,0.83);
+	  display: block;
+	  overflow: hidden;
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	}
+
 /* ----------------------------------
- * INLINE DIALOG
+ * INLINE BANNER
  * ---------------------------------- */
 
 body[role="application"] [role="dialog"].inline {
@@ -126,66 +137,70 @@ body[role="application"] [role="dialog"].inline {
 		border: 0;
 		padding: 1rem 1.5rem; 
 	}
-	body[role="application"] [role="dialog"].inline menu.action {
+	body[role="application"] [role="dialog"].inline menu {
 	  position: relative;
 		background: none;
 	}
 	
 /* ----------------------------------
- * ACTION MENU
+ * ACTION / OBJECT MENU
  * ---------------------------------- */
 
-body[role="application"] menu.action {
-	margin: 0;
-  padding: 1.5rem;
+body[role="application"] menu.actions {
+  margin: 0;
+  padding: 0;
+  background: none;
   display: block;
   overflow: hidden;
-  background: rgba(0,0,0,0.83);
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
 }
-
-/* ----------------------------------
- * OBJECT MENU
- * ---------------------------------- */
-
-body[role="application"] menu.action {
-	margin: 0;
-  padding: 1.5rem;
-  display: block;
-  overflow: hidden;
-  background: rgba(0,0,0,0.83);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-	body[role="application"] menu.action ul.object {
+	body[role="application"] menu.actions h3 {
+		display: block;
+		margin: 0 1.5rem;
+	}
+	body[role="application"] menu.actions > ul {
 		list-style: none;
-		padding: 0.5rem 0;
-		margin: 0 0 1.5rem 0;
-		border-bottom: 0.1rem solid #dbd9d9;
+		padding: 0;
+		margin: 0.5rem 0 0 0;
 		display: block;
 		overflow: hidden;
 	}
-		body[role="application"] menu.action ul.object > li {
-			margin-bottom: 1rem;
+		body[role="application"] menu.actions > ul > li {
+			padding: 1rem 1.5rem 0 1.5rem;
+			margin: 0;
 			display: block;
 			overflow: hidden;
+			border: none;
+			height: auto;
+			line-height: auto;
 		}
-			body[role="application"] menu.action ul.object > li > button,
-			body[role="application"] menu.action ul.object > li > a[role="button"] {
+		body[role="application"] menu.actions > ul > li:last-child {
+			background: rgba(0,0,0,0.83);
+			margin-top: 1.5rem;
+		}
+			body[role="application"] menu.actions > ul > li > button,
+			body[role="application"] menu.actions > ul > li > a[role="button"] {
 				width: 100%;
+				font-size: -moz-calc(6 * 0.226rem);
+				text-align: left;
+				padding: 0 1rem;
+			}
+			body[role="application"] menu.actions > ul > li:last-child > button,
+			body[role="application"] menu.actions > ul > li:last-child > a[role="button"] {
+  			margin: 0.5rem 0 1rem 0;
+				font-size: -moz-calc(7 * 0.226rem);
+				text-align: center;
 			}
 
 /* ----------------------------------
  * BUTTONS
  * ---------------------------------- */
 
-body[role="application"] menu.action button,
-body[role="application"] menu.action a[role="button"] {
+body[role="application"] menu button,
+body[role="application"] menu a[role="button"] {
 	background: url(images/ui/button_standard.png) repeat-x;
 	height: 4rem;
 	line-height: 4rem;
@@ -205,27 +220,27 @@ body[role="application"] menu.action a[role="button"] {
 	white-space: nowrap;
 	overflow: hidden;
 }
-body[role="application"] menu.action button:first-of-type,
-body[role="application"] menu.action a[role="button"]:first-of-type {
+body[role="application"] menu button:first-of-type,
+body[role="application"] menu a[role="button"]:first-of-type {
 	background: url(images/ui/button_standard.png) repeat-x;
 	margin-left: 0;
 }
-body[role="application"] menu.action button.affirmative,
-body[role="application"] menu.action a[role="button"].affirmative {
+body[role="application"] menu button.affirmative,
+body[role="application"] menu a[role="button"].affirmative {
 	background: url(images/ui/button_affirmative.png);
 }
-body[role="application"] menu.action button.negative,
-body[role="application"] menu.action a[role="button"].negative {
+body[role="application"] menu button.negative,
+body[role="application"] menu a[role="button"].negative {
 	background-image: url(images/ui/button_negative.png);
 	color: #fff;
 	text-shadow: none;
 }
 
-body[role="application"] menu.action[data-items="2"] button,
-body[role="application"] menu.action[data-items="2"] a[role="button"] {
+body[role="application"] menu[data-items="2"] button,
+body[role="application"] menu[data-items="2"] a[role="button"] {
 	width: -moz-calc((100% - 1rem) / 2);
 }
-body[role="application"] menu.action[data-items="3"] button,
-body[role="application"] menu.action[data-items="3"] a[role="button"] {
+body[role="application"] menu[data-items="3"] button,
+body[role="application"] menu[data-items="3"] a[role="button"] {
 	width: -moz-calc((100% - 2rem) / 3);
 }
