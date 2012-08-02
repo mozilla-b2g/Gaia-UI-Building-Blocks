@@ -186,8 +186,7 @@ body[role="application"] li > div[role="presentation"] > input:checked + span {
 }
 
 /* State disabled */
-body[role="application"] li[aria-disabled]:before,
-body[role="application"] li[data-state="disabled"]:before {
+body[role="application"] li[aria-disabled="true"]:before {
   content: "";
   position: absolute;
   left: 0;
