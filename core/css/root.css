@@ -1,20 +1,3 @@
-@font-face {
-  font-family: 'FontLight';
-  src: local('Open Sans Light'), url('../fonts/opensans-light-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'FontRegular';
-  src: local('Open Sans'), url('../fonts/opensans-regular-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'FontSemibold';
-  src: local('Open Sans Semibold'), url('../fonts/opensans-semibold-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'FontBold';
-  src: local('Open Sans Bold'), url('../fonts/opensans-bold-webfont.woff') format('woff');
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -25,14 +8,19 @@ html, body {
 body {
   background: #fff;
   color: #000;
-  font-family: FontRegular;
+  font-family: Open Sans, Sans-serif;
+  overflow: hidden;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup,
-menu, nav, section, video, audio, canvas, progress, meter, time {
+menu, nav, section, video, audio, canvas, progress, meter {
   display: block;
   padding: 0;
   margin: 0;
+}
+
+mark,time {
+  display: inline;
 }
 
 /* Text conventions */
@@ -60,7 +48,7 @@ button {
   background: none;
   border: none;
   outline: none;
-  font: 1.1rem/1.3rem FontRegular;
+  font: 1.1rem/1.3rem Open Sans, Sans-serif;
   color: #666;
   cursor: pointer;
 }
@@ -72,7 +60,7 @@ button::-moz-focus-inner {
 
 
 input[type="text"], textarea {
-  font: 1.3rem/4rem FontRegular;
+  font: 1.3rem/4rem Open Sans, Sans-serif;
   -moz-box-sizing: border-box;
   width: 100%;
 }
@@ -82,7 +70,7 @@ input[type="text"]:focus, textarea:focus {
 }
 
 body > section[role=region] {
-  width: 32rem;
-  height: 48rem;
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
 }
-
