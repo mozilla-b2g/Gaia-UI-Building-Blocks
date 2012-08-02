@@ -197,6 +197,10 @@ body[role="application"] li[aria-disabled="true"]:before {
   opacity: 0.7;
 }
 
+body[role="application"]  li[aria-disabled="true"] {
+  pointer-events:none;
+}
+
 /* State new */
 body[role="application"] li[data-state="marked"]:before {
   content: "";
