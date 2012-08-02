@@ -7,8 +7,9 @@
   <script type="text/javascript">
     function loadURL(event) {
       var el = event.target;
-      if (el.tagName.toLowerCase() == 'span')
-        el = el.parentNode;
+      var preview = document.getElementById("iframe");
+      var meta = document.getElementById("metadata");
+
       if (el.tagName.toLowerCase() != 'a')
         return;
 
@@ -20,17 +21,39 @@
       var i = 0, link, links = document.getElementsByTagName('a');
       while (link = links.item(i++))
         link.className = (link == el) ? 'current' : '';
+
+      preview.onload = function() {
+        var title = preview.contentWindow.document.head.querySelector("title").innerHTML;
+        var description = preview.contentWindow.document.head.querySelector("meta[type=description]").content;
+
+        meta.querySelector("h1").innerHTML = title;
+        meta.querySelector("p").innerHTML = description;
+      };
+
+
+
     }
   </script>
 </head>
 <body>
-  <nav onclick="loadURL(event)">
-    <li><a href="#headers/"><span>1</span>Headers</a></li>
-    <li><a href="#filters/"><span>2</span>Filters</a></li>
-    <li><a href="#filters/tabs.html"><span>3</span>Tabs</a></li>
+  <nav id="nav" onclick="loadURL(event)">
+    <ul>
+      <li><a href="#dialogs/">Menus + Dialogs</a></li>
+      <li><a href="#buttons/">Buttons</a></li>
+      <li><a href="#filters/">Filters</a></li>
+      <li><a href="#headers/">Headers</a></li>
+      <li><a href="#lists/">Lists</a></li>
+      <li><a href="#tabs/">Tabs</a></li>
+      <li><a href="#drawers/">Drawers</a></li>
+    </ul>
   </nav>
 
-  <iframe id="iframe" src="" width="320" height="480" />
+  <iframe id="iframe" src="" width="320" height="480" ></iframe>
+
+  <section id="metadata">
+      <h1>Building blocks</h1>
+      <p>Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p>
+  </section>
 
 </body>
 </html>
