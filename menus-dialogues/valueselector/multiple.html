@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="../required.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../../other/buttons/style.css">
+
+    <!--
+      This <style> and <link> is only used for the example code, is no needed for the real case use
+    -->
+    <link rel="stylesheet" type="text/css" href="../../fonts.css">
+    <style type="text/css">
+      html, body {
+          margin: 0;
+          padding: 0;
+          font-size: 10px;
+          background-color: #fff;
+        }
+       h2.bb-docs {
+          font-size: 1.8rem;
+          font-family: "Open Sans", Sans-serif;
+          font-weight: lighter;
+          color: #666;
+          margin: -1px 0 0;
+          background-color: #f5f5f5;
+          padding: 0.4rem 0.4rem 0.4rem 3rem;
+          border: solid 1px #e8e8e8;
+        }
+    </style>
+    <title>Value selector, multiples value</title>
+    <meta type="description" content="Provides a way for the user to select one of more values, usually from a Form interfac">
+</head>
+
+<body role="application">
+
+      <section role="region">
+        <div role="dialog">
+          <div class="center">
+            <h3>Choose your option(s)</h3>
+            <ul>
+              <li role="checkbox" aria-checked="false">Oprion 1</li>
+              <li role="checkbox" aria-checked="true">Oprion 2</li>
+              <li role="checkbox" aria-checked="true">Oprion 3</li>
+              <li role="checkbox" aria-checked="false">Oprion 4</li>
+              <li role="checkbox" aria-checked="true">Oprion 5</li>
+              <li role="checkbox" aria-checked="true">Oprion 6</li>
+              <li role="checkbox" aria-checked="false">Oprion 7</li>
+              <li role="checkbox" aria-checked="true">Oprion 8</li>
+              <li role="checkbox" aria-checked="true">Oprion 9</li>
+            </ul>
+          </div>
+
+          <menu data-items="2">
+            <button>Cancel</button>
+            <button class="affirmative">Action</button>
+          </menu>
+        </div>
+      </section>
+
+</body>
+</html>

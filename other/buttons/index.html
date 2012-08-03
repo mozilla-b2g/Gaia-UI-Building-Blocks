@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="../core/css/root.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!--
+      This <style> and <link> is only used for the example code, is no needed for the real case use
+    -->
+    <link rel="stylesheet" type="text/css" href="../../fonts.css">
+    <link rel="stylesheet" type="text/css" href="../headers/style.css">
+    <style type="text/css">
+      html, body {
+          margin: 0;
+          padding: 0;
+          font-size: 10px;
+          background-color: #fff;
+        }
+       h2.bb-docs {
+          font-size: 1.8rem;
+          font-family: "Open Sans", Sans-serif;
+          font-weight: lighter;
+          color: #666;
+          margin: -1px 0 0;
+          background-color: #f5f5f5;
+          padding: 0.4rem 0.4rem 0.4rem 3rem;
+          border: solid 1px #e8e8e8;
+        }
+      
+      body[role="application"] > [role="region"] {
+        height: 100%;
+        position: relative;
+      }
+      body[role="application"] menu {
+        margin: 0;
+        padding: 1.5rem;
+        display: block;
+        overflow: hidden;
+        background: rgba(0,0,0,0.83);
+      }
+      body[role="application"] menu.white {
+        background: #fff;
+      }
+      ul.list { margin: 1rem 1.5rem 0 1.5rem;}
+    </style>
+  <title>Buttons</title>
+  <meta type="description" content="Prompts user to take action. eg: Confirm a deletion, respond to a system event (eg: restart device after a SIM card swap), grant or deny a permission ">
+</head>
+
+<body role="application">
+
+  <h2 class="bb-docs">Menu buttons</h2>
+  <menu data-items="3">
+    <button>Default</button>
+    <button class="affirmative">Main</button>
+    <button class="negative">Negative</button>
+  </menu>
+ 
+  <h2 class="bb-docs">Disabled buttons</h2>
+  <menu data-items="3">
+    <button aria-disabled="true">Default</button>
+    <button aria-disabled="true" class="affirmative">Main</button>
+    <button aria-disabled="true" class="negative">Negative</button>
+  </menu>
+
+  <h2 class="bb-docs">List buttons</h2>
+  <ul class="list">  
+    <li>
+      <label>Label</label>
+      <button>List Button</button>
+    </li>
+    <li>
+      <button aria-disabled="true">List Disabled Button</button>
+    </li>
+  </ul>
+</body>
+</html>
