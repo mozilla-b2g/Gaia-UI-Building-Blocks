@@ -1,0 +1,196 @@
+/* ----------------------------------
+ * DIALOGS
+ * ---------------------------------- */
+
+body[role="application"] [role="dialog"] {
+	background: rgba(0,0,0,0.88);
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+	body[role="application"] [role="dialog"] > .center {
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		-moz-box-pack: center;
+		width: -moz-calc(100% - 5rem);
+		height: -moz-calc(100% - 3rem);
+		padding: 1.5rem 2.5rem 0 2.5rem;
+	}
+		body[role="application"] [role="dialog"] h3 {
+			font-family: 'Open Sans', Sans-serif;
+			font-weight: 600;
+			font-size: -moz-calc(7 * 0.226rem);
+			line-height: 4rem;
+			color: #fff;
+			border-bottom: 0.1rem solid #fff;
+			margin: 0;
+			display: -moz-box;
+			-moz-box-flex: 1;
+			-moz-box-pack: end;
+			-moz-box-orient: vertical;
+		}
+
+		body[role="application"] [role="dialog"] p {
+			font-family: 'Open Sans', Sans-serif;
+			font-weight: lighter;
+			font-size: -moz-calc(10 * 0.226rem);
+			color: #fff;
+			margin: 0;
+			padding: 1rem 0;
+		}
+		body[role="application"] [role="dialog"] p:last-child {
+			display: -moz-box;
+			-moz-box-flex: 1;
+			-moz-box-orient: vertical;
+			padding: 1rem 0 7.5rem 0;
+		}
+
+		body[role="application"] [role="dialog"] .content {
+			font-family: 'Open Sans', Sans-serif;
+			font-weight: lighter;
+			font-size: -moz-calc(10 * 0.226rem);
+			color: #fff;
+			border-bottom: 0.1rem solid #777;
+			margin: 0;
+			padding: 2.5rem 0 2rem 0;
+		}
+			body[role="application"] [role="dialog"] .content img {
+				float: left;
+				margin-right: 2rem;
+			}
+			body[role="application"] [role="dialog"] .content strong {
+				font-weight: normal;
+			}
+			body[role="application"] [role="dialog"] .content small {
+				font-size: -moz-calc(7 * 0.226rem);
+				font-family: 'Open Sans', Sans-serif;
+				font-weight: normal;
+				color: rgba(255,255,255,0.7);
+				display: block;
+			}
+
+		body[role="application"] [role="dialog"] ul {
+			margin: 0;
+			padding: 0 0 7.5rem 0;
+			overflow: auto;
+			display: -moz-box;
+			-moz-box-flex: 1;
+			-moz-box-orient: vertical;
+		}
+			body[role="application"] [role="dialog"] ul li {
+				margin: 0;
+				list-style: none;
+				font-family: 'Open Sans', Sans-serif;
+				font-weight: lighter;
+				font-size: -moz-calc(10 * 0.226rem);
+				height: 5.9rem;
+				line-height: 5.9rem;
+				color: #fff;
+				border-bottom: 0.1rem solid #777;
+				padding: 0 0.5rem;
+				position: relative;
+			}
+			body[role="application"] [role="dialog"] li[aria-checked="true"] {
+				color: #00abcd;
+			}
+			body[role="application"] [role="dialog"] li[aria-checked="true"]:after {
+				content: '';
+				width: 1.9rem;
+				height: 5.9rem;
+				display: block;
+				position: absolute;
+				right: 0.5rem;
+				top: 0;
+				background: url(images/ui/list_checked.png) left center no-repeat;
+			}
+				body[role="application"] [role="dialog"] ul li a {
+					color: #fff;
+					text-decoration: none;
+				}
+
+	body[role="application"] menu {
+	  margin: 0;
+	  padding: 1.5rem;
+	  background: rgba(0,0,0,0.83);
+	  display: block;
+	  overflow: hidden;
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	}
+
+/* ----------------------------------
+ * INLINE BANNER
+ * ---------------------------------- */
+
+body[role="application"] [role="dialog"].inline {
+	position: relative;
+	margin: -0.4rem 0 0 0;
+	padding: 1rem 0 0 0;
+	background: rgba(0,0,0,0.83);
+}
+	body[role="application"] [role="dialog"].inline p {
+		border: 0;
+		padding: 1rem 1.5rem; 
+	}
+	body[role="application"] [role="dialog"].inline menu {
+	  position: relative;
+		background: none;
+	}
+	
+/* ----------------------------------
+ * ACTION / OBJECT MENU
+ * ---------------------------------- */
+
+body[role="application"] menu.actions {
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+	body[role="application"] menu.actions h3 {
+		display: block;
+		margin: 0 1.5rem;
+	}
+	body[role="application"] menu.actions > ul {
+		list-style: none;
+		padding: 0;
+		margin: 0.5rem 0 0 0;
+		display: block;
+		overflow: hidden;
+	}
+		body[role="application"] menu.actions > ul > li {
+			padding: 1rem 1.5rem 0 1.5rem;
+			margin: 0;
+			display: block;
+			overflow: hidden;
+			border: none;
+			height: auto;
+			line-height: auto;
+		}
+		body[role="application"] menu.actions > ul > li:last-child {
+			background: rgba(0,0,0,0.83);
+			margin-top: 1.5rem;
+		}
+			body[role="application"] menu.actions > ul > li > button,
+			body[role="application"] menu.actions > ul > li > a[role="button"] {
+				width: 100%;
+				font-size: -moz-calc(6 * 0.226rem);
+				text-align: left;
+				padding: 0 1rem;
+			}
+			body[role="application"] menu.actions > ul > li:last-child > button,
+			body[role="application"] menu.actions > ul > li:last-child > a[role="button"] {
+  			margin: 0.5rem 0 1rem 0;
+				font-size: -moz-calc(7 * 0.226rem);
+				text-align: center;
+			}

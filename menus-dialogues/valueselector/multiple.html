@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    
+
     <link rel="stylesheet" type="text/css" href="../required.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="../../other/buttons/style.css">
@@ -29,29 +29,32 @@
           border: solid 1px #e8e8e8;
         }
     </style>
-    <title>Object menu</title>
-    <meta type="description" content="Directly manipulating objects without having to open them and navigate deeper into the hierarchy">
+    <title>Value selector, multiples value</title>
+    <meta type="description" content="Provides a way for the user to select one of more values, usually from a Form interfac">
 </head>
 
 <body role="application">
 
-     <h2 class="bb-docs">7. Object Menu</h2>
       <section role="region">
-        <header>
-          <h1>Title</h1>
-        </header>
-        <div class="content">
-          <p>Some content here...</p>
-        </div>
-
         <div role="dialog">
-          <menu class="actions">
+          <div class="center">
+            <h3>Choose your option(s)</h3>
             <ul>
-              <li><button>Action 1</button></li>
-              <li><button>Action 2</button></li>
-              <li><button>Action 3</button></li>
-              <li><button>Cancel</button></li>
+              <li role="checkbox" aria-checked="false">Oprion 1</li>
+              <li role="checkbox" aria-checked="true">Oprion 2</li>
+              <li role="checkbox" aria-checked="true">Oprion 3</li>
+              <li role="checkbox" aria-checked="false">Oprion 4</li>
+              <li role="checkbox" aria-checked="true">Oprion 5</li>
+              <li role="checkbox" aria-checked="true">Oprion 6</li>
+              <li role="checkbox" aria-checked="false">Oprion 7</li>
+              <li role="checkbox" aria-checked="true">Oprion 8</li>
+              <li role="checkbox" aria-checked="true">Oprion 9</li>
             </ul>
+          </div>
+
+          <menu data-items="2">
+            <button>Cancel</button>
+            <button class="affirmative">Action</button>
           </menu>
         </div>
       </section>
