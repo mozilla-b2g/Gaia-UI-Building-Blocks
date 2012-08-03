@@ -20,16 +20,35 @@ body {
 nav {
   float: left;
   font-size: 12px;
-  width: 260px;
+  width: 230px;
+  max-height: 100%;
+  overflow: auto;
+  margin-right: 30px;
 }
-nav ul  {
+
+nav h2 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+nav ol  {
   counter-reset: item;
   padding: 0;
 }
 
+nav ol ol {
+  height: 0;
+  overflow: hidden;
+}
+
+nav li[data-state="open"] ol {
+  height: auto;
+}
+
 nav li {
   margin: 10px 0 0;
-  padding: 0 0 0 30px;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -37,13 +56,12 @@ nav li:before {
   content: counter(item);
   counter-increment: item;
   float: left;
-  margin-left: -30px;
-  width: 24px;
-  height: 24px;
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
   color: hsl(0,0%,100%);
-  line-height: 24px;
+  line-height: 18px;
   font-size: 10px;
-  font-weight: 700;
   font-family: Verdana, Tahoma, Arial, sans-serif;
   text-align: center;
   border-radius: 5px;
@@ -53,17 +71,25 @@ nav li:before {
 }
 
 nav li a {
+  position: relative;
   display: block;
   font-size: 14px;
   color: hsl(0,0%,100%);
   text-shadow: 1px 1px 0 hsla(0,0%,0%,.5);
-  line-height: 24px;
+  line-height: 18px;
   text-decoration: none;
 }
 
 nav li a.current {
   color: #ff6800;
 }
+
+nav .disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+nav .disabled a { cursor: default; }
+
 
 iframe {
   float: left;
