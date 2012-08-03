@@ -1,70 +1,80 @@
 /* ----------------------------------
- * BUTTONS
+
+ * BUTTONS: DEFAULT
  * ---------------------------------- */
 
-body[role="application"] menu button,
-body[role="application"] menu a[role="button"] {
+body[role="application"] button,
+body[role="application"] a[role="button"] {
 	background: url(images/ui/button_default.png) repeat-x;
 	height: 4rem;
 	line-height: 4rem;
 	border: 0.1rem solid #9f9f9f;
 	border-radius: 0.3rem;
+
+	-moz-background-clip: padding;
 	width: 100%;
 	text-align: center;
+	text-indent: 0;
 	color: #333;
 	font-size: -moz-calc(7 * 0.226rem);
 	font-family: 'Open Sans', Sans-serif;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
 	text-decoration: none;
 	float: left;
-	margin-left: 1rem;
+	margin: 0 0 0 1rem;
 	font-weight: lighter;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
 }
-body[role="application"] menu button:first-of-type,
-body[role="application"] menu a[role="button"]:first-of-type {
+
+body[role="application"] button:first-of-type,
+body[role="application"] a[role="button"]:first-of-type {
 	margin-left: 0;
 }
-body[role="application"] menu button:active,
-body[role="application"] menu a[role="button"]:active {
+body[role="application"] button:active,
+body[role="application"] a[role="button"]:active {
 	background-position: 0 -40px;
 	border-color: #00acce;
 }
-body[role="application"] menu button.affirmative,
-body[role="application"] menu a[role="button"].affirmative {
+body[role="application"] button.affirmative,
+body[role="application"] a[role="button"].affirmative {
 	background-image: url(images/ui/button_affirmative.png);
 	border-color: #008aa7;
 
 }
-body[role="application"] menu button.affirmative:active,
-body[role="application"] menu a[role="button"].affirmative:active {
+
+body[role="application"] button.affirmative:active,
+body[role="application"] a[role="button"].affirmative:active {
+	background-position: 0 -40px;
 	border-color: #008aa7;
 }
-body[role="application"] menu button.negative,
-body[role="application"] menu a[role="button"].negative {
+body[role="application"] button.negative,
+body[role="application"] a[role="button"].negative {
 	background-image: url(images/ui/button_negative.png);
 	color: #fff;
 	text-shadow: -1px -1px 0 #830b0b;
 	border: none; 
 }
-body[role="application"] menu button.negative:active,
-body[role="application"] menu a[role="button"].negative:active {
-	color: red;
+
+body[role="application"] button.negative:active,
+body[role="application"] a[role="button"].negative:active {
+	background-position: 0 -40px;
 }
-body[role="application"] menu button[aria-disabled="true"],
-body[role="application"] menu a[role="button"][aria-disabled="true"],
-body[role="application"] menu button[aria-disabled="true"].affirmative,
-body[role="application"] menu a[role="button"][aria-disabled="true"].affirmative {
+body[role="application"] button[aria-disabled="true"],
+body[role="application"] a[role="button"][aria-disabled="true"],
+body[role="application"] button[aria-disabled="true"].affirmative,
+body[role="application"] a[role="button"][aria-disabled="true"].affirmative {
 	background-position: 0 -80px;
 	color: rgba(129,129,129,0.5);
 	border-color: rgba(131,131,131,0.3);
 	text-shadow: none;
 }
-body[role="application"] menu button[aria-disabled="true"].negative,
-body[role="application"] menu a[role="button"][aria-disabled="true"].negative {
-	color: #fff;
+
+body[role="application"] button[aria-disabled="true"].negative,
+body[role="application"] a[role="button"][aria-disabled="true"].negative {
+	background-position: 0 -80px;
+	color: rgba(255,255,255,0.3);
 }
 
 body[role="application"] menu[data-items="2"] button,
@@ -74,4 +84,55 @@ body[role="application"] menu[data-items="2"] a[role="button"] {
 body[role="application"] menu[data-items="3"] button,
 body[role="application"] menu[data-items="3"] a[role="button"] {
 	width: -moz-calc((100% - 2rem) / 3);
+}
+
+
+/* ----------------------------------
+ * BUTTONS: LIST
+ * ---------------------------------- */
+
+body[role="application"] .list button,
+body[role="application"] .list a[role="button"],
+body[role="application"] button.list,
+body[role="application"] a[role="button"].list {
+	background: #fff;
+	height: 4rem;
+	line-height: 4rem;
+	border: 0.1rem solid rgba(0,0,0,.2);
+	text-align: left;
+	text-indent: 1.5rem;
+	color: #333;
+	font-size: -moz-calc(6 * 0.226rem);
+	float: left;
+	margin: 0 0 0.5rem 0;
+	box-shadow: 0 1px 2px rgba(0,0,0,.14);
+}
+
+body[role="application"] .list button:active,
+body[role="application"] .list a[role="button"]:active,
+body[role="application"] button.list:active,
+body[role="application"] a[role="button"].list:active {
+	background: #00abcd;
+	border: 0.1rem solid #0099b9;
+	box-shadow: none;
+}
+
+body[role="application"] .list button[aria-disabled="true"],
+body[role="application"] .list a[role="button"][aria-disabled="true"],
+body[role="application"] button.list[aria-disabled="true"],
+body[role="application"] a[role="button"].list[aria-disabled="true"],
+body[role="application"] .list button[aria-disabled="true"]:active,
+body[role="application"] .list a[role="button"][aria-disabled="true"]:active,
+body[role="application"] button.list[aria-disabled="true"]:active,
+body[role="application"] a[role="button"].list[aria-disabled="true"]:active {
+	background: #ededed;
+	color: #a5a5a5; 
+	box-shadow: 0 1px 2px rgba(0,0,0,.14);
+	border: 0.1rem solid #d1d1d1;
+}
+body[role="application"] .list label {
+	font-size: -moz-calc(6 * 0.226rem);
+	text-transform: uppercase;
+	color: #000;
+	line-height: 2.5rem;
 }
