@@ -1,9 +1,10 @@
 /* ----------------------------------
- * DIALOGS
+ * CORE STYLES FOR DIALOGS AND MENUS
  * ---------------------------------- */
 
 body[role="application"] [role="dialog"] {
-	background: rgba(0,0,0,0.88);
+	background: url(images/ui/pattern.png) repeat left top, url(images/ui/gradient.png) no-repeat left top;
+	background-size: auto auto, 100% 100%;
 	position: absolute;
 	z-index: 100;
 	top: 0;
