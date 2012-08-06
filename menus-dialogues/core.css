@@ -26,7 +26,7 @@ body[role="application"] [role="dialog"] {
 			font-size: 1.6rem;
 			line-height: 4rem;
 			color: #fff;
-			border-bottom: 0.1rem solid #fff;
+			border-bottom: 0.1rem solid #686868;
 			margin: 0;
 			display: -moz-box;
 			-moz-box-flex: 1;
@@ -37,7 +37,8 @@ body[role="application"] [role="dialog"] {
 	body[role="application"] menu {
 	  margin: 0;
 	  padding: 1.5rem;
-	  background: rgba(0,0,0,0.83);
+	  border-top: solid 1px rgba(255, 255, 255, 0.1);
+	  background: #2d2d2d url(images/ui/pattern.png) repeat left top;
 	  display: block;
 	  overflow: hidden;
 	  position: absolute;
