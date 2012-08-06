@@ -22,7 +22,7 @@ body[role="application"] [role="dialog"] {
 		body[role="application"] [role="dialog"] h3 {
 			font-family: 'Open Sans', Sans-serif;
 			font-weight: 600;
-			font-size: -moz-calc(7 * 0.226rem);
+			font-size: 1.6rem;
 			line-height: 4rem;
 			color: #fff;
 			border-bottom: 0.1rem solid #fff;
@@ -36,7 +36,7 @@ body[role="application"] [role="dialog"] {
 		body[role="application"] [role="dialog"] p {
 			font-family: 'Open Sans', Sans-serif;
 			font-weight: lighter;
-			font-size: -moz-calc(10 * 0.226rem);
+			font-size: 2.2rem;
 			color: #fff;
 			margin: 0;
 			padding: 1rem 0;
@@ -51,7 +51,7 @@ body[role="application"] [role="dialog"] {
 		body[role="application"] [role="dialog"] .content {
 			font-family: 'Open Sans', Sans-serif;
 			font-weight: lighter;
-			font-size: -moz-calc(10 * 0.226rem);
+			font-size: 2.2rem
 			color: #fff;
 			border-bottom: 0.1rem solid #777;
 			margin: 0;
@@ -65,7 +65,7 @@ body[role="application"] [role="dialog"] {
 				font-weight: normal;
 			}
 			body[role="application"] [role="dialog"] .content small {
-				font-size: -moz-calc(7 * 0.226rem);
+				font-size: 1.6rem;
 				font-family: 'Open Sans', Sans-serif;
 				font-weight: normal;
 				color: rgba(255,255,255,0.7);
@@ -85,7 +85,7 @@ body[role="application"] [role="dialog"] {
 				list-style: none;
 				font-family: 'Open Sans', Sans-serif;
 				font-weight: lighter;
-				font-size: -moz-calc(10 * 0.226rem);
+				font-size: 2.2rem;
 				height: 5.9rem;
 				line-height: 5.9rem;
 				color: #fff;
@@ -184,13 +184,13 @@ body[role="application"] menu.actions {
 			body[role="application"] menu.actions > ul > li > button,
 			body[role="application"] menu.actions > ul > li > a[role="button"] {
 				width: 100%;
-				font-size: -moz-calc(6 * 0.226rem);
+				font-size: 1.3rem;
 				text-align: left;
 				padding: 0 1rem;
 			}
 			body[role="application"] menu.actions > ul > li:last-child > button,
 			body[role="application"] menu.actions > ul > li:last-child > a[role="button"] {
   			margin: 0.5rem 0 1rem 0;
-				font-size: -moz-calc(7 * 0.226rem);
+				font-size: 1.6rem;
 				text-align: center;
 			}

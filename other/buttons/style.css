@@ -14,7 +14,7 @@ body[role="application"] a[role="button"] {
 	text-align: center;
 	text-indent: 0;
 	color: #333;
-	font-size: -moz-calc(7 * 0.226rem);
+	font-size: 1.6rem;
 	font-family: 'Open Sans', Sans-serif;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
 	text-decoration: none;
@@ -95,7 +95,7 @@ body[role="application"] a[role="button"].list {
 	text-align: left;
 	text-indent: 1.5rem;
 	color: #333;
-	font-size: -moz-calc(6 * 0.226rem);
+	font-size: 1.3rem;
 	float: left;
 	margin: 0 0 0.5rem 0;
 	box-shadow: 0 1px 2px rgba(0,0,0,.14);
@@ -124,7 +124,7 @@ body[role="application"] a[role="button"].list[aria-disabled="true"]:active {
 	border: 0.1rem solid #d1d1d1;
 }
 body[role="application"] .list label {
-	font-size: -moz-calc(6 * 0.226rem);
+	font-size: 1.3rem;
 	text-transform: uppercase;
 	color: #000;
 	line-height: 2.5rem;

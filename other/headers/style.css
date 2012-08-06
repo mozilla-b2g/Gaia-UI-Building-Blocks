@@ -211,8 +211,8 @@ body[role="application"] section[role="region"] > header[aria-level="2"]:after {
       font-weight: 600;
       color: rgba(41, 41, 41, 0.9);
       margin: 0 3rem;
-      font-size: -moz-calc(6 * 0.226rem);
-      line-height: -moz-calc(8 * 0.226rem);
+      font-size: 1.3rem;
+      line-height: 1.8rem;
     }
 
 /* ----------------------------------
@@ -235,7 +235,7 @@ body[role="application"] section[role="region"] > header + form.search {
     font-weight: 600;
     color: #333;
     text-indent: 0.5rem;
-    font-size: -moz-calc(6 * 0.226rem);
+    font-size: 1.3rem;
   }
   body[role="application"] section[role="region"] > header + form.search input[type="text"]:-moz-placeholder {
     color: #777;
