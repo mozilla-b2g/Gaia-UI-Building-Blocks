@@ -129,6 +129,8 @@
       section#metadata a:hover {
         text-decoration: underline;
       }
+      section#metadata section { color: rgba(255, 255, 255, 0.75); }
+       section#metadata section ul { padding-left: 30px; }
   </style>
    <script type="text/javascript">
     function loadURL(event) {
@@ -151,9 +153,20 @@
       preview.onload = function() {
         var title = preview.contentWindow.document.head.querySelector("title").innerHTML;
         var description = preview.contentWindow.document.head.querySelector("meta[type=description]").content;
+        var requires = preview.contentWindow.document.head.querySelector("meta[type=requires]").content;
 
-        meta.querySelector("h1").innerHTML = title;
-        meta.querySelector("p").innerHTML = description;
+        requires = requires.split(",");
+        var tpl = "";
+        for ( var i in requires) {
+
+          tpl += "<li>"+requires[i]+"</li>"
+
+        }
+        requires = tpl;
+
+        meta.querySelector("[data-placeholder='title']").innerHTML = title;
+        meta.querySelector("[data-placeholder='description']").innerHTML = description;
+        meta.querySelector("[data-placeholder='requires']").innerHTML = requires;
       };
 
     }
@@ -229,8 +242,12 @@
   <iframe id="iframe" src="" width="320" height="480" ></iframe>
 
   <section id="metadata">
-      <h1>Building blocks</h1>
-      <p>Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p>
+      <h1 data-placeholder="title">Building blocks</h1>
+      <p data-placeholder="description">Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p>
+      <section>
+        <p><strong>Requires:</strong></p>
+        <ul data-placeholder="requires"><li>None</li></ul>
+      </section>
   </section>
 
 </body>
