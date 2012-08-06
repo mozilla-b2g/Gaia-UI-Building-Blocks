@@ -30,22 +30,201 @@
         meta.querySelector("p").innerHTML = description;
       };
 
-
-
     }
+    document.addEventListener("DOMContentLoaded", function() {
+        var submenu = document.querySelectorAll(".submenu > a");
+        for ( var i in submenu ) {
+            submenu[i].addEventListener("click", function(event){
+             if ( this.parentNode.getAttribute("data-state") == "open" ) {
+
+               this.parentNode.setAttribute("data-state", "close");
+
+             } else {
+                this.parentNode.setAttribute("data-state", "open");
+
+             }
+             return false;
+            });
+        }
+    });
   </script>
+  <style type="text/css">
+      @import url("fonts.css");
+
+      html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-size:14px;
+        font-family: "Open Sans", sans-serif;
+        background: #1a2633;
+        background-image:
+          -moz-radial-gradient(bottom right, circle cover, hsla(300,100%,62%,.07) 0%, hsla(226,77%,55%,.05) 65%, hsla(198,60%,59%,.1) 100%),
+          -moz-radial-gradient(center 45deg, closest-side, hsla(210,17%,25%,1) 0%, #1a2633 100%);
+
+      }
+
+      body {
+        padding: 25px;
+      }
+
+      nav {
+        float: left;
+        font-size: 12px;
+        width: 230px;
+        max-height: 100%;
+        overflow: auto;
+        margin-right: 30px;
+      }
+
+      nav h2 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      nav ol  {
+        counter-reset: item;
+        padding: 0;
+      }
+
+      nav ol ol {
+        height: 0;
+        overflow: hidden;
+      }
+
+      nav li[data-state="open"] ol {
+        height: auto;
+      }
+
+      nav li {
+        margin: 10px 0 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      nav li:before {
+        content: counter(item);
+        counter-increment: item;
+        float: left;
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+        color: hsl(0,0%,100%);
+        line-height: 18px;
+        font-size: 10px;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        text-align: center;
+        border-radius: 5px;
+        border-bottom: 1px solid hsla(0,0%,100%,.25);
+        background: hsl(220,7%,9%);
+        cursor: pointer;
+      }
+
+      nav li a {
+        position: relative;
+        display: block;
+        font-size: 14px;
+        color: hsl(0,0%,100%);
+        text-shadow: 1px 1px 0 hsla(0,0%,0%,.5);
+        line-height: 18px;
+        text-decoration: none;
+      }
+
+      nav li a.current {
+        color: #ff6800;
+      }
+
+      nav .disabled {
+        opacity: 0.4;
+        cursor: default;
+      }
+      nav .disabled a { cursor: default; }
+
+
+      iframe {
+        float: left;
+        width: 320px;
+        height: 480px;
+        border: 0;
+        margin: 0 50px 0 0;
+        padding: 0;
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+        overflow-x: hidden; 
+      }
+
+      section#metadata {
+        float: left;
+        color: #fff;
+        width: 300px;
+      }
+
+      section#metadata h1 {
+        font: 20px/1em "Open Sans", Sans-serif;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      section#metadata a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      section#metadata a:hover {
+        text-decoration: underline;
+      }
+  </style>
 </head>
 <body>
   <nav id="nav" onclick="loadURL(event)">
-    <ul>
-      <li><a href="#dialogs/">Menus + Dialogs</a></li>
-      <li><a href="#buttons/">Buttons</a></li>
-      <li><a href="#filters/">Filters</a></li>
-      <li><a href="#headers/">Headers</a></li>
-      <li><a href="#lists/">Lists</a></li>
-      <li><a href="#tabs/">Tabs</a></li>
-      <li><a href="#drawers/">Drawers</a></li>
-    </ul>
+    <h2>Menus + Dialogues</h2>
+    <ol>
+      <li class="submenu">
+          <a href="#menus-dialogues/prompt/">Promt</a>
+          <ol>
+            <li><a href="#menus-dialogues/prompt/">Default</a></li>
+            <li><a href="#menus-dialogues/prompt/content.html">With content</a></li>
+            <li><a href="#menus-dialogues/prompt/notitle.html">w/o Title</a></li>
+          </ol>
+      </li>
+      <li><a href="#menus-dialogues/actionmenu/">Action menu</a></li>
+      <li><a href="#menus-dialogues/objectmenu/">Object menu</a></li>
+      <li class="submenu">
+        <a href="#menus-dialogues/valueselector/">Value selector</a>
+        <ol>
+            <li><a href="#menus-dialogues/valueselector/index.html">Single value</a></li>
+            <li><a href="#menus-dialogues/valueselector/multiple.html">Multiple value</a></li>
+          </ol>
+      </li>
+      <li class="disabled"><a href="#menus-dialogues/banner/">Banner</a></li>
+    </ol>
+
+    <h2>Other</h2>
+    <ol>
+        <li><a href="#other/buttons/">Buttons</a></li>
+        <li class="disabled"><a href="#other/filters/">Filters</a></li>
+        <li><a href="#other/headers/">Headers</a></li>
+        <li><a href="#other/lists/">Lists</a></li>
+        <li><a href="#other/progress-activity/">Progress + Activity</a></li>
+        <li><a href="#other/scrolling/">Scrolling</a></li>
+        <li><a href="#other/seekbars/">Seekbars</a></li>
+        <li class="disabled"><a href="#other/switches/">Switches</a></li>
+        <li><a href="#other/tabs/">Tabs</a></li>
+        <li class="disabled"><a href="#other/toolbars/">Toolbars</a></li>
+        <li class="disabled"><a href="#other/drawer/">Drawer</a></li>
+        <li class="disabled"><a href="#other/input-areas/">Input areas</a></li>
+    </ol>
+
+   <!--  <h2>Transitions</h2>
+    <ol>
+        <li class="disabled"><a href="#transitions/"></a></li>
+    </ol>
+
+    <h2>Colours</h2>
+    <ol>
+        <li class="disabled"><a href="#colours/"></a></li>
+    </ol> -->
   </nav>
 
   <iframe id="iframe" src="" width="320" height="480" ></iframe>
