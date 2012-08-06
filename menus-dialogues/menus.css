@@ -1,0 +1,52 @@
+/* ----------------------------------
+ * ACTION / OBJECT MENU
+ * ---------------------------------- */
+
+body[role="application"] menu.actions {
+  margin: 0;
+  padding: 0;
+  background: none;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+	body[role="application"] menu.actions h3 {
+		display: block;
+		margin: 0 1.5rem;
+	}
+	body[role="application"] menu.actions > ul {
+		list-style: none;
+		padding: 0;
+		margin: 0.5rem 0 0 0;
+		display: block;
+		overflow: hidden;
+	}
+		body[role="application"] menu.actions > ul > li {
+			padding: 1rem 1.5rem 0 1.5rem;
+			margin: 0;
+			display: block;
+			overflow: hidden;
+			border: none;
+			height: auto;
+			line-height: auto;
+		}
+		body[role="application"] menu.actions > ul > li:last-child {
+			background: rgba(0,0,0,0.83);
+			margin-top: 1.5rem;
+		}
+			body[role="application"] menu.actions > ul > li > button,
+			body[role="application"] menu.actions > ul > li > a[role="button"] {
+				width: 100%;
+				font-size: 1.3rem;
+				text-align: left;
+				padding: 0 1rem;
+			}
+			body[role="application"] menu.actions > ul > li:last-child > button,
+			body[role="application"] menu.actions > ul > li:last-child > a[role="button"] {
+  			margin: 0.5rem 0 1rem 0;
+				font-size: 1.6rem;
+				text-align: center;
+			}

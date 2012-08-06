@@ -1,0 +1,65 @@
+/* ----------------------------------
+ * DIALOGS
+ * ---------------------------------- */
+
+body[role="application"] [role="dialog"] {
+	background: rgba(0,0,0,0.88);
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+	body[role="application"] [role="dialog"] > .center {
+		display: -moz-box;
+		-moz-box-orient: vertical;
+		-moz-box-pack: center;
+		width: -moz-calc(100% - 5rem);
+		height: -moz-calc(100% - 3rem);
+		padding: 1.5rem 2.5rem 0 2.5rem;
+	}
+		body[role="application"] [role="dialog"] h3 {
+			font-family: 'Open Sans', Sans-serif;
+			font-weight: 600;
+			font-size: 1.6rem;
+			line-height: 4rem;
+			color: #fff;
+			border-bottom: 0.1rem solid #fff;
+			margin: 0;
+			display: -moz-box;
+			-moz-box-flex: 1;
+			-moz-box-pack: end;
+			-moz-box-orient: vertical;
+		}
+
+	body[role="application"] menu {
+	  margin: 0;
+	  padding: 1.5rem;
+	  background: rgba(0,0,0,0.83);
+	  display: block;
+	  overflow: hidden;
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	}
+
+/* ----------------------------------
+ * INLINE BANNER
+ * ---------------------------------- */
+
+body[role="application"] [role="dialog"].inline {
+	position: relative;
+	margin: -0.4rem 0 0 0;
+	padding: 1rem 0 0 0;
+	background: rgba(0,0,0,0.83);
+}
+	body[role="application"] [role="dialog"].inline p {
+		border: 0;
+		padding: 1rem 1.5rem; 
+	}
+	body[role="application"] [role="dialog"].inline menu {
+	  position: relative;
+		background: none;
+	}
