@@ -21,7 +21,6 @@ body[role="application"] [role="dialog"] {
 		vertical-align: middle;
 		width: 1px;
 		height: 100%;
-		background: red;
 	}
 	body[role="application"] [role="dialog"] > .center {
 		padding: 0 2.5rem;
