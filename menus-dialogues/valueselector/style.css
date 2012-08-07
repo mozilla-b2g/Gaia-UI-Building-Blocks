@@ -50,8 +50,9 @@ body[role="application"] [role="dialog"] .center[data-mode="scroll"] h3 {
 
 	body[role="application"] [role="dialog"] li input[type="checkbox"]:checked + span,
 	body[role="application"] [role="dialog"] li[aria-checked="true"] span {
+		padding-right: 0.5rem;
 		color: #00abcd;
-		background: url(images/icons/checked.png) right center no-repeat;
+		background: url(images/icons/checked.png) content-box right center no-repeat;
 	}
 	
 	body[role="application"] [role="dialog"] ul li a,
