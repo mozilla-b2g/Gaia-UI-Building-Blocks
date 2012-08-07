@@ -1,10 +1,23 @@
 body[role="application"] [role="dialog"] ul {
-	padding: 0 4rem 0 0;
-	margin: -1rem -4rem 0 0;
-	max-height: 36rem;
+	position: relative;
+	padding: 0 4rem;
+	margin: -1rem -4rem 0;
+	max-height: 36.5rem;
 	/* Max height 100% doesnt work because the parent element has height auto for getting work the vertical alignment */
 	overflow: auto;
 }
+
+body[role="application"] [role="dialog"] .center[data-mode="scroll"] ul {
+	background: url(images/ui/shadow.png) repeat-x left top, url(images/ui/shadow-invert.png) repeat-x left bottom;
+	padding: 0 2.8rem 0 4rem;
+	/* 4rem - 1.2rem = 2.8rem (1.2rem scrollbar width) */
+}
+body[role="application"] [role="dialog"] .center[data-mode="scroll"] h3 {
+	margin-left: -2.5rem;
+	margin-right: -2.5rem;
+	text-indent: 2.5rem
+}
+
 	body[role="application"] [role="dialog"] ul li {
 		margin: 0;
 		padding-bottom: 1px;
@@ -43,7 +56,8 @@ body[role="application"] [role="dialog"] ul {
 	
 	body[role="application"] [role="dialog"] ul li a,
 	body[role="application"] [role="dialog"] ul li label {
-		border-bottom: 1px solid #000;		
+		border-bottom: 1px solid #000;
+		text-indent: 0.5rem;	
 	}
 
 	body[role="application"] [role="dialog"] ul li a,

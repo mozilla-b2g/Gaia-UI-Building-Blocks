@@ -23,7 +23,7 @@ body[role="application"] [role="dialog"] {
 		height: 100%;
 	}
 	body[role="application"] [role="dialog"] > .center {
-		padding: 0 2.5rem;
+		padding: 0 2.5rem 0 2rem;
 		-moz-box-sizing: padding-box;
 		width: 100%;
 		display: inline-block;
@@ -38,7 +38,7 @@ body[role="application"] [role="dialog"] {
 			color: #fff;
 			border-bottom: 0.1rem solid #686868;
 			margin: 0 0 1rem;
-			padding-bottom: 0.5rem;
+			padding-bottom: 1rem;
 		}
 
 	body[role="application"] menu {
