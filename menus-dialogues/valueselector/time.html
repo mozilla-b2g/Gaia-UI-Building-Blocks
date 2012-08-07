@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="../core.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="time.css">
+    <link rel="stylesheet" type="text/css" href="../../other/buttons/style.css">
+
+    <script type="text/javascript" src="ui.js"></script>
+
+    <!--
+      This <style> and <link> is only used for the example code, is no needed for the real case use
+    -->
+    <link rel="stylesheet" type="text/css" href="../../fonts.css">
+    <style type="text/css">
+      html, body {
+          margin: 0;
+          padding: 0;
+          font-size: 10px;
+          background-color: #fff;
+        }
+       h2.bb-docs {
+          font-size: 1.8rem;
+          font-family: "Open Sans", Sans-serif;
+          font-weight: lighter;
+          color: #666;
+          margin: -1px 0 0;
+          background-color: #f5f5f5;
+          padding: 0.4rem 0.4rem 0.4rem 3rem;
+          border: solid 1px #e8e8e8;
+        }
+    </style>
+    <title>Value selector, single value</title>
+    <meta type="description" content="Provides a way for the user to select one of more values, usually from a Form interfac">
+    <meta type="requires" content="menu-dialoges/core.css, menu-dialoges/valueselector/time.css, other/buttons/style.css">
+</head>
+
+<body role="application">
+
+      <section role="region">  
+        <div role="dialog">
+          <div class="center">
+            <h3>Select time</h3>
+            <section role="slider" id="slider">
+              <p>
+                <span style="background-image: -moz-element(#hours);"></span>
+                <span style="background-image: -moz-element(#minutes);"></span>
+                <span style="background-image: -moz-element(#options);"></span>
+              </p>
+              <div id="hours">
+                <ol>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li><a href="#">11</a></li>
+                  <li><a href="#">12</a></li>
+                </ol>
+              </div>
+              <div id="minutes">
+                 <ol>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li><a href="#">11</a></li>
+                  <li><a href="#">12</a></li>
+                </ol>
+              </div>
+              <div id="options">
+                 <ul>
+                  <li><a href="#">AM</a></li>
+                  <li><a href="#">PM</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <menu>
+            <button>Cancel</button>
+          </menu>
+        </div>
+      </section>
+
+</body>
+</html>
