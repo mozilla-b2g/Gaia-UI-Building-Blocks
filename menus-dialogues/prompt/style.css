@@ -4,13 +4,11 @@ body[role="application"] [role="dialog"] p {
 	font-size: 2.2rem;
 	color: #FAFAFA;
 	margin: 0;
-	padding: 1rem 0;
 }
 body[role="application"] [role="dialog"] p:last-child {
 	display: -moz-box;
 	-moz-box-flex: 1;
 	-moz-box-orient: vertical;
-	padding: 1rem 0 7.5rem 0;
 }
 
 body[role="application"] [role="dialog"] .content {

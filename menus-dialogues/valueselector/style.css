@@ -1,11 +1,10 @@
 body[role="application"] [role="dialog"] ul {
 	padding: 0;
-	margin: 0 0 7.5rem;
+	margin: 0;
 	border-bottom: 1px solid #666;
+	max-height: 36rem;
+	/* Max height 100% doesnt work because the parent element has height auto for getting work the vertical alignment */
 	overflow: auto;
-	display: -moz-box;
-	-moz-box-flex: 1;
-	-moz-box-orient: vertical;
 }
 	body[role="application"] [role="dialog"] ul li {
 		margin: 0;

@@ -5,36 +5,45 @@
 body[role="application"] [role="dialog"] {
 	background: url(images/ui/pattern.png) repeat left top, url(images/ui/gradient.png) no-repeat left top;
 	background-size: auto auto, 100% 100%;
+	overflow: hidden;
 	position: absolute;
 	z-index: 100;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	white-space: nowrap;
+	padding: 1.5rem 0 7rem;	
 }
+	body[role="application"] [role="dialog"]:before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		width: 1px;
+		height: 100%;
+		background: red;
+	}
 	body[role="application"] [role="dialog"] > .center {
-		display: -moz-box;
-		-moz-box-orient: vertical;
-		-moz-box-pack: center;
-		width: -moz-calc(100% - 5rem);
-		height: -moz-calc(100% - 3rem);
-		padding: 1.5rem 2.5rem 0 2.5rem;
+		padding: 0 2.5rem;
+		-moz-box-sizing: padding-box;
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		white-space: normal;	
 	}
 		body[role="application"] [role="dialog"] h3 {
 			font-family: 'Open Sans', Sans-serif;
 			font-weight: 600;
 			font-size: 1.6rem;
-			line-height: 4rem;
+			line-height: 1em;
 			color: #fff;
 			border-bottom: 0.1rem solid #686868;
-			margin: 0;
-			display: -moz-box;
-			-moz-box-flex: 1;
-			-moz-box-pack: end;
-			-moz-box-orient: vertical;
+			margin: 0 0 1rem;
+			padding-bottom: 0.5rem;
 		}
 
 	body[role="application"] menu {
+	  white-space: nowrap;			
 	  margin: 0;
 	  padding: 1.5rem;
 	  border-top: solid 1px rgba(255, 255, 255, 0.1);
