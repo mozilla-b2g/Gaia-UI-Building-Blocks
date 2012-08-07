@@ -1,6 +1,7 @@
 body[role="application"] [role="dialog"] ul {
-	margin: 0;
-	padding: 0 0 7.5rem 0;
+	padding: 0;
+	margin: 0 0 7.5rem;
+	border-bottom: 1px solid #666;
 	overflow: auto;
 	display: -moz-box;
 	-moz-box-flex: 1;
@@ -9,30 +10,46 @@ body[role="application"] [role="dialog"] ul {
 	body[role="application"] [role="dialog"] ul li {
 		margin: 0;
 		list-style: none;
+		border-bottom: 1px solid #000;
+		border-top: 1px solid #666;
+		position: relative;
+		color: #fff;
 		font-family: 'Open Sans', Sans-serif;
 		font-weight: lighter;
 		font-size: 2.2rem;
 		height: 5.9rem;
 		line-height: 5.9rem;
 		color: #fff;
-		border-bottom: 0.1rem solid #777;
-		padding: 0 0.5rem;
-		position: relative;
+		transition: background 0.2s ease;
 	}
-	body[role="application"] [role="dialog"] li[aria-checked="true"] {
-		color: #00abcd;
+	body[role="application"] [role="dialog"] ul li:first-child {
+		border-top: none;
 	}
-	body[role="application"] [role="dialog"] li[aria-checked="true"]:after {
-		content: '';
-		width: 1.9rem;
-		height: 5.9rem;
-		display: block;
+
+	body[role="application"] [role="dialog"] ul li:active,
+	body[role="application"] [role="dialog"] ul li:active label span {
+		background: #00ABCC;
+		color: #fff!important;
+	}
+
+	body[role="application"] [role="dialog"] li input[type="checkbox"] {
 		position: absolute;
-		right: 0.5rem;
+		left: 0;
 		top: 0;
-		background: url(images/ui/list_checked.png) left center no-repeat;
+		opacity: 0;
+		pointer-events: none;
 	}
-		body[role="application"] [role="dialog"] ul li a {
-			color: #fff;
-			text-decoration: none;
-		}
+
+	body[role="application"] [role="dialog"] li input[type="checkbox"]:checked + span,
+	body[role="application"] [role="dialog"] li[aria-checked="true"] span {
+		color: #00abcd;
+		background: url(images/ui/list_checked.png) right center no-repeat;
+	}
+	
+	body[role="application"] [role="dialog"] ul li a,
+	body[role="application"] [role="dialog"] ul li label,
+	body[role="application"] [role="dialog"] ul li label span {
+		text-decoration: none;
+		display: block;
+		color: #fff;
+	}
