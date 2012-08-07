@@ -1,6 +1,6 @@
 body[role="application"] [role="dialog"] ul {
 	padding: 0;
-	margin: 0;
+	margin: -1rem 0 0;
 	border-bottom: 1px solid #666;
 	max-height: 36rem;
 	/* Max height 100% doesnt work because the parent element has height auto for getting work the vertical alignment */
