@@ -1,16 +1,15 @@
 body[role="application"] [role="dialog"] ul {
-	padding: 0;
-	margin: -1rem 0 0;
-	border-bottom: 1px solid #666;
+	padding: 0 4rem 0 0;
+	margin: -1rem -4rem 0 0;
 	max-height: 36rem;
 	/* Max height 100% doesnt work because the parent element has height auto for getting work the vertical alignment */
 	overflow: auto;
 }
 	body[role="application"] [role="dialog"] ul li {
 		margin: 0;
+		padding-bottom: 1px;
 		list-style: none;
-		border-bottom: 1px solid #000;
-		border-top: 1px solid #666;
+		border-bottom: 1px solid #666;
 		position: relative;
 		color: #fff;
 		font-family: 'Open Sans', Sans-serif;
@@ -20,9 +19,6 @@ body[role="application"] [role="dialog"] ul {
 		line-height: 5.9rem;
 		color: #fff;
 		transition: background 0.2s ease;
-	}
-	body[role="application"] [role="dialog"] ul li:first-child {
-		border-top: none;
 	}
 
 	body[role="application"] [role="dialog"] ul li:active,
@@ -45,6 +41,11 @@ body[role="application"] [role="dialog"] ul {
 		background: url(images/icons/checked.png) right center no-repeat;
 	}
 	
+	body[role="application"] [role="dialog"] ul li a,
+	body[role="application"] [role="dialog"] ul li label {
+		border-bottom: 1px solid #000;		
+	}
+
 	body[role="application"] [role="dialog"] ul li a,
 	body[role="application"] [role="dialog"] ul li label,
 	body[role="application"] [role="dialog"] ul li label span {
