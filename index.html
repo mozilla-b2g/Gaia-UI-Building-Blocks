@@ -133,22 +133,41 @@
        section#metadata section ul { padding-left: 30px; }
   </style>
    <script type="text/javascript">
-    function loadURL(event) {
-      var el = event.target;
-      var preview = document.getElementById("iframe");
-      var meta = document.getElementById("metadata");
+    function loadURL(data) {
+
+      if ( data.nodeName == "#document" ) {
+        var url = data.location.hash;
+        var el = document.querySelector("a[href='"+url+"']")
+      } else {
+          var el = data.target;
+      }
 
       if (el.tagName.toLowerCase() != 'a')
-        return;
+            return;
 
       var url = el.getAttribute('href').replace(/^#/, '');
       if (/\/$/.test(url))
         url += 'index.html';
-      document.getElementById('iframe').src = url;
+
+      var preview = document.getElementById("iframe");
+      var meta = document.getElementById("metadata");
+
+      preview.src = url;
 
       var i = 0, link, links = document.getElementsByTagName('a');
-      while (link = links.item(i++))
-        link.className = (link == el) ? 'current' : '';
+      while (link = links.item(i++)) {
+        if (link == el) {
+          var current = 'current';
+          var parent = link.parentNode.parentNode.parentNode;
+
+          if ( parent.className == "submenu") {
+              parent.setAttribute("data-state", "open");
+          }
+
+        } else { var current = ""; }
+
+        link.className = current;
+      }
 
       preview.onload = function() {
         var title = preview.contentWindow.document.head.querySelector("title").innerHTML;
@@ -171,6 +190,10 @@
 
     }
     document.addEventListener("DOMContentLoaded", function() {
+        
+        //Set correct preview on DOM ready
+        loadURL(this);
+
         var submenu = document.querySelectorAll(".submenu > a");
         for ( var i in submenu ) {
             submenu[i].addEventListener("click", function(event){
