@@ -137,6 +137,7 @@
 
       if ( data.nodeName == "#document" ) {
         var url = data.location.hash;
+        if ( url == "" ) { url = "index.html" }
         var el = document.querySelector("a[href='"+url+"']")
       } else {
           var el = data.target;
@@ -187,8 +188,8 @@
         meta.querySelector("[data-placeholder='description']").innerHTML = description;
         meta.querySelector("[data-placeholder='requires']").innerHTML = requires;
       };
-
     }
+
     document.addEventListener("DOMContentLoaded", function() {
         
         //Set correct preview on DOM ready
@@ -212,6 +213,7 @@
   </script>
 </head>
 <body>
+  <h1 style="display: none"><a href="index.html">GAIA Building Blocks</a></h1>  
   <nav id="nav" onclick="loadURL(event)">
     <h2>Menus + Dialogues</h2>
     <ol>
