@@ -1,3 +1,11 @@
+/* ----------------------------------
+ * STYLES FOR VALUESELECTOR TIME
+ * Requires:
+    menu-dialoges/core.css
+    menu-dialoges/valueselector/style.css
+    other/buttons/style.css
+ * ---------------------------------- */
+
 body[role="application"] [role="dialog"] [role="slider"] {
 	text-align: center;
 	white-space: nowrap;

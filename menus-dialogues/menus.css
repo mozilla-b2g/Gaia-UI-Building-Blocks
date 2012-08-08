@@ -1,5 +1,7 @@
 /* ----------------------------------
  * ACTION / OBJECT MENU
+ * Requires:
+    menu-dialoges/core.css
  * ---------------------------------- */
 
 body[role="application"] menu.actions {

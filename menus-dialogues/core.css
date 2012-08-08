@@ -1,5 +1,6 @@
 /* ----------------------------------
  * CORE STYLES FOR DIALOGS AND MENUS
+ * Is required for all the subcomponents
  * ---------------------------------- */
 
 body[role="application"] [role="dialog"] {

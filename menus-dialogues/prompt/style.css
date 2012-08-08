@@ -1,3 +1,10 @@
+/* ----------------------------------
+ * STYLES FOR PROMPT
+ * Requires:
+    menu-dialoges/core.css
+    other/buttons/style.css
+ * ---------------------------------- */
+ 
 body[role="application"] [role="dialog"] p {
 	font-family: 'Open Sans', Sans-serif;
 	font-weight: lighter;
