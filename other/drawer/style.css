@@ -36,7 +36,7 @@
         body[role="application"] > nav > ul > li > h2, 
         body[role="application"] > nav > ul > li > h3 { 
           margin: 0;
-          font-size: -moz-calc(10 * 0.226rem);
+          font-size: 2.2rem;
           line-height: 5rem;
           font-weight: normal;
           padding-left: 3rem;
@@ -51,7 +51,7 @@
         body[role="application"] > nav > ul > li > a { 
           text-decoration: none;
           color: #fff;
-          font-size: -moz-calc(7 * 0.226rem);
+          font-size: 1.6rem;
           line-height: 4.4rem;
           border-bottom: 0.1rem solid #596068; 
           text-indent: 3rem;

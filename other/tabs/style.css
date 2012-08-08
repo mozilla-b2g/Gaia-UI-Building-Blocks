@@ -30,7 +30,7 @@ body[role="application"] section[role="region"] > [role="tablist"] {
     width: -moz-calc(100% / 5);
   }
     body[role="application"] section[role="region"] > [role="tablist"] [role="tab"] {
-      font-size: -moz-calc(6 * 0.226rem);
+      font-size: 1.3rem;
       text-decoration: none;
       line-height: 4rem;
       text-align: center;

@@ -3,51 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <title>Gaia-UI Building Blocks</title>
-  <link href="style.css" type="text/css" rel="stylesheet" />
-  <script type="text/javascript">
-    function loadURL(event) {
-      var el = event.target;
-      var preview = document.getElementById("iframe");
-      var meta = document.getElementById("metadata");
-
-      if (el.tagName.toLowerCase() != 'a')
-        return;
-
-      var url = el.getAttribute('href').replace(/^#/, '');
-      if (/\/$/.test(url))
-        url += 'index.html';
-      document.getElementById('iframe').src = url;
-
-      var i = 0, link, links = document.getElementsByTagName('a');
-      while (link = links.item(i++))
-        link.className = (link == el) ? 'current' : '';
-
-      preview.onload = function() {
-        var title = preview.contentWindow.document.head.querySelector("title").innerHTML;
-        var description = preview.contentWindow.document.head.querySelector("meta[type=description]").content;
-
-        meta.querySelector("h1").innerHTML = title;
-        meta.querySelector("p").innerHTML = description;
-      };
-
-    }
-    document.addEventListener("DOMContentLoaded", function() {
-        var submenu = document.querySelectorAll(".submenu > a");
-        for ( var i in submenu ) {
-            submenu[i].addEventListener("click", function(event){
-             if ( this.parentNode.getAttribute("data-state") == "open" ) {
-
-               this.parentNode.setAttribute("data-state", "close");
-
-             } else {
-                this.parentNode.setAttribute("data-state", "open");
-
-             }
-             return false;
-            });
-        }
-    });
-  </script>
   <style type="text/css">
       @import url("fonts.css");
 
@@ -174,7 +129,87 @@
       section#metadata a:hover {
         text-decoration: underline;
       }
+      section#metadata section { color: rgba(255, 255, 255, 0.75); }
+       section#metadata section ul { padding-left: 30px; }
   </style>
+   <script type="text/javascript">
+    function loadURL(data) {
+
+      if ( data.nodeName == "#document" ) {
+        var url = data.location.hash;
+        var el = document.querySelector("a[href='"+url+"']")
+      } else {
+          var el = data.target;
+      }
+
+      if (el.tagName.toLowerCase() != 'a')
+            return;
+
+      var url = el.getAttribute('href').replace(/^#/, '');
+      if (/\/$/.test(url))
+        url += 'index.html';
+
+      var preview = document.getElementById("iframe");
+      var meta = document.getElementById("metadata");
+
+      preview.src = url;
+
+      var i = 0, link, links = document.getElementsByTagName('a');
+      while (link = links.item(i++)) {
+        if (link == el) {
+          var current = 'current';
+          var parent = link.parentNode.parentNode.parentNode;
+
+          if ( parent.className == "submenu") {
+              parent.setAttribute("data-state", "open");
+          }
+
+        } else { var current = ""; }
+
+        link.className = current;
+      }
+
+      preview.onload = function() {
+        var title = preview.contentWindow.document.head.querySelector("title").innerHTML;
+        var description = preview.contentWindow.document.head.querySelector("meta[type=description]").content;
+        var requires = preview.contentWindow.document.head.querySelector("meta[type=requires]").content;
+
+        requires = requires.split(",");
+        var tpl = "";
+        for ( var i in requires) {
+
+          tpl += "<li>"+requires[i]+"</li>"
+
+        }
+        requires = tpl;
+
+        meta.querySelector("[data-placeholder='title']").innerHTML = title;
+        meta.querySelector("[data-placeholder='description']").innerHTML = description;
+        meta.querySelector("[data-placeholder='requires']").innerHTML = requires;
+      };
+
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        //Set correct preview on DOM ready
+        loadURL(this);
+
+        var submenu = document.querySelectorAll(".submenu > a");
+        for ( var i in submenu ) {
+            submenu[i].addEventListener("click", function(event){
+             if ( this.parentNode.getAttribute("data-state") == "open" ) {
+
+               this.parentNode.setAttribute("data-state", "close");
+
+             } else {
+                this.parentNode.setAttribute("data-state", "open");
+
+             }
+             return false;
+            });
+        }
+    });
+  </script>
 </head>
 <body>
   <nav id="nav" onclick="loadURL(event)">
@@ -195,6 +230,8 @@
         <ol>
             <li><a href="#menus-dialogues/valueselector/index.html">Single value</a></li>
             <li><a href="#menus-dialogues/valueselector/multiple.html">Multiple value</a></li>
+            <li><a href="#menus-dialogues/valueselector/time/index.html">Time</a></li>
+            <li><a href="#menus-dialogues/valueselector/date/index.html">Date</a></li>
           </ol>
       </li>
       <li class="disabled"><a href="#menus-dialogues/banner/">Banner</a></li>
@@ -219,19 +256,18 @@
    <!--  <h2>Transitions</h2>
     <ol>
         <li class="disabled"><a href="#transitions/"></a></li>
-    </ol>
-
-    <h2>Colours</h2>
-    <ol>
-        <li class="disabled"><a href="#colours/"></a></li>
     </ol> -->
   </nav>
 
   <iframe id="iframe" src="" width="320" height="480" ></iframe>
 
   <section id="metadata">
-      <h1>Building blocks</h1>
-      <p>Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p>
+      <h1 data-placeholder="title">Building blocks</h1>
+      <p data-placeholder="description">Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p>
+      <section>
+        <p><strong>Requires:</strong></p>
+        <ul data-placeholder="requires"><li>None</li></ul>
+      </section>
   </section>
 
 </body>
