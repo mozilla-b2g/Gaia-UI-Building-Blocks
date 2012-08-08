@@ -13,7 +13,9 @@ body[role="application"] [role="dialog"] {
 	right: 0;
 	bottom: 0;
 	white-space: nowrap;
-	padding: 1.5rem 0 7rem;	
+	padding: 1.5rem 0 7rem;
+	font-family: "Open Sans", Sans-serif;
+	color: #fff;
 }
 	body[role="application"] [role="dialog"]:before {
 		content: "";
