@@ -34,7 +34,7 @@ body[role="application"] [role="dialog"] {
 	}
 		body[role="application"] [role="dialog"] h3 {
 			font-family: 'Open Sans', Sans-serif;
-			font-weight: 600;
+			font-weight: normal;
 			font-size: 1.6rem;
 			line-height: 1em;
 			color: #fff;
