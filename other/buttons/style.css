@@ -109,19 +109,23 @@ body[role="application"] a[role="button"] span.goto {
 body[role="application"] button span.launch,
 body[role="application"] a[role="button"] span.launch {
 	background-image: url(images/icons/launch.png);
-	background-position: center bottom
+	background-position: 1rem bottom;
 }
 
 body[role="application"] button span.favourite,
 body[role="application"] a[role="button"] span.favourite {
 	background-image: url(images/icons/favourite.png);
-	background-position: center bottom
 }
 
 body[role="application"] button span.call,
 body[role="application"] a[role="button"] span.call {
 	background-image: url(images/icons/call.png);
-	background-position: center bottom
+	background-position: center bottom;
+}
+
+body[role="application"] button span.tick,
+body[role="application"] a[role="button"] span.tick {
+	background-image: url(images/icons/tick.png);
 }
 
 
@@ -193,20 +197,20 @@ body[role="application"] .buttons-list a[role="button"][aria-disabled="true"]:af
 }
 
 
+/* Compact mode */
+body[role="application"] .buttons-list[data-mode="compact"] { margin-bottom: 1rem; }
+body[role="application"] .buttons-list[data-mode="compact"] button,
+body[role="application"] .buttons-list[data-mode="compact"] a[role="button"] {
+	margin: -1px 0;
+	border-radius: 0;
+}
 
+body[role="application"] .buttons-list[data-mode="compact"] li:first-child button,
+body[role="application"] .buttons-list[data-mode="compact"] li:first-child a[role="button"] {
+	border-radius: 0.3rem 0.3rem 0 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+body[role="application"] .buttons-list[data-mode="compact"] li:last-child button,
+body[role="application"] .buttons-list[data-mode="compact"] li:last-child a[role="button"] {
+	border-radius:0 0 0.3rem 0.3rem;
+}
