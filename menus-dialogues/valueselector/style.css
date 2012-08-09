@@ -67,7 +67,8 @@ body[role="application"] [role="dialog"] [data-mode="scroll"] h3 {
 	body[role="application"] [role="dialog"] li a,
 	body[role="application"] [role="dialog"] li label {
 		border-bottom: 1px solid #000;
-		text-indent: 0.5rem;	
+		text-indent: 0.5rem;
+		outline: none;
 	}
 
 	body[role="application"] [role="dialog"] li a,

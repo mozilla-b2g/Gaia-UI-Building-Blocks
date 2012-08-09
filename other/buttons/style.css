@@ -28,6 +28,7 @@ body[role="application"] a[role="button"] {
 	text-align: center;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
 	text-decoration: none;
+	outline: none;
 }
 
 /* Press (default & affirmative) */
