@@ -43,7 +43,6 @@ body[role="application"] menu.actions {
 		}
 			body[role="application"] menu.actions > ul > li:not(:last-child) > button,
 			body[role="application"] menu.actions > ul > li:not(:last-child) > a[role="button"] {
-				width: 100%;
 				font-size: 1.4rem;
 				color: #fff;
 				text-shadow: none;
