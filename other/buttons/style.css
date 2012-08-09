@@ -1,83 +1,86 @@
 /* ----------------------------------
  * BUTTONS: DEFAULT
  * ---------------------------------- */
-
+body[role="application"] button::-moz-focus-inner {
+	border: none;
+	outline: none;
+}
 body[role="application"] button,
 body[role="application"] a[role="button"] {
-	background: url(images/ui/button_default.png) repeat-x;
-	height: 4rem;
-	line-height: 4rem;
-	border: 0.1rem solid #9f9f9f;
-	border-radius: 0.3rem;
-	-moz-background-clip: padding;
 	width: 100%;
-	text-align: center;
-	text-indent: 0;
-	color: #333;
-	font-size: 1.6rem;
-	font-family: 'Open Sans', Sans-serif;
-	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
-	text-decoration: none;
-	float: left;
-	margin: 0 0 0 1rem;
-	font-weight: lighter;
+	height: 3.8rem;
+	margin: 0 0 1rem;
+	-moz-box-sizing: border-box;
+	display: inline-block;
+	vertical-align: middle;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	background: #fafafa url(images/ui/default.png) repeat-x left bottom;
+	border: 1px solid #9f9f9f;
+	border-radius: 0.3rem;
+	font-size: 1.6rem;
+	font-family: 'Open Sans', Sans-serif;
+	font-weight: 600;
+	line-height: 3.8rem;
+	color: #333;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+	text-decoration: none;
 }
-body[role="application"] button:first-of-type,
-body[role="application"] a[role="button"]:first-of-type {
-	margin-left: 0;
-}
+
+/* Press (default & affirmative) */
 body[role="application"] button:active,
-body[role="application"] a[role="button"]:active {
-	background-position: 0 -40px;
-	border-color: #00acce;
+body[role="application"] a[role="button"]:active,
+body[role="application"] button.affirmative:active,
+body[role="application"] a.affirmative[role="button"]:active  {
+	border-color: #008aaa;
+	background: #008aaa;
+	color: #333;
 }
+
+/* Affirmative */
 body[role="application"] button.affirmative,
 body[role="application"] a[role="button"].affirmative {
-	background-image: url(images/ui/button_affirmative.png);
-	border-color: #008aa7;
+	background-image: url(images/ui/affirmative.png);
+	background-color: #00caf2;
+	border-color: #00acce;
+}
 
-}
-body[role="application"] button.affirmative:active,
-body[role="application"] a[role="button"].affirmative:active {
-	background-position: 0 -40px;
-	border-color: #008aa7;
-}
+/* Negative */
 body[role="application"] button.negative,
-body[role="application"] a[role="button"].negative {
-	background-image: url(images/ui/button_negative.png);
+body[role="application"] a.negative[role="button"] {
+	background-image: url(images/ui/negative.png);
+	background-color: #b70404;
 	color: #fff;
 	text-shadow: -1px -1px 0 #830b0b;
 	border: none; 
 }
+
+/* Negative Press */
 body[role="application"] button.negative:active,
 body[role="application"] a[role="button"].negative:active {
-	background-position: 0 -40px;
-}
-body[role="application"] button[aria-disabled="true"],
-body[role="application"] a[role="button"][aria-disabled="true"],
-body[role="application"] button[aria-disabled="true"].affirmative,
-body[role="application"] a[role="button"][aria-disabled="true"].affirmative {
-	background-position: 0 -80px;
-	color: rgba(129,129,129,0.5);
-	border-color: rgba(131,131,131,0.3);
-	text-shadow: none;
-}
-body[role="application"] button[aria-disabled="true"].negative,
-body[role="application"] a[role="button"][aria-disabled="true"].negative {
-	background-position: 0 -80px;
-	color: rgba(255,255,255,0.3);
+	background-image: url(images/ui/negative-press.png);
+	background-color: #890707;
 }
 
-body[role="application"] menu[data-items="2"] button,
-body[role="application"] menu[data-items="2"] a[role="button"] {
-	width: -moz-calc((100% - 1rem) / 2);
+/* Disabled (default & affirmative) */
+body[role="application"] button[disabled="disabled"],
+body[role="application"] a[role="button"][aria-disabled="true"],
+body[role="application"] button[disabled="disabled"].affirmative,
+body[role="application"] a[role="button"][aria-disabled="true"].affirmative {
+	background-image: url(images/ui/disabled-bright.png);
+	background-color: transparent;
+	border-color: #dadada;
+	color: #bcbcbc;
 }
-body[role="application"] menu[data-items="3"] button,
-body[role="application"] menu[data-items="3"] a[role="button"] {
-	width: -moz-calc((100% - 2rem) / 3);
+
+/* Negative disabled */
+body[role="application"] button[disabled="disabled"].negative,
+body[role="application"] a[role="button"][aria-disabled="true"].negative {
+	background-image: url(images/ui/negative-disabled.png);
+	color: #fff;
+	text-shadow: none;
 }
 
 /* ----------------------------------
