@@ -10,7 +10,7 @@ body[role="application"] [role="dialog"] ol {
 	position: relative;
 	padding: 0 4rem;
 	margin: -1rem -4rem 0;
-	max-height: 35.5rem;
+	max-height: 37rem;
 	/* Max height 100% doesnt work because the parent element has height auto for getting work the vertical alignment */
 	overflow: auto;
 }
