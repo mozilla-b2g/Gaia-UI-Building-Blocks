@@ -25,10 +25,24 @@
       padding: 0.4rem 0.4rem 0.4rem 3rem;
       border: solid 1px #e8e8e8;
     }
+    #bb-docs-toggle { vertical-align: middle; }
   </style>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+      document.getElementById("bb-docs-toggle").addEventListener("click", function(){
+        var target = document.querySelector("ul[data-state]");
+        if ( target.getAttribute("data-state") == "edit" ) {
+            target.setAttribute("data-state", "");
+        } else {
+            target.setAttribute("data-state", "edit");
+        }
+      })
+    });
+  </script>
 
   <title>Lists</title>
-  <meta type="description" content="">
+  <meta type="description" content="Displaying an enumeration of a set of items ">
+  <meta type="requires" content="None ">
 </head>
 
 <body role="application">
@@ -87,7 +101,10 @@
               </dd>
             </dl>
           </li>
+      </ul>
 
+      <h2 class="bb-docs">Press state ( click on the item! )</h2>
+      <ul>
           <li data-state="new">
             <a href="#">
               <em class="aside">
@@ -128,13 +145,16 @@
               </dd>
             </dl>
           </li>
+        </ul>
 
+        <h2 class="bb-docs">Edit mode <button id="bb-docs-toggle">toggle</button></h2>
+        <ul data-state="edit">
           <li>
             <img src="images/dummy.jpg">
-            <div class="aside" role="presentation">
+            <label>
               <input type="checkbox" checked="checked">
               <span></span>
-            </div>
+            </label>
             <dl>
               <dt>Margherita <strong>Gomez</strong></dt>
               <dd>
@@ -145,10 +165,10 @@
 
           <li>
             <img src="images/dummy.jpg">
-            <div class="aside" role="presentation">
+            <label>
               <input type="checkbox">
               <span></span>
-            </div>
+            </label>
             <dl>
               <dt>Margherita <strong>Gomez</strong></dt>
               <dd>
@@ -157,11 +177,32 @@
             </dl>
           </li>
 
+          <li>
+            <label>
+                <input type="checkbox" />
+                <span></span>
+            </label>
+            <a href="#">
+              <em class="aside">
+                <span class="icon icon-smsin">Missed call</span>
+              </em>
+              <em class="aside end">
+                <span class="icon icon-arrowaction">Missed call</span>
+              </em>
+              <dl>
+                <dt>MarkAlfenito <em>(2)</em></dt>
+                <dd>
+                  <time>5:43PM</time>
+                  <span>Mobile, Vivo</span>
+                </dd>
+              </dl>
+            </a>
+          </li>
         </ul>
 
         <h2 class="bb-docs">Search results</h2>
          <ul>
-           <li data-state="new">
+           <li>
             <a href="#">
               <em class="aside">
                 <span class="icon icon-smsin">Missed call</span>
