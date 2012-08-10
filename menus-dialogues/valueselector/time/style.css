@@ -40,8 +40,8 @@ body[role="application"] [role="dialog"] [role="slider"]:after {
 	}
 
 	body[role="application"] [role="dialog"] [role="slider"] > p span {
-		width: -moz-calc((100% / 3) - 1px);
-		background: transparent no-repeat 35% 47%;
+		width: -moz-calc(100% / 3);
+		background: transparent no-repeat 55% 47%;
 		background-size: 160% auto;
 		margin: -9rem 0;
 		padding: 9rem 0;
