@@ -66,6 +66,7 @@ body[role="application"] label.toggle span {
   border-radius: 5.4rem;
   overflow: hidden;
   background: url(images/toggle/handler.png) no-repeat -0.4rem center;
+  background-size: auto -moz-calc(100% + 2px);
   -moz-transition: background 0.18s ease;
 }
 
@@ -83,6 +84,7 @@ body[role="application"] label.toggle span:before {
 body[role="application"] label.toggle span:before {
   right: 100%;
   background: #00c3ea url(images/toggle/icon.png) no-repeat 0.5rem center;
+  background-size: auto -moz-calc(100% - 2px);
 }
 
 body[role="application"] label.toggle span:after {
