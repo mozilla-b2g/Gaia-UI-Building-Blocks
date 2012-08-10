@@ -15,11 +15,12 @@
           font-size: 10px;
           background-color: #fff;
         }
-        section[role="region"] { margin-bottom: 15px; }
+        section[role="region"] { margin-bottom: 15px; position: relative; }
     </style>
 
   <title>Headers</title>
-  <meta type="description" content="">
+  <meta type="description" content="Providing top-level navigation and inputs for the active view">
+  <meta type="requires" content="None">
 </head>
 
 <body role="application">
@@ -52,6 +53,9 @@
       </menu>
       <h1>Inbox <em>(2)</em></h1>
     </header>
+     <form class="search">
+      <input type="text" placeholder="Search">
+    </form>
   </section>
 
   <section role="region">
@@ -62,11 +66,8 @@
       </menu>
       <h1>Title</h1>
     </header>
-    <form class="search">
-      <input type="text" placeholder="Search">
-    </form>
     <header aria-level="2">
-        <p>Select a social network and import your contacts to the contact list</p>
+        <p>Subheader text</p>
       </header>
   </section>
 
@@ -82,6 +83,26 @@
           <button class="clear">clear</button>
         </label>
       </form>
+    </header>
+  </section>
+
+  <section role="region">
+    <header aria-level="1">
+      <button><span class="icon icon-close">close</span></button>
+      <menu type="toolbar">
+         <button>done</button>
+      </menu>
+      <h1>Title</h1>
+    </header>
+    <header aria-level="2">
+        <p>Subheader text</p>
+      </header>
+    <header aria-level="1" class="overlay">
+      <button><span class="icon icon-close">close</span></button>
+      <menu type="toolbar">
+         <button>done</button>
+      </menu>
+      <h1>Edit</h1>
     </header>
   </section>
 

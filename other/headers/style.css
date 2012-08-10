@@ -184,12 +184,14 @@ body[role="application"] section[role="region"] > header form {
    body[role="application"] section[role="region"] > header > button .icon.icon-menu
    { background-position: -1rem center; }
 
+
 /* ----------------------------------
  * HEADERS: subheader
  * ---------------------------------- */
 
 body[role="application"] section[role="region"] > header[aria-level="2"] {
-  background: rgba(255,255,255,0.7) url(images/ui/subheader.png) repeat-x left bottom;
+  background: url(images/ui/subheader.png) repeat left bottom;
+  border-bottom: solid 1px #e6e6e6;
   z-index: 0;
   padding: 0.4rem 0;
   height: auto;
@@ -221,13 +223,13 @@ body[role="application"] section[role="region"] > header[aria-level="2"]:after {
 
 body[role="application"] section[role="region"] > header + form.search {
   height: 3rem;
-  background: url(images/ui/search_bk.png) repeat-x left top;
+  background: url(images/ui/search.png) repeat-x left bottom;
   padding: 0.5rem 2.4rem 0 2.4rem;
 }
   body[role="application"] section[role="region"] > header + form.search input[type="text"] {
     width: 100%;
-    background: #fff url(images/ui/search_input_bk.png) repeat-x left top;
-    border: 0.1rem solid #b8b8b8;
+    background: #fff;
+    border: 1px solid #b8b8b8;
     border-radius: 0.3rem;
     height: 2.2rem;
     line-height: 2.2rem;
@@ -240,6 +242,7 @@ body[role="application"] section[role="region"] > header + form.search {
   body[role="application"] section[role="region"] > header + form.search input[type="text"]:-moz-placeholder {
     color: #777;
   }
+
 
 /* ----------------------------------
  * HEADERS: dark
@@ -258,4 +261,27 @@ body[role="application"] section[role="region"].dark-theme > header {
   }
 body[role="application"] section[role="region"].dark-theme > header[aria-level="2"] {
   background: #7f7f7f url(images/ui/dark/subheader.png) repeat-x left bottom;
+}
+
+
+/* ----------------------------------
+ * HEADERS: overlay
+ * ---------------------------------- */
+body[role="application"] section[role="region"] > header.overlay {
+  background: url(images/ui/overlay/header.png) repeat left top;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+body[role="application"] section[role="region"] > header.overlay > button .icon:after,
+body[role="application"] section[role="region"] > header.overlay > a .icon:after {
+  background: none;
+}
+
+body[role="application"] section[role="region"] > header.overlay menu[type="toolbar"] a:last-child,
+body[role="application"] section[role="region"] > header.overlay menu[type="toolbar"] button:last-child {
+  background-image: url(images/ui/overlay/separator.png);
 }
