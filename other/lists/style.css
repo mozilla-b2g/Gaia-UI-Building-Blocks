@@ -193,17 +193,17 @@ body[role="application"] ol[data-state="edit"] li {
   -moz-transform: translateX(5rem);
 }
 
-body[role="application"] ul[data-state="edit"] li > label,
-body[role="application"] ol[data-state="edit"] li > label {
+body[role="application"] ul[data-state="edit"] li > label.check,
+body[role="application"] ol[data-state="edit"] li > label.check {
    opacity: 1;
 }
 
-body[role="application"] li > label {
+body[role="application"] li > label.check {
   -moz-transition: opacity 0.6s ease;
   width: 5rem;
   height: 6rem;
-  position: absolute;
   right: 100%;
+  position: absolute;
   top: -1px;
   z-index: 100;
   opacity: 0;
