@@ -58,6 +58,24 @@ body[role="application"] [role="dialog"] {
 	  bottom: 0;
 	}
 
+		body[role="application"] menu button:last-child,
+		body[role="application"] menu a[role="button"]:last-child {
+			margin-left: 1rem;
+		}
+
+		body[role="application"] menu button,
+		body[role="application"] menu a[role="button"],
+		body[role="application"] menu button:first-child,
+		body[role="application"] menu a[role="button"]:first-child {
+			margin: 0;
+		}
+
+		body[role="application"] menu[data-items="2"] button,
+		body[role="application"] menu[data-items="2"] a[role="button"] {
+			width: -moz-calc((100% - 1rem) / 2);
+		}
+
+
 /* ----------------------------------
  * INLINE BANNER
  * ---------------------------------- */
