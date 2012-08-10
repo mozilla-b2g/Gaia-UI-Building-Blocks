@@ -23,6 +23,26 @@ body[role="application"] ul > li > a:first-child,
 body[role="application"] ol > li > a:first-child  {
   text-decoration: none;
   color: #000;
+  display: inline-block;
+  width: 100%;
+}
+
+/* State press */
+body[role="application"] li > a:first-child:after {
+  content: "";
+  -moz-transition: opacity 0.2s ease;
+  background-color: #b1f1ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+}
+body[role="application"] li > a:first-child:active:after {
+  opacity: 0.6;
 }
 
 body[role="application"] li .aside {
