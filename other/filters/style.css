@@ -1,103 +1,84 @@
+/* ----------------------------------
+ * FILTERS
+ * ---------------------------------- */
 
-/* Filters */
-nav[data-role="filter"],
-nav[data-role="tabs"] {
-  height: 3.5rem;
-  background: #676d75;
-  box-shadow: 0 0 0.3rem rgba(0,0,0,.5);
-}
-
-nav[data-role="filter"] [role="tablist"]:after,
-nav[data-role="tabs"] [role="tablist"]:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-nav[data-role="filter"] [role="tablist"] [role="tab"],
-nav[data-role="tabs"] [role="tablist"] [role="tab"] {
-  float: left;
-}
-
-nav[data-role="filter"] [role="tablist"] [role="tab"] a,
-nav[data-role="filter"] [role="tablist"] [role="search"] a,
-nav[data-role="tabs"] [role="tablist"] [role="tab"] a,
-nav[data-role="tabs"] [role="tablist"] [role="search"] a {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-
-[data-tabs="2"] > li { width: -moz-calc(100% / 2) }
-[data-tabs="3"] > li { width: -moz-calc(100% / 3) }
-[data-tabs="4"] > li { width: -moz-calc(100% / 4) }
-[data-tabs="5"] > li { width: -moz-calc(100% / 5) }
-[data-tabs="6"] > li { width: -moz-calc(100% / 6) }
-
-[role="tab"] > a,
-[role="search"] > a {
-  display: block;
+body[role="application"] ul[role="tablist"].filter {
+  background: #a5a5a5;
+  display: inline-block;
   width: 100%;
-  height: 3.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   position: relative;
 }
-
-.i-text a {
-  color: #2c323a;
-  font: 1.5rem/3.5rem "Open Sans", Sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-}
-.i-man a { background-image: url(images/icon-man.png) }
-.i-man a:active, .i-man.active a{ background-image: url(images/icon-man-active.png) }
-.i-clock a { background-image: url(images/icon-clock.png) }
-.i-clock a:active, .i-clock.active a { background-image: url(images/icon-clock-active.png) }
-.i-phone a { background-image: url(images/icon-phone.png) }
-.i-phone a:active, .i-phone.active a { background-image: url(images/icon-phone-active.png) }
-.i-voicemail a { background-image: url(images/icon-voicemail.png) }
-.i-voicemail a:active, .i-voicemail.active a { background-image: url(images/icon-voicemail-active.png) }
-.i-chat a { background-image: url(images/icon-chat.png) }
-.i-chat a:active, .i-chat.active a { background-image: url(images/icon-chat-active.png) }
-.i-search a { background-image: url(images/icon-search.png) }
-
-nav[data-role="filter"] [role="search"] {
-  float: left;
-  border-left: 0.2rem solid;
-  border-right: 0.2rem solid;
-  -moz-border-left-colors: #444a52 #767c83;
-  -moz-border-right-colors: transparent;
-  background: #565d65;
-  -moz-box-sizing: border-box;
-  background-color: #565d65;
-}
-
-nav[data-role="filter"] [role="tab"] a:active,
-nav[data-role="filter"] [role="tab"].active a,
-nav[data-role="tabs"] [role="tab"] a:active,
-nav[data-role="tabs"] [role="tab"].active a {
-  color: #fff;
-  background-color: #303740;
-}
-
-nav[data-role="filter"] [role="tab"] a:active:before,
-nav[data-role="filter"] [role="tab"].active a:before,
-nav[data-role="tabs"] [role="tab"] a:active:before,
-nav[data-role="tabs"] [role="tab"].active a:before {
+body[role="application"] ul[role="tablist"].filter:before {
   content: "";
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 0.2rem;
+  background: url(images/ui/shadow.png) repeat-x left bottom;
+}
+
+body[role="application"] ul[role="tablist"].filter li {
+  float: left;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  font: bold 1.4rem/1em "Open Sans", Sans-serif;
+  color: #404040;
+  border-bottom: solid 1px #7e7d7d;
+}
+
+body[role="application"] ul[role="tablist"].filter li a {
   display: block;
-  bottom: -0.7rem;
-  left: 50%;
-  margin-left: -0.4rem;
-  width: 0.9rem;
-  height: 0.7rem;
-  background-image: url(images/bottom-active-arrow.png);
+  padding: 0.8rem 0.5rem;
+  text-decoration: none;
+  color: #404040;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-nav[data-role="tabs"] [role="tab"] a:active:before,
-nav[data-role="tabs"] [role="tab"].active a:before {
-  top: -0.7rem;
-  bottom: auto;
-  background-image: url(images/top-active-arrow.png);
+/* Selected state */
+body[role="application"] ul[role="tablist"].filter li[aria-selected="true"] {
+  background: #fff;
+  border-bottom-color: #c2c1c1;
+  color: #000;
+}
+body[role="application"] ul[role="tablist"].filter li[aria-selected="true"] a {
+  color: #000;
 }
 
+/* Bottom position */
+body[role="application"] ul[role="tablist"][data-position="bottom"].filter:before {
+  bottom: 100%;
+  top: auto;
+  background-image: url(images/ui/shadow-revert.png);
+}
+
+body[role="application"] ul[role="tablist"][data-position="bottom"].filter li {
+  border-bottom: none;
+  border-top: solid 1px #7e7d7d;
+}
+
+body[role="application"] ul[role="tablist"][data-position="bottom"].filter li a {
+  padding: 1.3rem 0;
+}
+
+body[role="application"] ul[role="tablist"][data-position="bottom"].filter li[aria-selected="true"] {
+  border-top-color: #c2c1c1;
+}
+
+/* Items calcs */
+body[role="application"] ul[role="tablist"][data-items="2"].filter li {
+  width: -moz-calc(100% / 2);
+}
+
+body[role="application"] ul[role="tablist"][data-items="3"].filter li {
+  width: -moz-calc(100% / 3);
+}
+
+body[role="application"] ul[role="tablist"][data-items="4"].filter li {
+  width: -moz-calc(100% / 4);
+}
