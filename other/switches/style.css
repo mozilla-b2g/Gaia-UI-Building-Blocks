@@ -65,7 +65,7 @@ body[role="application"] label.toggle span {
   border: solid 1px #c2c2c2;
   border-radius: 5.4rem;
   overflow: hidden;
-  background: url(images/toggle/handler.png) no-repeat -0.4rem center;
+  background: url(images/toggle/handler.png) no-repeat -0.2rem center;
   background-size: auto -moz-calc(100% + 2px);
   -moz-transition: background 0.18s ease;
 }
