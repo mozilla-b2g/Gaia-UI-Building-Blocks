@@ -20,12 +20,11 @@
           font-family: "Open Sans", Sans-serif;
           font-weight: lighter;
           color: #666;
-          margin: -1px 0 0;
+          margin: -1px 0 10px;
           background-color: #f5f5f5;
           padding: 0.4rem 0.4rem 0.4rem 3rem;
           border: solid 1px #e8e8e8;
         }
-        section { padding: 10px; }
         progress { margin-bottom: 10px; }
     </style>
     <title>Progress & Activity Indicators</title>
@@ -36,9 +35,12 @@
 <body role="application">
 
     <section role="region">
+      <h2 class="bb-docs">Progress tag with out 'value' property ( Activity indicator )</h2>
       <progress></progress>
       <progress data-theme="dark"></progress>
       <progress class="spinner"></progress>
+
+      <h2 class="bb-docs">Progress tag with 'value' property</h2>
       <progress value="80" max="100"></progress>
     </section>
 
