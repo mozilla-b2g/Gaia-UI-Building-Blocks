@@ -25,14 +25,35 @@
           padding: 0.4rem 0.4rem 0.4rem 3rem;
           border: solid 1px #e8e8e8;
         }
+        body[role="application"] [role="toolbar"]:last-of-type { bottom: 5rem; }
     </style>
-    <title>Default</title>
-    <meta type="description" content="Description">
+    <title>Toolbars</title>
+    <meta type="description" content="Contains actions, indicators, and navigation associated with the current view">
+    <meta type="requires" content="none">
 </head>
 
 <body role="application">
 
-    
+      <div role="toolbar">
+        <ul>
+          <li><button class="update">Update</button></li>
+        </ul>
+        <ul class="end">
+          <li><button class="search">Search</button></li>
+        </ul>
+      </div>
+
+      <div role="toolbar">
+        <ul>
+          <li><button class="delete">Delete</button></li>
+        </ul>
+        <ul class="end">
+          <li><button class="mark">Mark</button></li>
+          <li><button class="send">Send</button></li>
+          <li><button class="move">Move</button></li>
+          <li><button class="share">Share</button></li>
+        </ul>
+      </div>
 
 </body>
 </html>
