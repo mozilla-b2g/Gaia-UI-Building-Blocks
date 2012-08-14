@@ -25,14 +25,57 @@
           padding: 0.4rem 0.4rem 0.4rem 3rem;
           border: solid 1px #e8e8e8;
         }
+        body[role="application"] nav[role="scrollbar"] p {
+          opacity: 1;
+        }
+
     </style>
-    <title>Default</title>
-    <meta type="description" content="Description">
+    <title>Scrolling</title>
+    <meta type="description" content="Vertically slide text, images and/or video across the device's display">
+    <meta type="requires" content="None">
 </head>
 
 <body role="application">
 
-    
+  <section role="region" id="main">
+      <nav role="scrollbar" aria-controls="main">
+        <p></p>
+        <ol>
+          <li><a href="#"><span class="search">Search</span></a></li>
+          <li><a href="#"><span class="favourites">Favourites</span></a></li>
+          <li><a href="#">A</a></li>
+          <li><a href="#">B</a></li>
+          <li><a href="#">C</a></li>
+          <li><a href="#">D</a></li>
+          <li><a href="#">E</a></li>
+          <li><a href="#">F</a></li>
+          <li><a href="#">G</a></li>
+          <li><a href="#">H</a></li>
+          <li><a href="#">I</a></li>
+          <li><a href="#">J</a></li>
+          <li><a href="#">K</a></li>
+          <li><a href="#">L</a></li>
+          <li><a href="#">M</a></li>
+          <li><a href="#">N</a></li>
+          <li><a href="#">O</a></li>
+          <li><a href="#">P</a></li>
+          <li><a href="#">Q</a></li>
+          <li><a href="#">R</a></li>
+          <li><a href="#">S</a></li>
+          <li><a href="#">T</a></li>
+          <li><a href="#">U</a></li>
+          <li><a href="#">V</a></li>
+          <li><a href="#">W</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Y</a></li>
+          <li><a href="#">Z</a></li>
+          <li><a href="#">#</a></li>
+      </ol>
+      </nav>
+      
+    </section>
 
+    <!-- This element must be at the bottom of the document, and his text node should be replaced with the current position -->
+    <span id="scrollbar-state" aria-valuenow="A">A</span>
 </body>
 </html>
