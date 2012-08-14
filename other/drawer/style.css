@@ -134,14 +134,14 @@ body[role="application"] > nav:after {
 
 body[role="application"] > nav > .inner {
   overflow-y: auto;
-  max-height: -moz-calc(100% - 5rem);
+  max-height: -moz-calc(100% - 9rem);
   margin-right: -0.8rem;
 }
 
 body[role="application"] > nav .inner > h2 {
   font-weight: bold;
   font-size: 1.4rem;
-  line-height: 3.4rem;
+  line-height: 3.3rem;
   text-indent: 3rem;
   color: #fff;
   background: url(images/ui/pattern-subheader.png) repeat left top;
@@ -150,6 +150,9 @@ body[role="application"] > nav .inner > h2 {
   padding-right: 0.8rem;
 }
 
+body[role="application"] > nav [role="toolbar"] {
+  position: absolute;
+}
 
 body[role="application"] > nav .inner > ul { 
   width: 100%;
@@ -162,12 +165,11 @@ body[role="application"] > nav .inner > ul > li {
   list-style: none;
 }
 
-
 body[role="application"] > nav .inner > ul > li > a { 
   text-decoration: none;
   color: #fff;
   font-size: 1.6rem;
-  line-height: 4.4rem;
+  line-height: 4.35rem;
   border-bottom: 1px solid #596068; 
   text-indent: 3rem;
   padding-right: 0.8rem;
