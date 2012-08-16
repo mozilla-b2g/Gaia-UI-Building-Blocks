@@ -30,4 +30,10 @@ body[role="application"] div[role="slider"] button {
 	top: 50%;
 	left: 0;
 	margin: -1.5rem 0 0 -0.5rem;
+	border-radius: 2.8rem;
+	border: solid 1px transparent;
+	-moz-transition: border 0.15s ease;
+}
+body[role="application"] div[role="slider"] button:active {
+	border: solid 0.4rem #01c5ed;
 }
