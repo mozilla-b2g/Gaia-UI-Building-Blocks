@@ -22,7 +22,7 @@
         }
         body { background: none; }
        html { background: url(images/dummy/edit.png) no-repeat left top; }
-       body[role="application"] section[role="region"] > header.overlay {
+       body[role="application"] section[role="region"] > header[data-theme="overlay"] {
         top: 2rem;
        }
     </style>
@@ -35,7 +35,7 @@
 <body role="application">
 
       <section role="region">  
-         <header aria-level="1" class="overlay">
+         <header aria-level="1" data-theme="overlay">
             <button><span class="icon icon-close">close</span></button>
             <menu type="toolbar">
                <button>done</button>
