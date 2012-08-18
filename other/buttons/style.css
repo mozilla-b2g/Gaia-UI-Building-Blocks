@@ -78,6 +78,18 @@ body[role="application"] a[role="button"][aria-disabled="true"].affirmative {
 	color: #bcbcbc;
 }
 
+/* Disabled dark (default & affirmative) */
+body[role="application"] menu button[disabled="disabled"],
+body[role="application"] menu a[role="button"][aria-disabled="true"],
+body[role="application"] menu button[disabled="disabled"].affirmative,
+body[role="application"] menu a[role="button"][aria-disabled="true"].affirmative {
+	background-image: url(images/ui/disabled-dark.png);
+	background-color: transparent;
+	border: none;
+	color: #4a4a4a;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
 /* Negative disabled */
 body[role="application"] button[disabled="disabled"].negative,
 body[role="application"] a[role="button"][aria-disabled="true"].negative {
