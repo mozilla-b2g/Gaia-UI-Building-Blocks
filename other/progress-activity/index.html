@@ -21,12 +21,11 @@
           font-family: "Open Sans", Sans-serif;
           font-weight: lighter;
           color: #666;
-          margin: -1px 0 10px;
+          margin: 10px 0;
           background-color: #f5f5f5;
           padding: 0.4rem 0.4rem 0.4rem 3rem;
           border: solid 1px #e8e8e8;
         }
-        progress { margin-bottom: 10px; }
     </style>
     <title>Progress & Activity Indicators</title>
     <meta type="description" content="Providing user with visual feedback that a process is active">
@@ -44,6 +43,27 @@
 
       <h2 class="bb-docs">Progress tag with 'value' property</h2>
       <progress value="80" max="100"></progress>
+
+       <h2 class="bb-docs">Progress with labels</h2>
+     <p role="status">
+        <progress></progress>
+         <span>Loading messages from server</span>
+      </p>
+
+      <p role="status">
+       <span>80%</span>
+        <progress value="80" max="100"></progress>
+      </p>
+
+      <p role="status" data-theme="dark">
+        <progress></progress>
+         <span>Loading messages from server</span>
+      </p>
+
+      <p role="status" data-theme="dark">
+       <span>80%</span>
+        <progress value="80" max="100"></progress>
+      </p>
     </section>
 
 </body>
