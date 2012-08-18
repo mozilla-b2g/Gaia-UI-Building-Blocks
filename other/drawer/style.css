@@ -72,13 +72,14 @@ body[role="application"] > nav > header h1 em {
 }
 
    body[role="application"] > nav > header menu[type="toolbar"] a:last-child,
-   body[role="application"] > nav > header menu[type="toolbar"] button:last-child
-   {
+   body[role="application"] > nav > header menu[type="toolbar"] button:last-child {
       background: url(images/ui/separator.png) no-repeat left center;
     }
 
- body[role="application"] > nav > header menu[type="toolbar"]
- { padding: 0; margin: 0; }
+ body[role="application"] > nav > header menu[type="toolbar"] {
+  padding: 0;
+  margin: 0;
+}
 
    body[role="application"] > nav > header a,
    body[role="application"] > nav > header button {
