@@ -26,16 +26,58 @@
           padding: 0.4rem 0.4rem 0.4rem 3rem;
           border: solid 1px #e8e8e8;
         }
+        body > label {
+          margin: 1rem 2rem;
+          display: block;
+        }
+        .fieldbox { margin: 1rem 2rem; }
     </style>
-    <title>Default</title>
-    <meta type="description" content="Description">
+    <title>Input areas</title>
+    <meta type="description" content="Without description">
     <meta type="requires" content="None">
     <meta type="target" content="html">  
 </head>
 
 <body role="application">
 
-    
+    <h2 class="bb-docs">Default inputs</h2>
+    <label>
+      <input type="text" placeholder="Placeholder">
+      <button class="clear">Clear all text</button>
+    </label>
+
+    <label>
+      <input type="text" placeholder="Placeholder" value="Some written text">
+      <button class="clear" data-state="active">Clear all text</button>
+    </label>
+
+    <h2 class="bb-docs">Fieldbox</h2>
+    <dl class="fieldbox">
+      <dt> <a href="#">Mobile</a></dt>
+      <dd>
+        <label>
+          Phone number:
+          <input type="tel" placeholder="Phone number">
+          <button class="clear">Clear all text</button>
+        </label>
+        <label>
+          Name:
+          <input type="text" placeholder="Name" value="Jessy James">
+          <button class="clear" data-state="active">Clear all text</button>
+        </label>
+      </dd>
+    </dl>
+
+    <dl class="fieldbox">
+      <dt> <a href="#">Work</a></dt>
+      <dd>
+        <label>
+          Email:
+          <input type="tel" placeholder="Email">
+          <button class="clear">Clear all text</button>
+        </label>
+      </dd>
+    </dl>
 
 </body>
 </html>
