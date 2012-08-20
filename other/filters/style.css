@@ -1,0 +1,103 @@
+
+/* Filters */
+nav[data-role="filter"],
+nav[data-role="tabs"] {
+  height: 3.5rem;
+  background: #676d75;
+  box-shadow: 0 0 0.3rem rgba(0,0,0,.5);
+}
+
+nav[data-role="filter"] [role="tablist"]:after,
+nav[data-role="tabs"] [role="tablist"]:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav[data-role="filter"] [role="tablist"] [role="tab"],
+nav[data-role="tabs"] [role="tablist"] [role="tab"] {
+  float: left;
+}
+
+nav[data-role="filter"] [role="tablist"] [role="tab"] a,
+nav[data-role="filter"] [role="tablist"] [role="search"] a,
+nav[data-role="tabs"] [role="tablist"] [role="tab"] a,
+nav[data-role="tabs"] [role="tablist"] [role="search"] a {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+
+[data-tabs="2"] > li { width: -moz-calc(100% / 2) }
+[data-tabs="3"] > li { width: -moz-calc(100% / 3) }
+[data-tabs="4"] > li { width: -moz-calc(100% / 4) }
+[data-tabs="5"] > li { width: -moz-calc(100% / 5) }
+[data-tabs="6"] > li { width: -moz-calc(100% / 6) }
+
+[role="tab"] > a,
+[role="search"] > a {
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  position: relative;
+}
+
+.i-text a {
+  color: #2c323a;
+  font: 1.5rem/3.5rem "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.i-man a { background-image: url(images/icon-man.png) }
+.i-man a:active, .i-man.active a{ background-image: url(images/icon-man-active.png) }
+.i-clock a { background-image: url(images/icon-clock.png) }
+.i-clock a:active, .i-clock.active a { background-image: url(images/icon-clock-active.png) }
+.i-phone a { background-image: url(images/icon-phone.png) }
+.i-phone a:active, .i-phone.active a { background-image: url(images/icon-phone-active.png) }
+.i-voicemail a { background-image: url(images/icon-voicemail.png) }
+.i-voicemail a:active, .i-voicemail.active a { background-image: url(images/icon-voicemail-active.png) }
+.i-chat a { background-image: url(images/icon-chat.png) }
+.i-chat a:active, .i-chat.active a { background-image: url(images/icon-chat-active.png) }
+.i-search a { background-image: url(images/icon-search.png) }
+
+nav[data-role="filter"] [role="search"] {
+  float: left;
+  border-left: 0.2rem solid;
+  border-right: 0.2rem solid;
+  -moz-border-left-colors: #444a52 #767c83;
+  -moz-border-right-colors: transparent;
+  background: #565d65;
+  -moz-box-sizing: border-box;
+  background-color: #565d65;
+}
+
+nav[data-role="filter"] [role="tab"] a:active,
+nav[data-role="filter"] [role="tab"].active a,
+nav[data-role="tabs"] [role="tab"] a:active,
+nav[data-role="tabs"] [role="tab"].active a {
+  color: #fff;
+  background-color: #303740;
+}
+
+nav[data-role="filter"] [role="tab"] a:active:before,
+nav[data-role="filter"] [role="tab"].active a:before,
+nav[data-role="tabs"] [role="tab"] a:active:before,
+nav[data-role="tabs"] [role="tab"].active a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.7rem;
+  left: 50%;
+  margin-left: -0.4rem;
+  width: 0.9rem;
+  height: 0.7rem;
+  background-image: url(images/bottom-active-arrow.png);
+}
+
+nav[data-role="tabs"] [role="tab"] a:active:before,
+nav[data-role="tabs"] [role="tab"].active a:before {
+  top: -0.7rem;
+  bottom: auto;
+  background-image: url(images/top-active-arrow.png);
+}
+
