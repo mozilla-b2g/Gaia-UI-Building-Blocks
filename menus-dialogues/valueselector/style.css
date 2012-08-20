@@ -49,7 +49,7 @@ body[role="application"] [role="dialog"] [data-mode="scroll"] h3 {
 		color: #fff!important;
 	}
 
-	body[role="application"] [role="dialog"] li input[type="checkbox"] {
+	body[role="application"] [role="dialog"] li input {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -57,7 +57,7 @@ body[role="application"] [role="dialog"] [data-mode="scroll"] h3 {
 		pointer-events: none;
 	}
 
-	body[role="application"] [role="dialog"] li input[type="checkbox"]:checked + span,
+	body[role="application"] [role="dialog"] li input:checked + span,
 	body[role="application"] [role="dialog"] li[aria-checked="true"] span {
 		padding-right: 0.5rem;
 		color: #00abcd;
