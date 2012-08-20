@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="headers.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!--
+    This <style> and <link> is only used for the example code, is no needed for the real case use
+  -->
+  <link rel="stylesheet" type="text/css" href="../../fonts.css">
+  <style type="text/css">
+      html, body {
+          margin: 0;
+          padding: 0;
+          font-size: 10px;
+          background-color: #fff;
+        }
+      .content p { 
+        font-family: 'System Sans Semibold';
+        font-size: 1.6rem;
+        padding: 0 3rem;
+      }
+    </style>
+
+    <!--script>
+      window.onload = function() {
+        var editClass = document.getElementById('add').classList
+        document.getElementById('add-button').onclick = function() {
+          editClass.add('show');
+          editClass.remove('hide');
+        }
+        document.getElementById('add-back').onclick = function() {
+          editClass.add('hide');
+          editClass.remove('show');
+        }
+      }
+    </script-->
+  <title>Transitions</title>
+</head>
+
+<body role="application">
+  <section role="region" id="main">
+    <header>
+      <menu type="toolbar">
+         <a id="edit-button" href="#edit"><span class="icon icon-edit">edit</span></a>
+         <a id="add-button" href="#add"><span class="icon icon-add">add</span></a>
+      </menu>
+      <h1>Main Screen</h1>
+    </header>
+
+    <div class="content">
+      <p>Click on the Add or Edit buttons to see the transitions.</p>
+    </div>
+  </section>
+
+  <section role="region" id="add">
+    <header>
+      <a href="#add-back"><span class="icon icon-back">back</span></a>
+      <h1>Add New Item</h1>
+    </header>
+
+    <div class="content">
+      <p>Click on the Back button.</p>
+    </div>
+  </section>
+
+  <div id="add-element"></div>
+</body>
+</html>

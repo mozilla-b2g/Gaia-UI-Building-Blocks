@@ -1,0 +1,99 @@
+/* ----------------------------------
+ * TRANSITIONS
+ * ---------------------------------- */
+
+body[role="application"] section[role="region"] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+
+#add-element {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	top: 10rem;
+	background:-moz-element(#add) no-repeat;
+}
+
+#thread-list-snapshot {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  -moz-transition: -moz-transform .4s ease;
+  background:-moz-element(#thread-list) no-repeat;
+}
+
+#thread-messages-snapshot {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50% !important;
+  height: 100% ;
+  -moz-transition: -moz-transform .4s ease;
+  background:-moz-element(#thread-messages) no-repeat;
+}
+
+
+body[role="application"] #add {
+	z-index: 100;
+	transform: translateX(100%);
+}
+
+
+/*body[role="application"] #add:target {
+	transform: translateX(0);
+	transition: 0.5s;
+}
+body[role="application"] #add:not(:target) {
+	transform: translateX(100%);
+	transition: 0.5s;
+}*/
+
+
+
+	/*body[role="application"] #add:target header {
+		opacity: 1;
+
+	}
+	body[role="application"] #add:not(:target) header {
+		opacity: 0;
+	}*/
+
+@keyframes left {
+	from { 
+			transform: translateX(100%);
+			opacity: 0;
+	} to { 
+			transform: translateX(0);
+			opacity: 1;
+	}  
+}
+@keyframes right {
+	from { transform: translateX(0); }   
+    to { transform: translateX(100%); } 
+}
+
+/*body[role="application"] #add {
+	z-index: 100;
+}
+body[role="application"] #add:target {
+	animation-name: left;
+	animation-duration: 1s;
+}*/
+/*body[role="application"] #add:not(:target) {
+	//transform: translateX(100%);
+	animation-name: right;
+	animation-duration: 1s;
+}*/
+
+

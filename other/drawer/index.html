@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" /> 
+ <!--
+      This <style> and <link> is only used for the example code, is no needed for the real case use
+    -->
+  <link rel="stylesheet" type="text/css" href="../../fonts.css">
+  <link rel="stylesheet" type="text/css" href="../core/css/root.css">
+  <link rel="stylesheet" type="text/css" href="../headers/style.css">
+    <style type="text/css">
+      html, body {
+          margin: 0;
+          padding: 0;
+          font-size: 10px;
+          background-color: #fff;
+        }
+  
+      body[role="application"] div[role="main"] {
+          font: 14px/1em "Open Sans", Sans-serif;
+          padding: 20px;
+      }
+    </style>
+  
+    <title>Drawers</title>
+    <meta type="description" content="">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(){
+
+        document.querySelector("body > section > header > a").addEventListener("click", function(){
+          var region = document.querySelector("body > section");
+
+          if ( region.getAttribute("data-state") == "drawer" ) {
+              region.setAttribute("data-state", "none");
+
+          } else {
+              region.setAttribute("data-state", "drawer");
+          }
+
+        });
+
+      });
+    </script>
+</head>
+
+<body role="application">
+    <nav>
+      <ul>
+        <li><h2>Largeeeeeee Title</h2></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+        <li><h3>Subtitle</h3></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+        <li><a href="#">john.doe@gmail.com</a></li>
+      </ul>
+  </nav>
+
+  <section role="region">
+    <header>
+      <a href="#"><span class="icon icon-menu">menu</span></a>
+      <h1>Inbox</h1>
+    </header>
+
+    <div role="main">
+      This is the content
+    </div>
+  </section>
+
+
+</body>
+</html>
