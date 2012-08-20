@@ -164,6 +164,11 @@ body[role="application"] > nav .inner > ul {
 body[role="application"] > nav .inner > ul > li { 
   color: #fff;
   list-style: none;
+  transition: background 0.2s ease;
+}
+
+body[role="application"] > nav .inner > ul > li:active {
+  background: #00ABCC;  
 }
 
 body[role="application"] > nav .inner > ul > li > a { 
