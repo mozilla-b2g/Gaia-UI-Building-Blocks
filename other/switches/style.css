@@ -8,6 +8,7 @@ body[role="application"] label.check  {
   height: 5rem;
   position: relative;
 }
+
 body[role="application"] label.check > input[type="checkbox"] {
   margin: 0;
   opacity: 0;
@@ -94,7 +95,6 @@ body[role="application"] label.toggle span:after {
 }
 
 /* state ON */
-
 body[role="application"] label.toggle input:checked + span {
   border-color: #00acce;
   background-position: 3.2rem center;
@@ -107,22 +107,3 @@ body[role="application"] label.toggle input:checked + span:before {
 body[role="application"] label.toggle input:checked + span:after {
   -moz-transform: translateX(0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

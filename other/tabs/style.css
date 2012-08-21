@@ -78,10 +78,6 @@ body[role="application"] section[role="region"] > [role="tablist"]:not(.filter) 
   background-image: url(images/icons/dialer.png);
 }
 
-body[role="application"] section[role="region"] > [role="tablist"]:not(.filter) li[aria-disabled="true"] [role="tab"]:after {
- 
-}
-
 /* Selected state */
 body[role="application"] section[role="region"] > [role="tablist"]:not(.filter) :target .icon[role="tab"]:after {
     background-position: center bottom;

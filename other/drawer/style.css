@@ -17,7 +17,6 @@ body[role="application"] > nav {
   font-family: 'Open Sans', Sans-serif;
 }
 
-
 /* Header in drawer */
 body[role="application"] > nav > header {
   position: relative;
@@ -39,28 +38,27 @@ body[role="application"] > nav > header:after {
 }
 
 body[role="application"] > nav > header h1 {
-    font: 2.2rem/4.8rem "Open Sans", Sans-serif;
-    text-align: left;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    overflow: hidden;
-    margin: 0 0 0 3rem;
-    height: 100%
-  }
+  font: 2.2rem/4.8rem "Open Sans", Sans-serif;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 0 3rem;
+  height: 100%
+}
 
 body[role="application"] > nav > header h1 em {
   font: bold 1.5rem/1em "Open Sans", Sans-serif;
 }
 
-
- /* Generic set of actions in toolbar */
- body[role="application"] > nav > header menu[type="toolbar"] {
+/* Generic set of actions in toolbar */
+body[role="application"] > nav > header menu[type="toolbar"] {
   height: 100%; float: right;
 }
 
- body[role="application"] > nav > header menu[type="toolbar"] a, 
- body[role="application"] > nav > header menu[type="toolbar"] button { 
+body[role="application"] > nav > header menu[type="toolbar"] a, 
+body[role="application"] > nav > header menu[type="toolbar"] button { 
   height: 4.9rem; 
   line-height: 4.9rem;
   float: left; 
@@ -71,56 +69,63 @@ body[role="application"] > nav > header h1 em {
   text-align: center;
 }
 
-   body[role="application"] > nav > header menu[type="toolbar"] a:last-child,
-   body[role="application"] > nav > header menu[type="toolbar"] button:last-child {
-      background: url(images/ui/separator.png) no-repeat left center;
-    }
+body[role="application"] > nav > header menu[type="toolbar"] a:last-child,
+body[role="application"] > nav > header menu[type="toolbar"] button:last-child {
+  background: url(images/ui/separator.png) no-repeat left center;
+}
 
- body[role="application"] > nav > header menu[type="toolbar"] {
+body[role="application"] > nav > header menu[type="toolbar"] {
   padding: 0;
   margin: 0;
 }
 
-   body[role="application"] > nav > header a,
-   body[role="application"] > nav > header button {
-      border: none;
-      background: none;
-      padding: 0;
-      overflow: hidden;
-      font: 600 1.4rem/1.1em "Open Sans", Sans-serif;
-      color: #fff;
-    }
-     body[role="application"] > nav > header a:first-letter,
-     body[role="application"] > nav > header button:first-letter {
-      text-transform: uppercase;
-     }
-      /* Icon definitions */
-     body[role="application"] > nav > header .icon {
-        display: inline-block;
-        width: 3rem;
-        height: 3rem;
-        margin: 0 -1rem;
-        background: transparent no-repeat center center;
-        text-indent: -9999px;
-        overflow: hidden;
-        position: relative;
-        height: 4.9rem;
-      }
+body[role="application"] > nav > header a,
+body[role="application"] > nav > header button {
+  border: none;
+  background: none;
+  padding: 0;
+  overflow: hidden;
+  font: 600 1.4rem/1.1em "Open Sans", Sans-serif;
+  color: #fff;
+}
 
-     body[role="application"] > nav > header .icon.icon-add
-     { background-image: url(images/icons/add.png); }
+body[role="application"] > nav > header a:first-letter,
+body[role="application"] > nav > header button:first-letter {
+  text-transform: uppercase;
+}
 
-     body[role="application"] > nav > header .icon.icon-edit
-     { background-image: url(images/icons/edit.png); }
+/* Icon definitions */
+body[role="application"] > nav > header .icon {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 -1rem;
+  background: transparent no-repeat center center;
+  text-indent: -9999px;
+  overflow: hidden;
+  position: relative;
+  height: 4.9rem;
+}
 
-     body[role="application"] > nav > header .icon.icon-close
-     { background-image: url(images/icons/close.png); }
+body[role="application"] > nav > header .icon.icon-add {
+  background-image: url(images/icons/add.png);
+}
 
-     body[role="application"] > nav > header .icon.icon-menu
-     { background-image: url(images/icons/menu.png); }
+body[role="application"] > nav > header .icon.icon-edit {
+  background-image: url(images/icons/edit.png);
+}
 
-     body[role="application"] > nav > header .icon.icon-user
-     { background-image: url(images/icons/user.png); }
+body[role="application"] > nav > header .icon.icon-close {
+  background-image: url(images/icons/close.png);
+}
+
+body[role="application"] > nav > header .icon.icon-menu {
+  background-image: url(images/icons/menu.png);
+}
+
+body[role="application"] > nav > header .icon.icon-user {
+  background-image: url(images/icons/user.png);
+}
 
 body[role="application"] > nav:after { 
   content: '';

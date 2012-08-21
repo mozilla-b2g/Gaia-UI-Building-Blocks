@@ -11,6 +11,7 @@ body[role="application"] ul[role="tablist"].filter {
   margin: 0;
   position: relative;
 }
+
 body[role="application"] ul[role="tablist"].filter:before {
   content: "";
   position: absolute;
@@ -46,6 +47,7 @@ body[role="application"] ul[role="tablist"].filter li[aria-selected="true"] {
   border-bottom-color: #c2c1c1;
   color: #000;
 }
+
 body[role="application"] ul[role="tablist"].filter li[aria-selected="true"] a {
   color: #000;
 }

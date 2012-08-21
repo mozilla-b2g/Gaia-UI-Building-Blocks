@@ -44,6 +44,7 @@ body[role="application"] li > a:first-of-type:after {
   pointer-events: none;
   opacity: 0;
 }
+
 body[role="application"] li > a:first-of-type:active:after {
   opacity: 0.6;
 }
@@ -60,7 +61,6 @@ body[role="application"] li .aside {
 body[role="application"] li .aside.end {
   float: right;
 }
-
 
 body[role="application"] li .aside:before {
   content: "";
@@ -216,7 +216,6 @@ body[role="application"] li > label.check {
   border-right: none;
 }
 
-
 /* State disabled */
 body[role="application"] li[aria-disabled="true"]:before {
   content: "";
@@ -228,7 +227,6 @@ body[role="application"] li[aria-disabled="true"]:before {
   background-color: #e6e6e6;
   opacity: 0.7;
 }
-
 
 body[role="application"]  li[aria-disabled="true"] {
   pointer-events:none;
@@ -268,7 +266,6 @@ body[role="application"] li[data-tag="B"]:after { background-color: #954fa7; }
 /* ----------------------------------
  * LISTS: Overlay theme
  * ---------------------------------- */
-
 body[role="application"] ul.overlay li,
 body[role="application"] ol.overlay li {
   border-top-color: rgba(255, 255, 255, 0.1);
