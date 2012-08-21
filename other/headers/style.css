@@ -73,6 +73,8 @@ body[role="application"] section[role="region"] > header form {
         top: 0;
         bottom: 0;
         width: 3rem;
+        height: auto;
+        margin: 0;
         background: url(images/icons/clear.png) no-repeat center center;
       }
 
@@ -83,13 +85,16 @@ body[role="application"] section[role="region"] > header form {
  body[role="application"] section[role="region"] > header menu[type="toolbar"] a, 
  body[role="application"] section[role="region"] > header menu[type="toolbar"] button { 
   height: 4.9rem; 
+  min-width: 5rem;
+  width: auto;
+  margin-bottom: 0;
   line-height: 4.9rem;
   float: left; 
   background: none; 
   padding: 0 1.75rem; 
   -moz-box-sizing: border-box;
-  min-width: 5rem;
   text-align: center;
+  text-shadow: none;
 }
 
    body[role="application"] section[role="region"] > header menu[type="toolbar"] a:last-child,
