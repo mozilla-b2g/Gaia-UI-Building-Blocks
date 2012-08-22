@@ -3,7 +3,7 @@
 * ---------------------------------- */
 
 body[role="application"] section[role="region"][data-state="drawer"] {
-  -moz-transform: translateX(80%);
+  transform: translateX(80%);
 }
 
 body[role="application"] > nav { 
@@ -195,7 +195,7 @@ body[role="application"] > nav .inner > ul > li > a {
 /* Section */
 body[role="application"] > section[role="region"] {
   width: -moz-calc(100%);
-  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   position: relative;
   left: -2rem;
   z-index: 100;

@@ -17,7 +17,7 @@ body[role="application"] nav[role="scrollbar"] p {
   width: 10.5rem;
   height: 10.5rem;
   opacity: 0;
-  -moz-transition: opacity;
+  transition: opacity;
   background: -moz-element(#scrollbar-state) no-repeat center center, url(images/ui/background.png) repeat left top;
   pointer-events: none;
   text-align: center;

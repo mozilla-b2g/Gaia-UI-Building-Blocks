@@ -13,7 +13,7 @@ body[role="application"] li {
   display: inline-block;
   width: 100%;
   -moz-box-sizing: border-box;
-  -moz-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
   border: solid 1px #dbd9d9;
   border-right: none;
   border-left: none;
@@ -33,7 +33,7 @@ body[role="application"] li > a:first-of-type  {
 /* State press */
 body[role="application"] li > a:first-of-type:after {
   content: "";
-  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
   background-color: #b1f1ff;
   position: absolute;
   left: 0;
@@ -194,7 +194,7 @@ body[role="application"] li[data-state="new"] .icon.icon-smsin {
 /* State edit*/
 body[role="application"] ul[data-state="edit"] li,
 body[role="application"] ol[data-state="edit"] li {
-  -moz-transform: translateX(5rem);
+  transform: translateX(5rem);
 }
 
 body[role="application"] ul[data-state="edit"] li > label.check,
@@ -203,7 +203,7 @@ body[role="application"] ol[data-state="edit"] li > label.check {
 }
 
 body[role="application"] li > label.check {
-  -moz-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
   width: 5rem;
   height: 6rem;
   right: 100%;

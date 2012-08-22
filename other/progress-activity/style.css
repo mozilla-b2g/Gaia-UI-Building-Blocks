@@ -8,7 +8,7 @@
    height: 2.9rem;
    background: url(images/ui/default.png) no-repeat left top;
    border: none;
-   -moz-animation: 1s moveDefault infinite steps(10);
+   animation: 1s moveDefault infinite steps(10);
    display: inline-block;
    vertical-align: middle;
  }
@@ -24,7 +24,7 @@ body[role="application"] p[role="status"][data-theme="dark"] progress:not([value
 
 body[role="application"] progress:not([value]).spinner {
   background-image: url(images/ui/spinner.png);
-   -moz-animation: 1s moveSpinner infinite steps(12);
+   animation: 1s moveSpinner infinite steps(12);
    width: 1.6rem;
    height: 1.6rem;
 }
@@ -67,7 +67,7 @@ body[role="application"] p[role="status"][data-theme="dark"] {
   color: #fff;
 }
 
-@-moz-keyframes moveDefault {
+@keyframes moveDefault {
   from {
     background-position: 0 top;
   }
@@ -77,7 +77,7 @@ body[role="application"] p[role="status"][data-theme="dark"] {
   }
 } 
 
-@-moz-keyframes moveSpinner {
+@keyframes moveSpinner {
   from {
     background-position: 0 top;
   }

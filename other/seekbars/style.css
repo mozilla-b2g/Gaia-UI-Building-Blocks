@@ -33,7 +33,7 @@ body[role="application"] div[role="slider"] button {
   margin: -1.5rem 0 0 -0.5rem;
   border-radius: 2.8rem;
   border: solid 1px transparent;
-  -moz-transition: border 0.15s ease;
+  transition: border 0.15s ease;
 }
 
 body[role="application"] div[role="slider"] button:active {

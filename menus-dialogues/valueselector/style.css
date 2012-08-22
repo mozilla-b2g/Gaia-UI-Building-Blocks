@@ -41,7 +41,7 @@ body[role="application"] [role="dialog"] li {
   height: 5.9rem;
   line-height: 5.9rem;
   color: #fff;
-  -moz-transition: background 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 body[role="application"] [role="dialog"] li:active,

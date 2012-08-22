@@ -68,7 +68,7 @@ body[role="application"] label.toggle span {
   overflow: hidden;
   background: url(images/toggle/handler.png) no-repeat -0.2rem center;
   background-size: auto -moz-calc(100% + 2px);
-  -moz-transition: background 0.18s ease;
+  transition: background 0.18s ease;
 }
 
 body[role="application"] label.toggle span:after,
@@ -79,7 +79,7 @@ body[role="application"] label.toggle span:before {
   bottom: 0;
   width: 5.4rem;
   z-index: -1;
-  -moz-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 body[role="application"] label.toggle span:before {
@@ -91,7 +91,7 @@ body[role="application"] label.toggle span:before {
 body[role="application"] label.toggle span:after {
   left: 100%;
   background: #e6e6e6;
-  -moz-transform: translateX(-5.4rem);
+  transform: translateX(-5.4rem);
 }
 
 /* state ON */
@@ -101,9 +101,9 @@ body[role="application"] label.toggle input:checked + span {
 }
 
 body[role="application"] label.toggle input:checked + span:before {
-  -moz-transform: translateX(5.4rem);
+  transform: translateX(5.4rem);
 }
 
 body[role="application"] label.toggle input:checked + span:after {
-  -moz-transform: translateX(0);
+  transform: translateX(0);
 }
