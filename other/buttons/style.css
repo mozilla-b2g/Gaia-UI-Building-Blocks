@@ -127,9 +127,9 @@ body[role="application"] a[role="button"] span.launch {
   background-position: 1rem bottom;
 }
 
-body[role="application"] button span.favourite,
-body[role="application"] a[role="button"] span.favourite {
-  background-image: url(images/icons/favourite.png);
+body[role="application"] button span.favorite,
+body[role="application"] a[role="button"] span.favorite {
+  background-image: url(images/icons/favorite.png);
 }
 
 body[role="application"] button span.call,
