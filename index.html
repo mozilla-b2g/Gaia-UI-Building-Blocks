@@ -16,7 +16,6 @@
         background-image:
           -moz-radial-gradient(bottom right, circle cover, hsla(300,100%,62%,.07) 0%, hsla(226,77%,55%,.05) 65%, hsla(198,60%,59%,.1) 100%),
           -moz-radial-gradient(center 45deg, closest-side, hsla(210,17%,25%,1) 0%, #1a2633 100%);
-
       }
 
       body {
@@ -94,8 +93,10 @@
         opacity: 0.4;
         cursor: default;
       }
-      nav .disabled a { cursor: default; }
 
+      nav .disabled a {
+        cursor: default;
+      }
 
       iframe {
         float: left;
@@ -113,9 +114,11 @@
         color: #fff;
         width: 300px;
       }
+
       section#metadata button {
         float: right;
       }
+
       section#metadata h1 {
         font: 20px/1em "Open Sans", Sans-serif;
         font-weight: 600;
@@ -132,8 +135,13 @@
       section#metadata a:hover {
         text-decoration: underline;
       }
-      section#metadata section { color: rgba(255, 255, 255, 0.75); }
-       section#metadata section ul { padding-left: 30px; }
+      section#metadata section {
+        color: rgba(255, 255, 255, 0.75);
+      }
+      
+      section#metadata section ul {
+        padding-left: 30px;
+      }
   </style>
    <script type="text/javascript">
 
@@ -145,11 +153,11 @@
         if ( url == "" ) { url = "index.html" }
         var el = document.querySelector("a[href='"+url+"']")
       } else {
-          var el = data.target;
+        var el = data.target;
       }
 
       if (el.tagName.toLowerCase() != 'a')
-            return;
+        return;
 
       var url = el.getAttribute('href').replace(/^#/, '');
       if (/\/$/.test(url))
@@ -167,7 +175,7 @@
           var parent = link.parentNode.parentNode.parentNode;
 
           if ( parent.className == "submenu") {
-              parent.setAttribute("data-state", "open");
+            parent.setAttribute("data-state", "open");
           }
 
         } else { var current = ""; }
@@ -184,10 +192,9 @@
         requires = requires.split(",");
         var tpl = "";
         for ( var i in requires) {
-
           tpl += "<li>"+requires[i]+"</li>"
-
         }
+
         requires = tpl;
 
         meta.querySelector("[data-placeholder='title']").innerHTML = title;
@@ -238,9 +245,8 @@
               }
             }
           }
-
         });
-       
+    
     });
   </script>
 </head>
