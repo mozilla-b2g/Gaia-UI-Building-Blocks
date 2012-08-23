@@ -27,7 +27,7 @@ body[role="application"] [role="dialog"]:before {
   height: 100%;
 }
 
-body[role="application"] [role="dialog"] > .inner {
+body[role="application"] [role="dialog"] > div {
   padding: 0 2.5rem 0 2rem;
   -moz-box-sizing: padding-box;
   width: 100%;
