@@ -5,8 +5,7 @@
     other/buttons/style.css
  * ---------------------------------- */
 
-body[role="application"] [role="dialog"] ul, 
-body[role="application"] [role="dialog"] ol {
+body[role="application"] [role="dialog"] [role="listbox"] {
   position: relative;
   padding: 0 4rem;
   margin: -1rem -4rem 0;
@@ -15,8 +14,7 @@ body[role="application"] [role="dialog"] ol {
   overflow: auto;
 }
 
-body[role="application"] [role="dialog"] [data-mode="scroll"] ul,
-body[role="application"] [role="dialog"] [data-mode="scroll"] ol {
+body[role="application"] [role="dialog"] [data-mode="scroll"] [role="listbox"] {
   background: url(images/ui/shadow.png) repeat-x left top, url(images/ui/shadow-invert.png) repeat-x left bottom;
   padding: 0 2.8rem 0 4rem;
   /* 4rem - 1.2rem = 2.8rem (1.2rem scrollbar width) */
@@ -28,7 +26,7 @@ body[role="application"] [role="dialog"] [data-mode="scroll"] h3 {
   text-indent: 2.5rem
 }
 
-body[role="application"] [role="dialog"] li {
+body[role="application"] [role="dialog"] [role="listbox"] li {
   margin: 0;
   padding-bottom: 1px;
   list-style: none;
@@ -44,13 +42,13 @@ body[role="application"] [role="dialog"] li {
   transition: background 0.2s ease;
 }
 
-body[role="application"] [role="dialog"] li:active,
-body[role="application"] [role="dialog"] li:active label span {
+body[role="application"] [role="dialog"] [role="listbox"]  li:active,
+body[role="application"] [role="dialog"] [role="listbox"]  li:active label span {
   background: #00ABCC;
   color: #fff!important;
 }
 
-body[role="application"] [role="dialog"] li input {
+body[role="application"] [role="dialog"] [role="listbox"]  li input {
   position: absolute;
   left: 0;
   top: 0;
@@ -58,23 +56,23 @@ body[role="application"] [role="dialog"] li input {
   pointer-events: none;
 }
 
-body[role="application"] [role="dialog"] li input:checked + span,
-body[role="application"] [role="dialog"] li[aria-checked="true"] span {
+body[role="application"] [role="dialog"] [role="listbox"]  li input:checked + span,
+body[role="application"] [role="dialog"] [role="listbox"]  li[aria-checked="true"] span {
   padding-right: 0.5rem;
   color: #00abcd;
   background: url(images/icons/checked.png) content-box right center no-repeat;
 }
 
-body[role="application"] [role="dialog"] li a,
-body[role="application"] [role="dialog"] li label {
+body[role="application"] [role="dialog"] [role="listbox"]  li a,
+body[role="application"] [role="dialog"] [role="listbox"]  li label {
   border-bottom: 1px solid #000;
   text-indent: 0.5rem;
   outline: none;
 }
 
-body[role="application"] [role="dialog"] li a,
-body[role="application"] [role="dialog"] li label,
-body[role="application"] [role="dialog"] li label span {
+body[role="application"] [role="dialog"] [role="listbox"]  li a,
+body[role="application"] [role="dialog"] [role="listbox"]  li label,
+body[role="application"] [role="dialog"] [role="listbox"]  li label span {
   text-decoration: none;
   display: block;
   color: #fff;
