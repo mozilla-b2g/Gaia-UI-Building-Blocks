@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
 
+  <link rel="stylesheet" href="../../widgets/buttons/style.css">
+  <link rel="stylesheet" href="../../widgets/headers/style.css">
   <link rel="stylesheet" href="../core.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../../other/buttons/style.css">
 
   <!--
   This <style> and <link> is only used for the example code, is no needed for the real case use
@@ -20,27 +21,28 @@
     }
 
     body { background: none; }
-    html { background: url(images/dummy/content.png) no-repeat left top; }
+    html { background: url(images/dummy/edit.png) no-repeat left top; }
 
+    body[role="application"] section[role="region"] > header[data-theme="overlay"] {
+      top: 2rem;
+    }
   </style>
-  <title>Promt, with content</title>
+  <title>Promt, edit</title>
   <meta type="description" content="Prompts user to take action">
-  <meta type="requires" content="menu-dialoges/core.css, other/buttons/style.css">
+  <meta type="requires" content="menu-dialoges/core.css, other/buttons/style.css, other/headers/style.css">
   <meta type="target" content="html">  
 </head>
 
 <body role="application">
 
-  <section role="dialog">
-    <div>
-        <h3>Confirmation</h3>
-        <div class="content">
-        <img src="images/dummy/icon.png">
-        <strong>Lightbox</strong>
-        <small>Lightbox Enterprises LLC.</small>
-      </div>
-      <p>Do you want to download and install this application?</p>
-    </div>
+  <section role="region">  
+    <header aria-level="1" data-theme="overlay">
+      <button><span class="icon icon-close">close</span></button>
+      <menu type="toolbar">
+        <button>done</button>
+      </menu>
+      <h1>Edit</h1>
+    </header>
     <menu data-items="2">
       <button>Cancel</button>
       <button class="affirmative">Yes</button>
