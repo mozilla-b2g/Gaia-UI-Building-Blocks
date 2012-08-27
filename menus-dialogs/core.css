@@ -77,25 +77,3 @@ body[role="application"] menu:not([type="toolbar"])[data-items="2"] button,
 body[role="application"] menu:not([type="toolbar"])[data-items="2"] a[role="button"] {
   width: -moz-calc((100% - 1rem) / 2);
 }
-
-
-/* ----------------------------------
- * INLINE BANNER
- * ---------------------------------- */
-
-body[role="application"] [role="dialog"].inline {
-  position: relative;
-  margin: -0.4rem 0 0 0;
-  padding: 1rem 0 0 0;
-  background: rgba(0,0,0,0.83);
-}
-
-body[role="application"] [role="dialog"].inline p {
-  border: 0;
-  padding: 1rem 1.5rem; 
-}
-
-body[role="application"] [role="dialog"].inline menu {
-  position: relative;
-  background: none;
-}
