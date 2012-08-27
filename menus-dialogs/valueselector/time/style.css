@@ -71,11 +71,11 @@ body[role="application"] [role="dialog"] [role="spinbutton"] ul {
   max-height: 100%;
 }
 
-body[role="application"] [role="dialog"] [role="spinbutton"] #alpha {
+body[role="application"] [role="dialog"] [role="spinbutton"] div:first-of-type {
   border-left: none;
 }
 
-body[role="application"] [role="dialog"] [role="spinbutton"] #gamma {
+body[role="application"] [role="dialog"] [role="spinbutton"] .mode {
   border-right: none;
   background: url(images/ui/pattern.png) repeat left top;
 }
