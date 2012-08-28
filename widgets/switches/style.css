@@ -1,7 +1,7 @@
 /* ----------------------------------
  * CHECKS
  * ---------------------------------- */
-body[role="application"] label.check  {
+.switches  {
   display: inline-block;
   vertical-align: middle;
   width: 5rem;
@@ -9,7 +9,7 @@ body[role="application"] label.check  {
   position: relative;
 }
 
-body[role="application"] label.check > input[type="checkbox"] {
+.switches > input {
   margin: 0;
   opacity: 0;
   position:absolute;
@@ -17,7 +17,7 @@ body[role="application"] label.check > input[type="checkbox"] {
   left: 0;
 }
 
-body[role="application"] label.check > span {
+.switches input + span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -25,24 +25,33 @@ body[role="application"] label.check > span {
   width: 2.2rem;
   height: 2.2rem;
   pointer-events: none;
-  background: url(images/check/default.png) no-repeat center top;
-  background-size: 100% auto;
 }
 
-body[role="application"] label.check > input:checked + span {
+.switches input[type="checkbox"] + span {
+  background: url(images/check/default.png) no-repeat center top;
+}
+
+.switches input[type="radio"] + span {
+  background: url(images/radio/default.png) no-repeat center top;
+}
+
+.switches > input:checked + span {
   background-position: center bottom;
 }
 
 /* Negative */
-body[role="application"] label.check.negative > input[type="checkbox"] + span {
+.switches input[type="checkbox"].negative + span {
   background-image: url(images/check/negative.png);
 }
 
+.switches input[type="radio"].negative + span {
+  background-image: url(images/radio/negative.png);
+}
 
 /* ----------------------------------
  * TOGGLES
  * ---------------------------------- */
-body[role="application"] label.toggle {
+.toggle {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -51,11 +60,11 @@ body[role="application"] label.toggle {
   height: 4rem;
 }
 
-body[role="application"] label.toggle input[type="checkbox"] {
+.toggle input {
   opacity: 0;
 }
 
-body[role="application"] label.toggle span {
+.toggle span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -71,8 +80,8 @@ body[role="application"] label.toggle span {
   transition: background 0.18s ease;
 }
 
-body[role="application"] label.toggle span:after,
-body[role="application"] label.toggle span:before {
+.toggle span:after,
+.toggle span:before {
   content: "";
   position: absolute;
   top: 0;
@@ -82,28 +91,28 @@ body[role="application"] label.toggle span:before {
   transition: transform 0.2s ease;
 }
 
-body[role="application"] label.toggle span:before {
+.toggle span:before {
   right: 100%;
   background: #00c3ea url(images/toggle/icon.png) no-repeat 0.5rem center;
   background-size: auto -moz-calc(100% - 2px);
 }
 
-body[role="application"] label.toggle span:after {
+.toggle span:after {
   left: 100%;
   background: #e6e6e6;
   transform: translateX(-5.4rem);
 }
 
 /* state ON */
-body[role="application"] label.toggle input:checked + span {
+.toggle input:checked + span {
   border-color: #00acce;
   background-position: 3.2rem center;
 }
 
-body[role="application"] label.toggle input:checked + span:before {
+.toggle input:checked + span:before {
   transform: translateX(5.4rem);
 }
 
-body[role="application"] label.toggle input:checked + span:after {
+.toggle input:checked + span:after {
   transform: translateX(0);
 }
