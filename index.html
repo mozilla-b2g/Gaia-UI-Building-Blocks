@@ -138,7 +138,7 @@
       section#metadata section {
         color: rgba(255, 255, 255, 0.75);
       }
-      
+
       section#metadata section ul {
         padding-left: 30px;
       }
@@ -186,8 +186,8 @@
       //Load metadata
       preview.onload = function() {
         var title = preview.contentWindow.document.head.querySelector("title").innerHTML;
-        var description = preview.contentWindow.document.head.querySelector("meta[type=description]").content;
-        var requires = preview.contentWindow.document.head.querySelector("meta[type=requires]").content;
+        var description = preview.contentWindow.document.head.querySelector("meta[name=description]").content;
+        var requires = preview.contentWindow.document.head.querySelector("meta[name=requires]").content;
 
         requires = requires.split(",");
         var tpl = "";
@@ -204,7 +204,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        
+
         //Set correct preview on DOM ready
         loadURL(this);
 
@@ -239,19 +239,19 @@
           for ( var i in bgRoot ) {
             if (bgRoot[i].nodeType == 1) {
               if (  bgRoot[i].style.background == "" ) {
-                bgRoot[i].setAttribute("style", "background: url("+imageURI+") repeat left top;");            
+                bgRoot[i].setAttribute("style", "background: url("+imageURI+") repeat left top;");
               } else {
-                bgRoot[i].removeAttribute("style");           
+                bgRoot[i].removeAttribute("style");
               }
             }
           }
         });
-    
+
     });
   </script>
 </head>
 <body>
-  <h1 style="display: none"><a href="index.html">GAIA Building Blocks</a></h1>  
+  <h1 style="display: none"><a href="index.html">GAIA Building Blocks</a></h1>
   <nav id="nav" onclick="loadURL(event)">
     <h2>Menus + Dialogs</h2>
     <ol>

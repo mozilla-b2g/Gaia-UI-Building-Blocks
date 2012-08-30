@@ -40,11 +40,11 @@
 }
 
 /* Negative */
-.switches input[type="checkbox"].negative + span {
+.switches.negative input[type="checkbox"] + span {
   background-image: url(images/check/negative.png);
 }
 
-.switches input[type="radio"].negative + span {
+.switches.negative input[type="radio"] + span {
   background-image: url(images/radio/negative.png);
 }
 
