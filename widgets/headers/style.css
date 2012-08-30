@@ -139,10 +139,10 @@ section[role="region"] > header:first-child button:focus {
   border: none!important;
 }
 
-section[role="region"] > header:first-child a:active .icon:after,
-section[role="region"] > header:first-child button:active .icon:after,
-section[role="region"] > header:first-child menu[type="toolbar"] a:active,
-section[role="region"] > header:first-child menu[type="toolbar"] button:active  {
+section[role="region"] > header:first-child a:not([aria-disabled="true"]):active .icon:after,
+section[role="region"] > header:first-child button:not(:disabled):active .icon:after,
+section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):active,
+section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):active  {
   background: #008aaa!important;
   transition: background 0.2s ease;
   border-bottom: solid 1px rgba(0, 0, 0, 0.2)!important;
@@ -152,7 +152,6 @@ section[role="region"] > header:first-child menu[type="toolbar"] button:active  
 section[role="region"] > header:first-child menu[type="toolbar"] a[aria-disabled="true"],
 section[role="region"] > header:first-child menu[type="toolbar"] button[disabled]  {
   opacity: 0.5;
-  background-color: transparent!important;
 }
 
 section[role="region"] > header:first-child a:first-letter,
