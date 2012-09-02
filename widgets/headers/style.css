@@ -214,7 +214,7 @@ section[role="region"] > header:first-child > a {
 section[role="region"] > header:first-child > button .icon,
 section[role="region"] > header:first-child > a .icon {
   font-size: 0;
-  line-height: 10rem;
+  line-height: 3rem;
   overflow: visible;
   position: static;
   margin-left: -3rem;
