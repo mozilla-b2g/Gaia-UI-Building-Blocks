@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Promt</title>
+  <title>Promt, edit</title>
   <meta name="description" content="Prompts user to take action">
   <meta name="target" content="html">
 
@@ -26,21 +26,27 @@
     }
 
     html {
-      background: url(images/dummy/default.png) no-repeat left top;
+      background: url(images/dummy.png) no-repeat left top;
+    }
+
+    body[role="application"] section[role="dialog"] {
+      top: 2rem;
     }
   </style>
 </head>
 
 <body role="application">
-
-  <section role="dialog">
-    <div>
-      <h3>Confirmation</h3>
-      <p>Are you sure you want to delete this contact?</p>
-    </div>
+  <section role="dialog" class="edit">
+    <header>
+      <button><span class="icon icon-close">close</span></button>
+      <menu type="toolbar">
+        <button>done</button>
+      </menu>
+      <h1>Edit</h1>
+    </header>
     <menu data-items="2">
-      <button>Cancel</button>
-      <button class="negative">Delete</button>
+      <button>Delete all</button>
+      <button>Delete selected</button>
     </menu>
   </section>
 
