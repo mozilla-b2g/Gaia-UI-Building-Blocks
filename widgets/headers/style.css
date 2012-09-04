@@ -301,8 +301,15 @@ section[role="region"].skin-dark > header:first-child,
 section[role="region"].skin-dark > header:first-child > a .icon:after,
 .skin-dark section[role="region"] > header:first-child > a .icon:after,
 section[role="region"].skin-dark > header:first-child > button .icon:after,
-.skin-dark section[role="region"]> header > button .icon:after {
+.skin-dark section[role="region"] > header:first-child > button .icon:after {
   background: #26272c url(images/ui/dark/negative.png) repeat-x 0 0;
+}
+
+section[role="region"].skin-dark > header:first-child menu[type="toolbar"] a:last-child,
+.skin-dark section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
+section[role="region"].skin-dark > header:first-child menu[type="toolbar"] button:last-child,
+.skin-dark section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
+  background-image: url(images/ui/dark/separator.png);
 }
 
 section[role="region"].skin-dark > header,
@@ -336,7 +343,7 @@ section[role="region"].skin-organic > header:first-child > button .icon:after,
 section[role="region"].skin-organic > header:first-child menu[type="toolbar"] a:last-child,
 .skin-organic section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
 section[role="region"].skin-organic > header:first-child menu[type="toolbar"] button:last-child,
-.skin-organic section[role="region"]> header menu[type="toolbar"] button:last-child {
+.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
   background-image: url(images/ui/organic/separator.png);
 }
 
