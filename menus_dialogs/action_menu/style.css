@@ -19,7 +19,7 @@ section[role="dialog"] {
   color: #fff;
 }
 
-body[role="application"] [role="dialog"]:before {
+section[role="dialog"]:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
