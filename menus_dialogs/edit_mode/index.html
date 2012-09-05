@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Edit mode</title>
+  <meta name="description" content="Starts an edition mode for adding or removing items">
+  <meta name="target" content="html">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+  This <style> and <link> is only used for the example code, is no needed for the real case use
+  -->
+  <link rel="stylesheet" href="../../fonts.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+      background-color: #fff;
+    }
+
+    body {
+      background: none;
+    }
+
+    html {
+      background: url(images/dummy.png) no-repeat left top;
+    }
+
+    body[role="application"] section[role="dialog"] {
+      top: 2rem;
+    }
+  </style>
+</head>
+
+<body role="application">
+  <section role="dialog" class="edit">
+    <header>
+      <button><span class="icon icon-close">close</span></button>
+      <menu type="toolbar">
+        <button>done</button>
+      </menu>
+      <h1>Edit</h1>
+    </header>
+    <menu data-items="2">
+      <button>Delete all</button>
+      <button>Delete selected</button>
+    </menu>
+  </section>
+
+</body>
+</html>
