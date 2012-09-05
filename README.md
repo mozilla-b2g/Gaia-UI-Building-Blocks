@@ -21,6 +21,7 @@
 * have a single space before the property value
 * end in a semi-colon
 * multiple values - each value should be separated with a space.
+  
   .b2g {
     color: #efefef;
     font-size: 0.9rem;
@@ -30,10 +31,12 @@
 ## Comments
 
 Describe a section of code
+
   /**
    * Your Comment Here.
    */
 
 
 Shorter inline comments may be added after a property, preceded with a space
+  
   padding-left: 2em; /* LTR */
