@@ -187,19 +187,9 @@
       preview.onload = function() {
         var title = preview.contentWindow.document.head.querySelector("title").innerHTML;
         var description = preview.contentWindow.document.head.querySelector("meta[name=description]").content;
-        var requires = preview.contentWindow.document.head.querySelector("meta[name=requires]").content;
-
-        requires = requires.split(",");
-        var tpl = "";
-        for ( var i in requires) {
-          tpl += "<li>"+requires[i]+"</li>"
-        }
-
-        requires = tpl;
 
         meta.querySelector("[data-placeholder='title']").innerHTML = title;
         meta.querySelector("[data-placeholder='description']").innerHTML = description;
-        meta.querySelector("[data-placeholder='requires']").innerHTML = requires;
       };
     }
 
@@ -229,7 +219,7 @@
         //Toggle background
          document.getElementById("toggleExample").addEventListener("click", function(){
           var preview = document.getElementById("iframe").contentWindow.document;
-          var selector = preview.head.querySelector("meta[type=target]").content;
+          var selector = preview.head.querySelector("meta[name=target]").content;
           var imageURI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2RjkxRjkzNUUwRjUxMUUxQkI2OUZCMzdENTY5OEI2RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2RjkxRjkzNkUwRjUxMUUxQkI2OUZCMzdENTY5OEI2RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjZGOTFGOTMzRTBGNTExRTFCQjY5RkIzN0Q1Njk4QjZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjZGOTFGOTM0RTBGNTExRTFCQjY5RkIzN0Q1Njk4QjZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ph+CNwAAAC1JREFUeNpi/P//PwM2cO3aNaziTAwkglENxADGq1evYpXQ0tIaDSX6aQAIMABDIwib2BL4OQAAAABJRU5ErkJggg==";
 
           console.log(selector)
@@ -261,9 +251,9 @@
             <li><a href="#menus_dialogs/prompt/">Default</a></li>
             <li><a href="#menus_dialogs/prompt/content.html">With content</a></li>
             <li><a href="#menus_dialogs/prompt/no_title.html">w/o Title</a></li>
-            <li><a href="#menus_dialogs/prompt/edit.html">Edit</a></li>
           </ol>
       </li>
+      <li><a href="#menus_dialogs/edit_mode/index.html">Edit mode</a></li>
       <li><a href="#menus_dialogs/action_menu/">Action menu</a></li>
       <li><a href="#menus_dialogs/object_menu/">Object menu</a></li>
       <li class="submenu">
@@ -271,10 +261,10 @@
         <ol>
             <li><a href="#menus_dialogs/value_selector/index.html">Single value</a></li>
             <li><a href="#menus_dialogs/value_selector/multiple.html">Multiple value</a></li>
-            <li><a href="#menus_dialogs/value_selector/time/index.html">Time</a></li>
-            <li><a href="#menus_dialogs/value_selector/date/index.html">Date</a></li>
           </ol>
       </li>
+      <li><a href="#menus_dialogs/time_selector/index.html">Time selector</a></li>
+      <li><a href="#menus_dialogs/date_selector/index.html">Date selector</a></li>
       <li><a href="#menus_dialogs/banner/">Banner</a></li>
     </ol>
 
@@ -306,10 +296,6 @@
     <button id="toggleExample">Switch background</button>
       <h1 data-placeholder="title">Building blocks</h1>
       <p data-placeholder="description">Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p>
-      <section>
-        <p><strong>Requires:</strong></p>
-        <ul data-placeholder="requires"><li>None</li></ul>
-      </section>
   </section>
 
 </body>
