@@ -4,14 +4,12 @@
   <meta charset="utf-8">
   <title>Headers</title>
   <meta name="description" content="Providing top-level navigation and inputs for the active view">
-  <meta name="requires" content="None">
-  <meta name="target" content="html">
-  <link rel="stylesheet" href="style.css">
-
   <!--
-    This <style> and <link> is only used for the example preview, isn't needed for the real use case
-  -->
-  <style>
+    - This <style> and <link> is only used for the example preview,
+    - it isn't needed for the real use case.
+    -->
+  <link rel="stylesheet" href="../headers.css">
+  <style type="text/css">
     html, body {
       margin: 0;
       padding: 0;
@@ -52,8 +50,8 @@
     <header>
       <button><span class="icon icon-menu">menu</span></button>
       <menu type="toolbar">
-        <button disabled><span class="icon icon-edit">edit</span></button>
-        <a href="#" aria-disabled="true"><span class="icon icon-add">add</span></a>
+        <button><span class="icon icon-edit">edit</span></button>
+        <button><span class="icon icon-add">add</span></button>
       </menu>
       <h1>Inbox <em>(2)</em></h1>
     </header>
