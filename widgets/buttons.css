@@ -19,7 +19,7 @@ a[role="button"] {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  background: #fafafa url(images/ui/default.png) repeat-x left bottom;
+  background: #fafafa url(buttons/images/ui/default.png) repeat-x left bottom;
   border: 0.1rem solid #9f9f9f;
   border-radius: 0.3rem;
   font-size: 1.6rem;
@@ -46,7 +46,7 @@ a.affirmative[role="button"]:active  {
 /* Affirmative */
 button.affirmative,
 a[role="button"].affirmative {
-  background-image: url(images/ui/affirmative.png);
+  background-image: url(buttons/images/ui/affirmative.png);
   background-color: #00caf2;
   border-color: #00acce;
 }
@@ -54,7 +54,7 @@ a[role="button"].affirmative {
 /* Negative */
 button.negative,
 a.negative[role="button"] {
-  background-image: url(images/ui/negative.png);
+  background-image: url(buttons/images/ui/negative.png);
   background-color: #b70404;
   color: #fff;
   text-shadow: -0.1rem -0.1rem 0 #830b0b;
@@ -64,7 +64,7 @@ a.negative[role="button"] {
 /* Negative Press */
 button.negative:active,
 a[role="button"].negative:active {
-  background-image: url(images/ui/negative-press.png);
+  background-image: url(buttons/images/ui/negative-press.png);
   background-color: #890707;
 }
 
@@ -73,7 +73,7 @@ button[disabled="disabled"],
 a[role="button"][aria-disabled="true"],
 button[disabled="disabled"].affirmative,
 a[role="button"][aria-disabled="true"].affirmative {
-  background-image: url(images/ui/disabled-bright.png);
+  background-image: url(buttons/images/ui/disabled-bright.png);
   background-color: transparent;
   border-color: #dadada;
   color: #bcbcbc;
@@ -84,7 +84,7 @@ menu button[disabled="disabled"],
 menu a[role="button"][aria-disabled="true"],
 menu button[disabled="disabled"].affirmative,
 menu a[role="button"][aria-disabled="true"].affirmative {
-  background-image: url(images/ui/disabled-dark.png);
+  background-image: url(buttons/images/ui/disabled-dark.png);
   background-color: transparent;
   border: none;
   color: #4a4a4a;
@@ -94,7 +94,7 @@ menu a[role="button"][aria-disabled="true"].affirmative {
 /* Negative disabled */
 button[disabled="disabled"].negative,
 a[role="button"][aria-disabled="true"].negative {
-  background-image: url(images/ui/negative-disabled.png);
+  background-image: url(buttons/images/ui/negative-disabled.png);
   color: #fff;
   text-shadow: none;
 }
@@ -118,29 +118,29 @@ a[role="button"] span.end {
 /* Icon base types */
 button span.goto,
 a[role="button"] span.goto {
-  background-image: url(images/icons/goto.png);
+  background-image: url(buttons/images/icons/goto.png);
 }
 
 button span.launch,
 a[role="button"] span.launch {
-  background-image: url(images/icons/launch.png);
+  background-image: url(buttons/images/icons/launch.png);
   background-position: 1rem bottom;
 }
 
 button span.favorite,
 a[role="button"] span.favorite {
-  background-image: url(images/icons/favorite.png);
+  background-image: url(buttons/images/icons/favorite.png);
 }
 
 button span.call,
 a[role="button"] span.call {
-  background-image: url(images/icons/call.png);
+  background-image: url(buttons/images/icons/call.png);
   background-position: center bottom;
 }
 
 button span.tick,
 a[role="button"] span.tick {
-  background-image: url(images/icons/tick.png);
+  background-image: url(buttons/images/icons/tick.png);
 }
 
 /* ----------------------------------
@@ -179,7 +179,7 @@ a[role="button"] span.tick {
   left: 0;
   right: 0;
   top: 100%;
-  background: url(images/ui/shadow.png) repeat-x left bottom;
+  background: url(buttons/images/ui/shadow.png) repeat-x left bottom;
   height: 0.2rem;
   margin-top: 0.1rem;
   pointer-events: none;
