@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Promt</title>
+  <title>Confirm</title>
   <meta name="description" content="Prompts user to take action">
   <meta name="target" content="html">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../confirm.css">
 
   <!--
   This <style> and <link> is only used for the example code, is no needed for the real case use
@@ -33,16 +33,16 @@
 
 <body role="application">
 
-  <section role="dialog">
-    <div>
-      <h3>Confirmation</h3>
+  <form role="dialog">
+    <section>
+      <h1>Confirmation</h1>
       <p>Are you sure you want to delete this contact?</p>
-    </div>
-    <menu data-items="2">
-      <button>Cancel</button>
-      <button class="negative">Delete</button>
+    </section>
+    <menu>
+      <button type="reset">Cancel</button>
+      <button>Delete</button>
     </menu>
-  </section>
+  </form>
 
 </body>
 </html>

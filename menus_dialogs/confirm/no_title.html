@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Promt, with content</title>
+  <title>Confirm, w/o title</title>
   <meta name="description" content="Prompts user to take action">
   <meta name="target" content="html">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../confirm.css">
 
   <!--
   This <style> and <link> is only used for the example code, is no needed for the real case use
@@ -26,28 +26,22 @@
     }
 
     html {
-      background: url(images/dummy/content.png) no-repeat left top;
+      background: url(images/dummy/default.png) no-repeat left top;
     }
   </style>
 </head>
 
 <body role="application">
 
-  <section role="dialog">
-    <div>
-        <h3>Confirmation</h3>
-        <div class="content">
-        <img src="images/dummy/icon.png">
-        <strong>Lightbox</strong>
-        <small>Lightbox Enterprises LLC.</small>
-      </div>
-      <p>Do you want to download and install this application?</p>
-    </div>
-    <menu data-items="2">
-      <button>Cancel</button>
-      <button class="affirmative">Yes</button>
+  <form role="dialog">
+    <section>
+      <p>Are you sure you want to delete this contact?</p>
+    </section>
+    <menu>
+      <button type="reset">Cancel</button>
+      <button>Delete</button>
     </menu>
-  </section>
+  </form>
 
 </body>
 </html>
