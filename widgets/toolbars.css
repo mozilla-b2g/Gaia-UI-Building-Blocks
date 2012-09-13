@@ -43,29 +43,29 @@
 
 /* Base icons */
 [role="toolbar"] .update {
-  background-image: url(toolbars/images/update.png);
+  background-image: url(toolbars/images/icons/update.png);
 }
 
 [role="toolbar"] .mark {
-  background-image: url(toolbars/images/mark.png);
+  background-image: url(toolbars/images/icons/mark.png);
 }
 
 [role="toolbar"] .share {
-  background-image: url(toolbars/images/share.png);
+  background-image: url(toolbars/images/icons/share.png);
 }
 
 [role="toolbar"] .send {
-  background-image: url(toolbars/images/send.png);
+  background-image: url(toolbars/images/icons/send.png);
 }
 
 [role="toolbar"] .search {
-  background-image: url(toolbars/images/search.png);
+  background-image: url(toolbars/images/icons/search.png);
 }
 
 [role="toolbar"] .move {
-  background-image: url(toolbars/images/move.png);
+  background-image: url(toolbars/images/icons/move.png);
 }
 
 [role="toolbar"] .delete {
-  background-image: url(toolbars/images/delete.png);
+  background-image: url(toolbars/images/icons/delete.png);
 }
