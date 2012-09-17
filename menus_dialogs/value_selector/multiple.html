@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Value selector, multiples value</title>
+  <title>Value selector, multiple selection</title>
   <meta name="description" content="Provides a way for the user to select one of more values, usually from a Form interface">
   <meta name="target" content="html">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../value_selector.css">
 
   <!--
   This <style> and <link> is only used for the example code, is no needed for the real case use
@@ -44,9 +44,9 @@
 
 <body role="application">
 
-  <section role="dialog">
-    <div class="inner" data-mode="scroll">
-      <h3>Choose your option(s)</h3>
+  <form role="dialog">
+    <section class="inner scrollable">
+      <h1>Choose your option(s)</h1>
       <ul role="listbox" aria-multiselectable="true">
         <li role="option">
           <label for="option1">
@@ -103,12 +103,12 @@
           </label>
         </li>
       </ul>
-    </div>
+    </section>
     <menu data-items="2">
-      <button>Cancel</button>
-      <button class="affirmative">Action</button>
+      <button type="reset">Cancel</button>
+      <button type="submit">Action</button>
     </menu>
-  </section>
+  </form>
 
 </body>
 </html>
