@@ -7,7 +7,7 @@
   <meta name="description" content="Presenting a list of actions related to the App content">
   <meta name="target" content="html">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../action_menu.css">
 
   <!--
   This <style> and <link> is only used for the example code, is no needed for the real case use
@@ -43,18 +43,18 @@
 </head>
 
 <body role="application">
-
-  <section role="dialog">
+  
+  <form role="dialog">
+    <section>
+      <h1>Title</h1>
+    </section>
     <menu class="actions">
-      <h3>Title</h3>
-      <ul>
-        <li><button>Action 1</button></li>
-        <li><button>Action 2</button></li>
-        <li><button>Action 3</button></li>
-        <li><button>Cancel</button></li>
-      </ul>
+      <button>Action 1</button>
+      <button>Action 2</button>
+      <button>Action 3</button>
+      <button type="reset">Cancel</button>
     </menu>
-  </section>
+  </form>
 
 </body>
 </html>
