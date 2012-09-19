@@ -68,7 +68,7 @@ form[role="dialog"] menu {
   bottom: 0;
 }
 
-button {
+form[role="dialog"] menu button {
   width: 100%;
   height: 3.8rem;
   margin: 0 0 1rem;
@@ -94,22 +94,22 @@ button {
 }
 
 /* Press (default & recommend) */
-button:active,
-button.recommend:active {
+form[role="dialog"] menu button:active,
+form[role="dialog"] menu button.recommend:active {
   border-color: #008aaa;
   background: #008aaa;
   color: #333;
 }
 
 /* Recommend */
-button.recommend{
+form[role="dialog"] menu button.recommend{
   background-image: url(confirm/images/ui/recommend.png);
   background-color: #00caf2;
   border-color: #00acce;
 }
 
 /* Danger */
-button.danger{
+form[role="dialog"] menu button.danger{
   background-image: url(confirm/images/ui/danger.png);
   background-color: #b70404;
   color: #fff;
@@ -118,14 +118,14 @@ button.danger{
 }
 
 /* Danger Press */
-button.danger:active{
+form[role="dialog"] menu button.danger:active{
   background-image: url(confirm/images/ui/danger-press.png);
   background-color: #890707;
 }
 
 /* Disabled (default & recommend) */
-button[disabled],
-button[disabled].recommend {
+form[role="dialog"] menu button[disabled],
+form[role="dialog"] menu button[disabled].recommend {
   background-image: url(confirm/images/ui/disabled.png);
   background-color: transparent;
   border-color: #dadada;
@@ -134,7 +134,7 @@ button[disabled].recommend {
 }
 
 /* Danger disabled */
-button[disabled].danger {
+form[role="dialog"] menu button[disabled].danger {
   background-image: url(confirm/images/ui/danger-disabled.png);
   color: #fff;
   text-shadow: none;
