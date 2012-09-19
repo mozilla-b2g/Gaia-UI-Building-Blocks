@@ -1,7 +1,6 @@
 /* ----------------------------------
  * HEADERS: default
  * ---------------------------------- */
-
 section[role="region"] > header:first-child {
   position: relative;
   z-index: 10;
@@ -62,7 +61,7 @@ section[role="region"] > header:first-child input[type=text] {
 }
 
 section[role="region"] > header:first-child form button[type="reset"] {
-  text-indent: -9999px;
+  font-size: 0;
   overflow: hidden;
   position: absolute;
   right: 1rem;
@@ -162,12 +161,13 @@ section[role="region"] > header:first-child button:first-letter {
 /* Icon definitions */
 section[role="region"] > header:first-child .icon {
   display: inline-block;
+  vertical-align: top;
   float: none;
   width: 3rem;
   height: 3rem;
   margin: 0 -1rem;
   background: transparent no-repeat center center;
-  text-indent: -9999px;
+  font-size: 0;
   overflow: hidden;
   position: relative;
   height: 4.9rem;
@@ -212,7 +212,7 @@ section[role="region"] > header:first-child > a {
 section[role="region"] > header:first-child > button .icon,
 section[role="region"] > header:first-child > a .icon {
   overflow: visible;
-  text-indent: -9999px;
+  font-size: 0;
   position: static;
   margin-left: -3rem;
   height: 4.9rem;
@@ -251,7 +251,6 @@ section[role="region"] > header {
 section[role="region"] > header:after {
   display: none;
 }
-
 
 section[role="region"] > header h2 {
   font-family: "Open Sans", Sans-serif;
