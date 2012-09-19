@@ -36,8 +36,8 @@
 </head>
 
 <body role="application">
-  <form role="dialog" class="edit">
-    <section role="region">
+  <form role="dialog" class="edit" onsubmit="return false;">
+    <section>
       <header>
         <button><span class="icon icon-close">close</span></button>
         <menu type="toolbar">
@@ -46,9 +46,9 @@
         <h1>Edit</h1>
       </header>
     </section>
-    <menu data-items="2">
-      <button>Delete all</button>
-      <button>Delete selected</button>
+    <menu>
+      <button class="danger">Delete all</button>
+      <button class="danger">Delete selected</button>
     </menu>
   </form>
 

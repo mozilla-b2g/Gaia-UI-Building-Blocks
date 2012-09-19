@@ -1,5 +1,5 @@
 /* ----------------------------------
- * EDIT MODE
+ * Edit mode
  * ---------------------------------- */
 
 form[role="dialog"].edit {
@@ -98,6 +98,7 @@ form[role="dialog"].edit header menu[type="toolbar"] button:active  {
   background: #008aaa !important;
   transition: background 0.2s ease;
   border-bottom: solid 1px rgba(0, 0, 0, 0.2) !important;
+  color: #fff;
 }
 
 form[role="dialog"].edit header button:first-letter {
@@ -150,8 +151,7 @@ form[role="dialog"].edit > menu {
   bottom: 0;
 }
 
-form[role="dialog"].edit > menu button,
-form[role="dialog"].edit > menu a[role="button"] {
+form[role="dialog"] menu button {
   width: 100%;
   height: 3.8rem;
   margin: 0 0 1rem;
@@ -162,8 +162,8 @@ form[role="dialog"].edit > menu a[role="button"] {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  background: #fafafa url(edit_mode/images/ui/button_default.png) repeat-x left bottom;
-  border: 1px solid #9f9f9f;
+  background: #fafafa url(edit_mode/images/ui/default.png) repeat-x left bottom;
+  border: 0.1rem solid #9f9f9f;
   border-radius: 0.3rem;
   font-size: 1.6rem;
   font-family: 'Open Sans', Sans-serif;
@@ -171,41 +171,73 @@ form[role="dialog"].edit > menu a[role="button"] {
   line-height: 3.8rem;
   color: #333;
   text-align: center;
-  text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
   text-decoration: none;
   outline: none;
 }
 
-/* Buttons */
-form[role="dialog"].edit > menu button,
-form[role="dialog"].edit > menu a[role="button"] {
-  background-image: url(edit_mode/images/ui/button.png);
+/* Press (default & recommend) */
+form[role="dialog"] menu button:active,
+form[role="dialog"] menu button.recommend:active {
+  border-color: #008aaa;
+  background: #008aaa;
+  color: #333;
+}
+
+/* Recommend */
+form[role="dialog"] menu button.recommend{
+  background-image: url(edit_mode/images/ui/recommend.png);
+  background-color: #00caf2;
+  border-color: #00acce;
+}
+
+/* Danger */
+form[role="dialog"] menu button.danger{
+  background-image: url(edit_mode/images/ui/danger.png);
   background-color: #b70404;
   color: #fff;
-  text-shadow: -1px -1px 0 #830b0b;
+  text-shadow: -0.1rem -0.1rem 0 #830b0b;
   border: none;
 }
 
-/* Press state */
-form[role="dialog"].edit > menu button:active,
-form[role="dialog"].edit > menu a[role="button"]:active {
-  background-image: url(edit_mode/images/ui/button_press.png);
+/* Danger Press */
+form[role="dialog"] menu button.danger:active{
+  background-image: url(edit_mode/images/ui/danger-press.png);
   background-color: #890707;
 }
 
-form[role="dialog"].edit > menu button:last-child,
-form[role="dialog"].edit > menu a[role="button"]:last-child {
+/* Disabled (default & recommend) */
+form[role="dialog"] menu button[disabled],
+form[role="dialog"] menu button[disabled].recommend {
+  background-image: url(edit_mode/images/ui/disabled.png);
+  background-color: transparent;
+  border: none;
+  color: #bcbcbc;
+  text-shadow: none;
+  pointer-events: none;
+}
+
+/* Danger disabled */
+form[role="dialog"] menu button[disabled].danger {
+  background-image: url(edit_mode/images/ui/danger-disabled.png);
+  color: #fff;
+  text-shadow: none;
+  pointer-events: none;
+}
+
+form[role="dialog"] menu button:last-child {
   margin-left: 1rem;
 }
 
-form[role="dialog"].edit > menu button,
-form[role="dialog"].edit > menu a[role="button"],
-form[role="dialog"].edit > menu button:first-child,
-form[role="dialog"].edit > menu a[role="button"]:first-child {
+form[role="dialog"] menu button,
+form[role="dialog"] menu button:first-child {
   margin: 0;
 }
 
-form[role="dialog"].edit > menu[data-items="2"] button,
-form[role="dialog"].edit > menu[data-items="2"] a[role="button"] {
+form[role="dialog"] menu button {
   width: -moz-calc((100% - 1rem) / 2);
+}
+
+form[role="dialog"] menu button.full {
+  width: 100%;
 }
