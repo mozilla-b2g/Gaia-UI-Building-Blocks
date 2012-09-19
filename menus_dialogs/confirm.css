@@ -128,8 +128,9 @@ form[role="dialog"] menu button[disabled],
 form[role="dialog"] menu button[disabled].recommend {
   background-image: url(confirm/images/ui/disabled.png);
   background-color: transparent;
-  border-color: #dadada;
+  border: none;
   color: #bcbcbc;
+  text-shadow: none;
   pointer-events: none;
 }
 
