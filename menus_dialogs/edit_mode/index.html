@@ -7,7 +7,7 @@
   <meta name="description" content="Starts an edition mode for adding or removing items">
   <meta name="target" content="html">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../edit_mode.css">
 
   <!--
   This <style> and <link> is only used for the example code, is no needed for the real case use
@@ -29,26 +29,28 @@
       background: url(images/dummy.png) no-repeat left top;
     }
 
-    body[role="application"] section[role="dialog"] {
+    body[role="application"] form[role="dialog"] {
       top: 2rem;
     }
   </style>
 </head>
 
 <body role="application">
-  <section role="dialog" class="edit">
-    <header>
-      <button><span class="icon icon-close">close</span></button>
-      <menu type="toolbar">
-        <button>done</button>
-      </menu>
-      <h1>Edit</h1>
-    </header>
+  <form role="dialog" class="edit">
+    <section role="region">
+      <header>
+        <button><span class="icon icon-close">close</span></button>
+        <menu type="toolbar">
+          <button>done</button>
+        </menu>
+        <h1>Edit</h1>
+      </header>
+    </section>
     <menu data-items="2">
       <button>Delete all</button>
       <button>Delete selected</button>
     </menu>
-  </section>
+  </form>
 
 </body>
 </html>
