@@ -2,36 +2,60 @@
  * PROGRESS + ACTIVITIES
  * ---------------------------------- */
 
-/* Activity indicator */
- progress:not([value]) {
-   width: 2.9rem;
-   height: 2.9rem;
-   background: url(images/ui/default.png) no-repeat left top;
-   border: none;
-   animation: 1s moveDefault infinite steps(10);
-   display: inline-block;
-   vertical-align: middle;
- }
+/* Spinner */
+progress:not([value]) {
+  background: url(images/ui/default.png) no-repeat center center;
+  animation: 0.9s rotate infinite linear;
+  width: 6.4rem;
+  height: 6.4rem;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+}
 
- progress:not([value])::-moz-progress-bar {
-   background: none;
- }
+progress:not([value])::-moz-progress-bar {
+ background: none;
+}
 
-progress:not([value])[data-theme="dark"],
-p[role="status"][data-theme="dark"] progress:not([value]) {
+progress:not([value]).skin-dark,
+p[role="status"].skin-dark progress:not([value]) {
   background-image: url(images/ui/dark/default.png);
 }
 
-progress:not([value]).spinner {
-  background-image: url(images/ui/spinner.png);
-   animation: 1s moveSpinner infinite steps(12);
-   width: 2.4rem;
-   height: 2.4rem;
+/* Opposite */
+progress:not([value]).opposite {
+  background-image: url(images/ui/opposite.png);
+}
+
+progress:not([value]).opposite.skin-dark,
+p[role="status"].skin-dark progress:not([value]).opposite {
+  background-image: url(images/ui/default.png);
+}
+
+/* Small */
+progress:not([value]).small {
+  width: 3.2em;
+  height: 3.2em;
+  background-image: url(images/ui/default-small.png);
+}
+
+progress:not([value]).small.opposite {
+  background-image: url(images/ui/opposite-small.png);
+}
+
+progress:not([value]).skin-dark.small,
+p[role="status"].skin-dark progress:not([value]).small {
+  background-image: url(images/ui/dark/default-small.png);
+}
+
+progress:not([value]).skin-dark.small.opposite,
+p[role="status"].skin-dark progress:not([value]).small.opposite {
+  background-image: url(images/ui/default-small.png);
 }
 
 /* Progress bar */
 progress[value] {
-   width: 100%; 
+   width: 100%;
    background: #838990;
    border: none;
    height: 0.5rem;
@@ -62,26 +86,18 @@ p[role="status"] span {
   margin-bottom: 0.5rem;
 }
 
-p[role="status"][data-theme="dark"] {
+p[role="status"].skin-dark {
   background: #555d65;
   color: #fff;
 }
 
-@keyframes moveDefault {
-  from {
-    background-position: 0 top;
-  }
-  to {
-    background-position: -390px top;
-  }
-}
 
-@keyframes moveSpinner {
+@keyframes rotate {
   from {
-    background-position: 0 top;
+    transform: rotate(1deg);
   }
 
   to {
-    background-position: -372px top;
+    transform: rotate(360deg);
   }
 }
