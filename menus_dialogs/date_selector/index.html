@@ -35,7 +35,7 @@
 
 <body role="application">
 
-      <form role="dialog">
+      <form role="dialog" onsubmit="return false;">
         <section class="calendar">
           <h1>Select day</h1>
           <button>Previous month</button>
@@ -98,7 +98,6 @@
                   </label>
                 </td>
               </tr>
-
               <tr>
                 <td>
                   <label>
@@ -143,7 +142,6 @@
                   </label>
                 </td>
               </tr>
-
               <tr>
                 <td>
                   <label>
@@ -188,7 +186,6 @@
                   </label>
                 </td>
               </tr>
-
               <tr>
                 <td>
                   <label>
@@ -233,7 +230,6 @@
                   </label>
                 </td>
               </tr>
-
               <tr>
                 <td>
                   <label>
@@ -282,9 +278,9 @@
           </table>
         </section>
 
-        <menu data-items="2">
+        <menu>
           <button>Cancel</button>
-          <button class="affirmative">Action</button>
+          <button class="recommend">Action</button>
         </menu>
       </form>
 

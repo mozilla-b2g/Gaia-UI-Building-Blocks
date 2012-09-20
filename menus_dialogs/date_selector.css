@@ -68,8 +68,7 @@ form[role="dialog"] menu {
   bottom: 0;
 }
 
-form[role="dialog"] menu button,
-form[role="dialog"] menu a[role="button"] {
+form[role="dialog"] menu button {
   width: 100%;
   height: 3.8rem;
   margin: 0 0 1rem;
@@ -80,8 +79,8 @@ form[role="dialog"] menu a[role="button"] {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  background: #fafafa url(date_selector/images/ui/button_default.png) repeat-x left bottom;
-  border: 1px solid #9f9f9f;
+  background: #fafafa url(date_selector/images/ui/default.png) repeat-x left bottom;
+  border: 0.1rem solid #9f9f9f;
   border-radius: 0.3rem;
   font-size: 1.6rem;
   font-family: 'Open Sans', Sans-serif;
@@ -89,87 +88,81 @@ form[role="dialog"] menu a[role="button"] {
   line-height: 3.8rem;
   color: #333;
   text-align: center;
-  text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
   text-decoration: none;
   outline: none;
 }
 
+/* Press (default & recommend) */
 form[role="dialog"] menu button:active,
-form[role="dialog"] menu a[role="button"]:active,
-form[role="dialog"] menu button.affirmative:active,
-form[role="dialog"] menu a.affirmative[role="button"]:active  {
+form[role="dialog"] menu button.recommend:active {
   border-color: #008aaa;
   background: #008aaa;
   color: #333;
 }
 
-/* Affirmative */
-form[role="dialog"] menu button.affirmative,
-form[role="dialog"] menu a[role="button"].affirmative {
-  background-image: url(date_selector/images/ui/button_affirmative.png);
+/* Recommend */
+form[role="dialog"] menu button.recommend{
+  background-image: url(date_selector/images/ui/recommend.png);
   background-color: #00caf2;
   border-color: #00acce;
 }
 
-/* Negative */
-form[role="dialog"] menu button.negative,
-form[role="dialog"] menu a.negative[role="button"] {
-  background-image: url(date_selector/images/ui/button_negative.png);
+/* Danger */
+form[role="dialog"] menu button.danger{
+  background-image: url(date_selector/images/ui/danger.png);
   background-color: #b70404;
   color: #fff;
-  text-shadow: -1px -1px 0 #830b0b;
+  text-shadow: -0.1rem -0.1rem 0 #830b0b;
   border: none;
 }
 
-/* Negative Press */
-form[role="dialog"] menu button.negative:active,
-form[role="dialog"] menu a[role="button"].negative:active {
-  background-image: url(date_selector/images/ui/button_negative_press.png);
+/* Danger Press */
+form[role="dialog"] menu button.danger:active{
+  background-image: url(date_selector/images/ui/danger-press.png);
   background-color: #890707;
 }
 
-/* Disabled  (default & affirmative) */
-form[role="dialog"] menu button[disabled="disabled"],
-form[role="dialog"] menu a[role="button"][aria-disabled="true"],
-form[role="dialog"] menu button[disabled="disabled"].affirmative,
-form[role="dialog"] menu a[role="button"][aria-disabled="true"].affirmative {
-  background-image: url(date_selector/images/ui/button_disabled.png);
+/* Disabled (default & recommend) */
+form[role="dialog"] menu button[disabled],
+form[role="dialog"] menu button[disabled].recommend {
+  background-image: url(date_selector/images/ui/disabled.png);
   background-color: transparent;
   border: none;
-  color: #4a4a4a;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #bcbcbc;
+  text-shadow: none;
+  pointer-events: none;
 }
 
-/* Negative disabled */
-form[role="dialog"] menu button[disabled="disabled"].negative,
-form[role="dialog"] menu a[role="button"][aria-disabled="true"].negative {
-  background-image: url(date_selector/images/ui/button_negative_disabled.png);
+/* Danger disabled */
+form[role="dialog"] menu button[disabled].danger {
+  background-image: url(date_selector/images/ui/danger-disabled.png);
   color: #fff;
   text-shadow: none;
+  pointer-events: none;
 }
 
-form[role="dialog"] menu button:last-child,
-form[role="dialog"] menu a[role="button"]:last-child {
+form[role="dialog"] menu button:last-child {
   margin-left: 1rem;
 }
 
 form[role="dialog"] menu button,
-form[role="dialog"] menu a[role="button"],
-form[role="dialog"] menu button:first-child,
-form[role="dialog"] menu a[role="button"]:first-child {
+form[role="dialog"] menu button:first-child {
   margin: 0;
 }
 
-form[role="dialog"] menu[data-items="2"] button,
-form[role="dialog"] menu[data-items="2"] a[role="button"] {
+form[role="dialog"] menu button {
   width: -moz-calc((100% - 1rem) / 2);
+}
+
+form[role="dialog"] menu button.full {
+  width: 100%;
 }
 
 /* SPECIFIC COMPONENT CODE */
 form[role="dialog"] section.calendar {
   font-size: 2.2rem;
   line-height: 1em;
-  //margin: 0 -2.1rem 0 -2.5rem;
   margin: 0;
   padding: 0;
 }
