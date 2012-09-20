@@ -28,12 +28,16 @@
     html {
       background: url(images/dummy/content.png) no-repeat left top;
     }
+
+    body[role="application"] form[role="dialog"] {
+      top: 2rem;
+    }
   </style>
 </head>
 
 <body role="application">
 
-  <form role="dialog">
+  <form role="dialog" onsubmit="return false;">
     <section>
       <h1>Confirmation</h1>
       <p>
@@ -44,8 +48,8 @@
       <p>Do you want to download and install this application?</p>
     </section>
     <menu>
-      <button type="reset">Cancel</button>
-      <button type="submit">Yes</button>
+      <button>Cancel</button>
+      <button class="recommend">Yes</button>
     </menu>
   </form>
 

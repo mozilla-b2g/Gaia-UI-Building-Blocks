@@ -28,19 +28,23 @@
     html {
       background: url(images/dummy/default.png) no-repeat left top;
     }
+
+    body[role="application"] form[role="dialog"] {
+      top: 2rem;
+    }
   </style>
 </head>
 
 <body role="application">
 
-  <form role="dialog">
+  <form role="dialog" onsubmit="return false;">
     <section>
       <h1>Confirmation</h1>
       <p>Are you sure you want to delete this contact?</p>
     </section>
     <menu>
-      <button type="reset">Cancel</button>
-      <button>Delete</button>
+      <button>Cancel</button>
+      <button class="danger">Delete</button>
     </menu>
   </form>
 

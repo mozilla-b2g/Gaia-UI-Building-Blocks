@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Value selector, single value</title>
+  <title>Value selector, single selection</title>
   <meta name="description" content="Provides a way for the user to select one of more values, usually from a Form interfac">
-  <meta name="target" content="html">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../value_selector.css">
 
   <!--
   This <style> and <link> is only used for the example code, is no needed for the real case use
@@ -24,48 +23,33 @@
     body {
       background: none;
     }
-
-    html {
-      background: url(images/dummy/single-multiple.png) no-repeat left top;
-    }
-
-    h2.bb-docs {
-      font-size: 1.8rem;
-      font-family: "Open Sans", Sans-serif;
-      font-weight: lighter;
-      color: #666;
-      margin: -1px 0 0;
-      background-color: #f5f5f5;
-      padding: 0.4rem 0.4rem 0.4rem 3rem;
-      border: solid 1px #e8e8e8;
-    }
   </style>
 </head>
 
 <body role="application">
 
-  <section role="dialog">
-    <div>
-      <h3>Choose social network</h3>
+  <form role="dialog" onsubmit="return false;">
+    <section>
+      <h1>Choose social network</h1>
       <ul role="listbox">
-        <li>
+        <li role="option">
           <label for="option1">
             <input type="radio" name="option" id="option1">
             <span>Twitter</span>
           </label>
         </li>
-        <li>
+        <li role="option">
           <label for="option2">
             <input type="radio" name="option" id="option2">
             <span>Facebook</span>
           </label>
         </li>
       </ul>
-    </div>
+    </section>
     <menu>
-      <button>Cancel</button>
+      <button class="full">Cancel</button>
     </menu>
-  </section>
+  </form>
 
 </body>
 </html>
