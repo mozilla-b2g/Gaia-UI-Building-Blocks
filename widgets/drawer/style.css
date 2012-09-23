@@ -130,19 +130,17 @@ body[role="application"] > nav > header .icon.icon-user {
 
 body[role="application"] > nav:after { 
   content: '';
-  width: 100%;
-  background: url(images/ui/shadow.png) right top repeat-y;
+  width: 1rem;
   height: 100%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
-  z-index: 5;
+  background: url(images/ui/shadow.png) right top repeat-y;
 }
 
 body[role="application"] > nav > .inner {
   overflow-y: auto;
   max-height: -moz-calc(100% - 9rem);
-  margin-right: -0.8rem;
 }
 
 body[role="application"] > nav .inner > h2 {
