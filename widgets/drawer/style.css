@@ -101,7 +101,8 @@ body[role="application"] > nav > header .icon {
   height: 3rem;
   margin: 0 -1rem;
   background: transparent no-repeat center center;
-  text-indent: -9999px;
+  text-indent: 100%;
+  white-space: nowrap;
   overflow: hidden;
   position: relative;
   height: 4.9rem;
