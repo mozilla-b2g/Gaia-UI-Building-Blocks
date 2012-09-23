@@ -150,7 +150,7 @@ body[role="application"] > nav .inner > h2 {
   text-indent: 3rem;
   color: #fff;
   background: url(images/ui/pattern-subheader.png) repeat left top;
-  border-bottom: 1px solid #596068; 
+  border-bottom: 0.1rem solid #596068; 
   margin: 0;
   padding-right: 0.8rem;
 }
@@ -180,7 +180,7 @@ body[role="application"] > nav .inner > ul > li > a {
   color: #fff;
   font-size: 1.6rem;
   line-height: 4.35rem;
-  border-bottom: 1px solid #596068; 
+  border-bottom: 0.1rem solid #596068; 
   text-indent: 3rem;
   padding-right: 0.8rem;
   width: 100%;
