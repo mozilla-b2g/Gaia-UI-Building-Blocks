@@ -101,7 +101,8 @@ body[role="application"] > nav > header .icon {
   height: 3rem;
   margin: 0 -1rem;
   background: transparent no-repeat center center;
-  text-indent: -9999px;
+  text-indent: 100%;
+  white-space: nowrap;
   overflow: hidden;
   position: relative;
   height: 4.9rem;
@@ -130,18 +131,16 @@ body[role="application"] > nav > header .icon.icon-user {
 body[role="application"] > nav:after { 
   content: '';
   width: 1rem;
-  background: url(images/ui/shadow.png) right top repeat-y;
   height: 100%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
-  z-index: 5;
+  background: url(images/ui/shadow.png) right top repeat-y;
 }
 
 body[role="application"] > nav > .inner {
   overflow-y: auto;
   max-height: -moz-calc(100% - 9rem);
-  margin-right: -0.8rem;
 }
 
 body[role="application"] > nav .inner > h2 {
@@ -151,7 +150,7 @@ body[role="application"] > nav .inner > h2 {
   text-indent: 3rem;
   color: #fff;
   background: url(images/ui/pattern-subheader.png) repeat left top;
-  border-bottom: 1px solid #596068; 
+  border-bottom: 0.1rem solid #596068; 
   margin: 0;
   padding-right: 0.8rem;
 }
@@ -181,7 +180,7 @@ body[role="application"] > nav .inner > ul > li > a {
   color: #fff;
   font-size: 1.6rem;
   line-height: 4.35rem;
-  border-bottom: 1px solid #596068; 
+  border-bottom: 0.1rem solid #596068; 
   text-indent: 3rem;
   padding-right: 0.8rem;
   width: 100%;
@@ -197,9 +196,14 @@ body[role="application"] > section[role="region"] {
   width: -moz-calc(100%);
   transition: all 0.25s ease;
   position: relative;
-  left: -2rem;
+  left: 0;
   z-index: 100;
-  padding-left: 2rem;
+  padding-left: 0;
+}
+
+body[role="application"] section[role="region"][data-state="drawer"] > header {
+  transition: all 0.25s linear;
+  margin-left: 0;
 }
 
 /* Header */
