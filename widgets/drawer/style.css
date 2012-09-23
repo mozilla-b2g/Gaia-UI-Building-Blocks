@@ -129,7 +129,7 @@ body[role="application"] > nav > header .icon.icon-user {
 
 body[role="application"] > nav:after { 
   content: '';
-  width: 1rem;
+  width: 100%;
   background: url(images/ui/shadow.png) right top repeat-y;
   height: 100%;
   position: absolute;
@@ -197,9 +197,14 @@ body[role="application"] > section[role="region"] {
   width: -moz-calc(100%);
   transition: all 0.25s ease;
   position: relative;
-  left: -2rem;
+  left: 0;
   z-index: 100;
-  padding-left: 2rem;
+  padding-left: 0;
+}
+
+body[role="application"] section[role="region"][data-state="drawer"] > header {
+  transition: all 0.25s linear;
+  margin-left: 0;
 }
 
 /* Header */
