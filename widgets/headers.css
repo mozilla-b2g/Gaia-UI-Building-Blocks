@@ -43,20 +43,20 @@ section[role="region"] > header:first-child form {
   display: block;
   overflow: hidden;
   position: relative;
-  padding: 1.1rem;
+  padding: 0.9rem 0.9rem 0 0.2rem ;
   margin-left: 2.5rem;
 }
 
 section[role="region"] > header:first-child input[type=text] {
   width: 100%;
-  height: 2.7rem;
+  height: 3rem;
   -moz-box-sizing: border-box;
-  padding: 0 2.5rem 0 0.5rem;
+  padding: 0 0.8rem;
   border: solid 0.1rem #9d4123;
   border-top-color: #a6501e;
   border-radius: 0.3rem;
   background: #fff url(headers/images/ui/shadow.png) repeat-x left -0.1rem;
-  font: 1.35rem/1em "Open Sans", Sans-serif;
+  font: 1.35rem/3em "Open Sans", Sans-serif;
   box-shadow: none;
 }
 

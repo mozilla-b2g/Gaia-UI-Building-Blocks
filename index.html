@@ -150,7 +150,7 @@
 
       if ( data.nodeName == "#document" ) {
         var url = data.location.hash;
-        if ( url == "" ) { url = "index.html" }
+        if ( url == "" ) { url = "#menus_dialogs/confirm/" }
         var el = document.querySelector("a[href='"+url+"']")
       } else {
         var el = data.target;
