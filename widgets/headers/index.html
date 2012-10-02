@@ -55,8 +55,12 @@
       </menu>
       <h1>Inbox <em>(2)</em></h1>
     </header>
-    <form class="search">
-      <input type="text" placeholder="Search">
+    <form role="search" class="full">
+      <button type="submit">Send</button>
+      <p>
+        <input placeholder="search" required>
+        <button type="reset">Clear</button>
+      </p>
     </form>
   </section>
 
@@ -80,7 +84,7 @@
         <button><span class="icon icon-user">user</span></button>
       </menu>
       <form action="#">
-        <input type="text" required="required">
+        <input type="text" placeholder="search" required="required">
         <button type="reset">Remove text</button>
       </form>
     </header>
