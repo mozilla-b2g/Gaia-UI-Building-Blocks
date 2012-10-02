@@ -43,7 +43,7 @@ section[role="region"] > header:first-child form {
   display: block;
   overflow: hidden;
   position: relative;
-  padding: 0.9rem 0.9rem 0 0.2rem ;
+  padding: 1rem 1rem 0 0.5rem ;
   margin-left: 2.5rem;
 }
 
@@ -65,7 +65,7 @@ section[role="region"] > header:first-child form button[type="reset"] {
   overflow: hidden;
   position: absolute;
   right: 1rem;
-  top: 0.9rem;
+  top: 1rem;
   bottom: 0;
   width: 3rem;
   height: auto;
