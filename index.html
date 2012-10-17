@@ -15,7 +15,7 @@
         background: #ababab;
       }
 
-      body {
+      body > .wrapper {
         padding: 1rem 0 1rem 3.5rem;
         width: 55rem;
         margin: 0 auto;
@@ -26,13 +26,13 @@
         overflow: hidden;
       }
 
-      body > h1  {
+      body > .wrapper > h1  {
         margin: 0 0 1rem 0;
         font-size: 4rem;
         font-weight: 200;
       }
 
-      body > h1 a {
+      body > .wrapper > h1 a {
         color: #4f4f4f;
         text-decoration: none;
       }
@@ -329,65 +329,68 @@
   </script>
 </head>
 <body>
-  <h1><a href="index.html">GAIA Building Blocks</a></h1>
 
-  <ul id="legend"> 
-    <li>Stable BB</li>
-    <li class="system">System BB</li>
-    <li class="unstable">Unstable BB</li>
-    <li class="not-merged">Not merged</li>
-  </ul>
+  <div class="wrapper">
+    <h1><a href="index.html">GAIA Building Blocks</a></h1>
 
-  <div class="centered">
-    <nav id="nav" onclick="loadURL(event)">
-      <h2>Menus + Dialogs</h2>
+    <ul id="legend"> 
+      <li>Stable BB</li>
+      <li class="system">System BB</li>
+      <li class="unstable">Unstable BB</li>
+      <li class="not-merged">Not merged</li>
+    </ul>
+
+    <div class="centered">
+      <nav id="nav" onclick="loadURL(event)">
+        <h2>Menus + Dialogs</h2>
+        <ol>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/">Confirm</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/content.html">Confirm with content</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/no_title.html">Confirm w/o title</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/edit_mode/">Edit mode</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/action_menu/">Action menu</a></li>
+          <li class="system"><a href="#menus_dialogs/value_selector/">Single value</a></li>
+          <li class="system"><a href="#menus_dialogs/value_selector/multiple.html">Multiple value</a></li>
+          </li>
+          <li class="not-merged"><a href="#menus_dialogs/time_selector/">Time selector</a></li>
+          <li class="not-merged"><a href="#menus_dialogs/date_selector/">Date selector</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/status/">Status</a></li>
+        </ol>
+
+        <h2>Widgets</h2>
+        <ol>
+            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/buttons/">Buttons</a></li>
+            <!--li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/filters.html">Filters</a></li-->
+            <li class="unstable"><a href="#widgets/filters/">Filters</a></li>
+            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/headers/">Headers</a></li>
+            <li class="not-merged"><a href="#widgets/lists/">Lists</a></li>
+            <li class="not-merged"><a href="#widgets/progress_activity/">Progress + Activity</a></li>
+            <li class="not-merged"><a href="#widgets/scrolling/">Scrolling</a></li>
+            <li class="not-merged"><a href="#widgets/seekbars/">Seekbars</a></li>
+            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/switches/">Switches</a></li>
+            <!--li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/">Tabs</a></li-->
+            <li class="unstable"><a href="#widgets/tabs/">Tabs</a></li>
+            <li><a href="#widgets/toolbars/">Toolbars</a></li>
+            <li class="not-merged"><a href="#widgets/drawer/">Drawer</a></li>
+            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/input_areas/">Input areas</a></li>
+        </ol>
+      </div>
+
+     <!--  <h2>Transitions</h2>
       <ol>
-        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/">Confirm</a></li>
-        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/content.html">Confirm with content</a></li>
-        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/no_title.html">Confirm w/o title</a></li>
-        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/edit_mode/">Edit mode</a></li>
-        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/action_menu/">Action menu</a></li>
-        <li class="system"><a href="#menus_dialogs/value_selector/">Single value</a></li>
-        <li class="system"><a href="#menus_dialogs/value_selector/multiple.html">Multiple value</a></li>
-        </li>
-        <li class="not-merged"><a href="#menus_dialogs/time_selector/">Time selector</a></li>
-        <li class="not-merged"><a href="#menus_dialogs/date_selector/">Date selector</a></li>
-        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/status/">Status</a></li>
-      </ol>
-
-      <h2>Widgets</h2>
-      <ol>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/buttons/">Buttons</a></li>
-          <!--li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/filters.html">Filters</a></li-->
-          <li class="unstable"><a href="#widgets/filters/">Filters</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/headers/">Headers</a></li>
-          <li class="not-merged"><a href="#widgets/lists/">Lists</a></li>
-          <li class="not-merged"><a href="#widgets/progress_activity/">Progress + Activity</a></li>
-          <li class="not-merged"><a href="#widgets/scrolling/">Scrolling</a></li>
-          <li class="not-merged"><a href="#widgets/seekbars/">Seekbars</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/switches/">Switches</a></li>
-          <!--li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/">Tabs</a></li-->
-          <li class="unstable"><a href="#widgets/tabs/">Tabs</a></li>
-          <li><a href="#widgets/toolbars/">Toolbars</a></li>
-          <li class="not-merged"><a href="#widgets/drawer/">Drawer</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/input_areas/">Input areas</a></li>
-      </ol>
+          <li class="disabled"><a href="#transitions/"></a></li>
+      </ol> -->
+    </nav>
+    <div id="phone-frame">
+      <iframe id="iframe" src="" width="320" height="480" ></iframe>
     </div>
 
-   <!--  <h2>Transitions</h2>
-    <ol>
-        <li class="disabled"><a href="#transitions/"></a></li>
-    </ol> -->
-  </nav>
-  <div id="phone-frame">
-    <iframe id="iframe" src="" width="320" height="480" ></iframe>
+    <section id="metadata">
+      <!--button id="toggleExample">Switch background</button-->
+        <!--h1 data-placeholder="title">Building blocks</h1>
+        <p data-placeholder="description">Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p-->
+    </section>
   </div>
-
-  <section id="metadata">
-    <!--button id="toggleExample">Switch background</button-->
-      <!--h1 data-placeholder="title">Building blocks</h1>
-      <p data-placeholder="description">Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p-->
-  </section>
 
 </body>
 </html>
