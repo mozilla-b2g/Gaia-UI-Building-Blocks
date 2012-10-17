@@ -12,30 +12,96 @@
         margin: 0;
         font-size:14px;
         font-family: "Open Sans", sans-serif;
-        background: #1a2633;
-        background-image:
-          -moz-radial-gradient(bottom right, circle cover, hsla(300,100%,62%,.07) 0%, hsla(226,77%,55%,.05) 65%, hsla(198,60%,59%,.1) 100%),
-          -moz-radial-gradient(center 45deg, closest-side, hsla(210,17%,25%,1) 0%, #1a2633 100%);
+        background: #ababab;
       }
 
       body {
-        padding: 25px;
+        padding: 1rem 0 1rem 3.5rem;
+        width: 55rem;
+        margin: 0 auto;
+        background-image: -moz-radial-gradient(center center, circle, #fff 0%, #d3d3d3 100%);
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        display: block;
+        overflow: hidden;
+      }
+
+      body > h1  {
+        margin: 0 0 1rem 0;
+        font-size: 4rem;
+        font-weight: 200;
+      }
+
+      body > h1 a {
+        color: #4f4f4f;
+        text-decoration: none;
+      }
+
+      #legend  {
+        padding: 0.3rem 0.6rem;
+        list-style: none;
+        border: 1px solid #b4b4b4;
+        margin: 0 0 5rem;
+        float: left;
+        border-radius: 5px;
+      }
+
+      #legend li {
+        color: #4f4f4f;
+        margin-left: 2rem;
+        float: left;
+      }
+      #legend li:first-of-type {
+        margin-left: 0;
+      }
+
+      #legend li:before {
+        content: '';
+        float: left;
+        margin: 4px 8px;
+        width: 10px;
+        height: 10px;
+        color: #fff;
+        font-size: 10px;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+        background: #03731d;
+        cursor: pointer;
+      }
+
+      #legend li.system:before {
+        background: #e17a00;
+      }
+
+      #legend li.unstable:before {
+        background: #8e05ac;
+      }
+
+      #legend li.not-merged:before {
+        background: #555;
       }
 
       nav {
+        clear: left;
         float: left;
         font-size: 12px;
-        width: 230px;
+        width: 20rem;
         max-height: 100%;
         overflow: auto;
-        margin-right: 30px;
+        margin-right: 10px;
       }
 
       nav h2 {
-        color: #fff;
-        font-size: 14px;
-        font-weight: bold;
+        color: #4f4f4f;
+        font-size: 2rem;
+        font-weight: 200;
         text-transform: uppercase;
+        margin: 2rem 0 1rem 0;
+      }
+      nav h2:first-of-type {
+        margin: 0 0 1rem 0;
       }
       nav ol  {
         counter-reset: item;
@@ -58,37 +124,51 @@
       }
 
       nav li:before {
-        content: counter(item);
-        counter-increment: item;
+        /*content: counter(item);
+        counter-increment: item;*/
+        content: '';
         float: left;
-        margin-right: 8px;
-        width: 18px;
-        height: 18px;
-        color: hsl(0,0%,100%);
-        line-height: 18px;
+        margin: 4px 8px;
+        width: 10px;
+        height: 10px;
+        color: #fff;
         font-size: 10px;
         font-family: Verdana, Tahoma, Arial, sans-serif;
         text-align: center;
-        border-radius: 5px;
-        border-bottom: 1px solid hsla(0,0%,100%,.25);
-        background: hsl(220,7%,9%);
+        border-radius: 10px;
+        box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+        background: #03731d;
         cursor: pointer;
+      }
+
+      nav li.system:before {
+        background: #e17a00;
+      }
+
+      nav li.unstable:before {
+        background: #8e05ac;
+      }
+
+      nav li.not-merged:before {
+        background: #555;
       }
 
       nav li a {
         position: relative;
         display: block;
         font-size: 14px;
-        color: hsl(0,0%,100%);
-        text-shadow: 1px 1px 0 hsla(0,0%,0%,.5);
+        color: #979797;
+        //text-shadow: 1px 1px 0 hsla(0,0%,0%,.5);
         line-height: 18px;
         text-decoration: none;
       }
 
       nav li a.current {
-        color: #ff6800;
+        color: #4f4f4f;
+        font-weight: bold;
+        text-decoration: underline;
       }
-
+      
       nav .disabled {
         opacity: 0.4;
         cursor: default;
@@ -98,14 +178,22 @@
         cursor: default;
       }
 
-      iframe {
+      #phone-frame {
+        width: 468px;
+        height: 690px;
+        background-image: url(phone_frame.png);
         float: left;
+        margin: 0;
+        position: relative;
+      }
+      iframe {
+        position: absolute;
+        top: 86px;
+        left: 74px;
         width: 320px;
         height: 480px;
         border: 0;
-        margin: 0 50px 0 0;
         padding: 0;
-        box-shadow: 0 0 10px rgba(0,0,0,.5);
         overflow-x: hidden; 
       }
 
@@ -150,7 +238,7 @@
 
       if ( data.nodeName == "#document" ) {
         var url = data.location.hash;
-        if ( url == "" ) { url = "#menus_dialogs/confirm/" }
+        if ( url == "" ) { url = "#http://mozilla-b2g.github.com/gaia/shared/style/confirm/" }
         var el = document.querySelector("a[href='"+url+"']")
       } else {
         var el = data.target;
@@ -241,63 +329,66 @@
   </script>
 </head>
 <body>
-  <h1 style="display: none"><a href="index.html">GAIA Building Blocks</a></h1>
-  <nav id="nav" onclick="loadURL(event)">
-    <h2>Menus + Dialogs</h2>
-    <ol>
-      <li class="submenu">
-          <a href="#menus_dialogs/confirm/">Confirm</a>
-          <ol>
-            <li><a href="#menus_dialogs/confirm/">Default</a></li>
-            <li><a href="#menus_dialogs/confirm/content.html">With content</a></li>
-            <li><a href="#menus_dialogs/confirm/no_title.html">w/o Title</a></li>
-          </ol>
-      </li>
-      <li><a href="#menus_dialogs/edit_mode/index.html">Edit mode</a></li>
-      <li><a href="#menus_dialogs/action_menu/">Action menu</a></li>
-      <li><a href="#menus_dialogs/object_menu/">Object menu</a></li>
-      <li class="submenu">
-        <a href="#menus_dialogs/value_selector/">Value selector</a>
-        <ol>
-            <li><a href="#menus_dialogs/value_selector/index.html">Single value</a></li>
-            <li><a href="#menus_dialogs/value_selector/multiple.html">Multiple value</a></li>
-          </ol>
-      </li>
-      <li><a href="#menus_dialogs/time_selector/index.html">Time selector</a></li>
-      <li><a href="#menus_dialogs/date_selector/index.html">Date selector</a></li>
-      <li><a href="#menus_dialogs/status/index.html">Status</a></li>
-    </ol>
+  <h1><a href="index.html">GAIA Building Blocks</a></h1>
 
-    <h2>Widgets</h2>
-    <ol>
-        <li><a href="#widgets/buttons/">Buttons</a></li>
-        <li><a href="#widgets/buttons_list/">Buttons List</a></li>
-        <li><a href="#widgets/filters/">Filters</a></li>
-        <li><a href="#widgets/headers/">Headers</a></li>
-        <li><a href="#widgets/lists/">Lists</a></li>
-        <li><a href="#widgets/progress_activity/">Progress + Activity</a></li>
-        <li><a href="#widgets/scrolling/">Scrolling</a></li>
-        <li><a href="#widgets/seekbars/">Seekbars</a></li>
-        <li><a href="#widgets/switches/">Switches</a></li>
-        <li><a href="#widgets/tabs/">Tabs</a></li>
-        <li><a href="#widgets/toolbars/">Toolbars</a></li>
-        <li><a href="#widgets/drawer/">Drawer</a></li>
-        <li><a href="#widgets/input_areas/">Input areas</a></li>
-    </ol>
+  <ul id="legend"> 
+    <li>Stable BB</li>
+    <li class="system">System BB</li>
+    <li class="unstable">Unstable BB</li>
+    <li class="not-merged">Not merged</li>
+  </ul>
+
+  <div class="centered">
+    <nav id="nav" onclick="loadURL(event)">
+      <h2>Menus + Dialogs</h2>
+      <ol>
+        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/">Confirm</a></li>
+        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/content.html">Confirm with content</a></li>
+        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/no_title.html">Confirm w/o title</a></li>
+        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/edit_mode/">Edit mode</a></li>
+        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/action_menu/">Action menu</a></li>
+        <li class="system"><a href="#menus_dialogs/value_selector/">Single value</a></li>
+        <li class="system"><a href="#menus_dialogs/value_selector/multiple.html">Multiple value</a></li>
+        </li>
+        <li class="not-merged"><a href="#menus_dialogs/time_selector/">Time selector</a></li>
+        <li class="not-merged"><a href="#menus_dialogs/date_selector/">Date selector</a></li>
+        <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/status/">Status</a></li>
+      </ol>
+
+      <h2>Widgets</h2>
+      <ol>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/buttons/">Buttons</a></li>
+          <!--li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/filters.html">Filters</a></li-->
+          <li class="unstable"><a href="#widgets/filters/">Filters</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/headers/">Headers</a></li>
+          <li class="not-merged"><a href="#widgets/lists/">Lists</a></li>
+          <li class="not-merged"><a href="#widgets/progress_activity/">Progress + Activity</a></li>
+          <li class="not-merged"><a href="#widgets/scrolling/">Scrolling</a></li>
+          <li class="not-merged"><a href="#widgets/seekbars/">Seekbars</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/switches/">Switches</a></li>
+          <!--li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/">Tabs</a></li-->
+          <li class="unstable"><a href="#widgets/tabs/">Tabs</a></li>
+          <li><a href="#widgets/toolbars/">Toolbars</a></li>
+          <li class="not-merged"><a href="#widgets/drawer/">Drawer</a></li>
+          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/input_areas/">Input areas</a></li>
+      </ol>
+    </div>
 
    <!--  <h2>Transitions</h2>
     <ol>
         <li class="disabled"><a href="#transitions/"></a></li>
     </ol> -->
   </nav>
-
-  <iframe id="iframe" src="" width="320" height="480" ></iframe>
+  <div id="phone-frame">
+    <iframe id="iframe" src="" width="320" height="480" ></iframe>
+  </div>
 
   <section id="metadata">
-    <button id="toggleExample">Switch background</button>
-      <h1 data-placeholder="title">Building blocks</h1>
-      <p data-placeholder="description">Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p>
+    <!--button id="toggleExample">Switch background</button-->
+      <!--h1 data-placeholder="title">Building blocks</h1>
+      <p data-placeholder="description">Is a suite of Gaia UI patterns built on HTML & CSS, <a href="https://wiki.mozilla.org/Gaia/Design/BuildingBlocks">More information »</a></p-->
   </section>
 
 </body>
 </html>
+
