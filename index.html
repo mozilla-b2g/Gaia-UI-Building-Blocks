@@ -2,7 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0;url=https://wiki.mozilla.org/Gaia/Design" />
   <title>Gaia-UI Building Blocks</title>
   <style>
       @import url("fonts.css");
@@ -239,7 +238,7 @@
 
       if ( data.nodeName == "#document" ) {
         var url = data.location.hash;
-        if ( url == "" ) { url = "#http://mozilla-b2g.github.com/gaia/shared/style/confirm/" }
+        if ( url == "" ) { url = "#menus_dialogs/confirm/" }
         var el = document.querySelector("a[href='"+url+"']")
       } else {
         var el = data.target;
@@ -345,33 +344,33 @@
       <nav id="nav" onclick="loadURL(event)">
         <h2>Menus + Dialogs</h2>
         <ol>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/">Confirm</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/content.html">Confirm with content</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/confirm/no_title.html">Confirm w/o title</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/edit_mode/">Edit mode</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/action_menu/">Action menu</a></li>
+          <li><a href="#menus_dialogs/confirm/">Confirm</a></li>
+          <li><a href="#menus_dialogs/confirm/content.html">Confirm with content</a></li>
+          <li><a href="#menus_dialogs/confirm/no_title.html">Confirm w/o title</a></li>
+          <li><a href="#menus_dialogs/edit_mode/">Edit mode</a></li>
+          <li><a href="#menus_dialogs/action_menu/">Action menu</a></li>
           <li class="system"><a href="#menus_dialogs/value_selector/">Single value</a></li>
           <li class="system"><a href="#menus_dialogs/value_selector/multiple.html">Multiple value</a></li>
           </li>
           <li class="system"><a href="#menus_dialogs/time_selector/">Time selector</a></li>
           <li class="system"><a href="#menus_dialogs/date_selector/">Date selector</a></li>
-          <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/status/">Status</a></li>
+          <li><a href="#menus_dialogs/status/">Status</a></li>
         </ol>
 
         <h2>Widgets</h2>
         <ol>
-            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/buttons/">Buttons</a></li>
-            <li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/filters.html">Filters</a></li>
-            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/headers/">Headers</a></li>
+            <li><a href="#widgets/buttons/">Buttons</a></li>
+            <li class="unstable"><a href="#widgets/filters/">Filters</a></li>
+            <li><a href="#widgets/headers/">Headers</a></li>
             <li class="unstable"><a href="#widgets/lists/">Lists</a></li>
-            <li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/progress_activity/">Progress + Activity</a></li>
+            <li class="unstable"><a href="#widgets/progress_activity/">Progress + Activity</a></li>
             <li class="unstable"><a href="#widgets/scrolling/">Scrolling</a></li>
-            <li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/seekbars/">Seekbars</a></li>
-            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/switches/">Switches</a></li>
-            <li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/tabs/">Tabs</a></li>
-            <li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/toolbars/">Toolbars</a></li>
-            <li class="unstable"><a href="#http://mozilla-b2g.github.com/gaia/shared/style_unstable/drawer/">Drawer</a></li>
-            <li><a href="#http://mozilla-b2g.github.com/gaia/shared/style/input_areas/">Input areas</a></li>
+            <li class="unstable"><a href="#widgets/seekbars/">Seekbars</a></li>
+            <li><a href="#widgets/switches/">Switches</a></li>
+            <li class="unstable"><a href="#widgets/tabs/">Tabs</a></li>
+            <li class="unstable"><a href="#widgets/toolbars/">Toolbars</a></li>
+            <li class="unstable"><a href="#widgets/drawer/">Drawer</a></li>
+            <li><a href="#widgets/input_areas/">Input areas</a></li>
         </ol>
       </div>
 
