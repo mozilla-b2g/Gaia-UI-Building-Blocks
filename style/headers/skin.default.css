@@ -1,0 +1,37 @@
+/**
+ * Default skin
+ */
+
+.bb-header {
+  background-image: url(images/ui/header.png);
+}
+
+.bb-header .action {
+  background: url(images/ui/separator-large.png) no-repeat 2rem top;
+}
+
+.bb-header .action:after {
+  background-color: #a03f25;
+}
+
+.bb-header menu .action {
+  background-image: none;
+}
+
+.bb-header menu .action:last-child {
+  background-image: url(images/ui/separator.png);
+}
+
+.bb-subheader h2 {
+  background: url(images/ui/subheader.png);
+  color: #424242;
+  border-bottom: solid 0.1rem #e6e6e6;
+}
+
+/**
+ * Right to left tweaks
+ */
+
+html[dir="rtl"] .bb-header menu .action:first-child { /* Last-child becomes first-child */
+  background: url(images/ui/separator.png) no-repeat right center;
+}

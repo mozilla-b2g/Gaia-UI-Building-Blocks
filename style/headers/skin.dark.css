@@ -1,0 +1,38 @@
+/**
+ * Dark skin
+ */
+
+.bb-dark .bb-header {
+  background-image: url(images/ui/dark/header.png);
+}
+
+.bb-dark .bb-header .action {
+  background: url(images/ui/dark/separator-large.png) no-repeat 2rem top;
+}
+
+.bb-dark .bb-header .action:after {
+  background-image:  url(images/ui/dark/negative.png);
+  background-color: transparent;
+}
+
+.bb-dark .bb-header menu .action {
+  background-image: none;
+}
+
+.bb-dark .bb-header menu .action:last-child {
+  background-image: url(images/ui/dark/separator.png);
+}
+
+.bb-dark .bb-subheader h2 {
+  background: #2e3c3f url(images/ui/dark/subheader.png);
+  color: #fff;
+  border: none;
+}
+
+/**
+ * Right to left tweaks
+ */
+
+html[dir="rtl"] .bb-dark .bb-header menu .action:first-child { /* Theme tweak */
+  background-image: url(images/ui/dark/separator.png);
+}
