@@ -1,0 +1,204 @@
+/**
+ * Defaults & name spaces definition
+ */
+
+.bb-header,
+.bb-subheader {
+  font-family: sans-serif;
+}
+
+.bb-header {
+  position: relative;
+  z-index: 10;
+  padding: 0;
+  height: 5rem;
+  color: #fff;
+  background-size: auto 100%;
+  border: none;
+}
+
+.bb-header:after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: url(images/ui/shadow.png) repeat-x;
+  background-size: auto 100%;
+}
+
+.bb-header h1 {
+  font-size: 2.5rem;
+  line-height: 4.8rem;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 0 3rem;
+  padding-right: 1rem;
+  height: 100%;
+  font-weight: normal;
+}
+
+.bb-header h1 em {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1em;
+  font-style: normal;
+}
+
+/**
+ * Default actions style
+ */
+
+.bb-header .action {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5rem;
+  height: 100%;
+  cursor: pointer;
+  background: none;
+  background-size: 0.2rem 100%;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 5rem;
+}
+
+.bb-header .action:after { /* Extra background-image for skins */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 100%;
+}
+
+.bb-header .action:active:after,
+.bb-header menu .action:active  { /* Pressed state */
+  background: #008aaa!important;
+  transition: background 0.2s ease;
+}
+
+.bb-header menu:active .action {
+  background-image: none!important; /* Prevent mess active colors with image borders */
+}
+
+.bb-header .action::-moz-focus-inner { /* Fixes extra spaces on Gecko */
+  padding: 0;
+}
+
+.bb-header .action::-moz-focus-inner,
+.bb-header .action:active,
+.bb-header .action:focus { /* Overrides dotted lines in a pressed state */
+  outline: none !important;
+  border: none !important;
+}
+
+/**
+ * Actions inside toolbar
+ */
+
+.bb-header menu {
+  height: 100%;
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+.bb-header menu .action {
+  -moz-box-sizing: border-box;
+  position: relative;
+  float: left;
+  width: auto;
+  min-width: 5rem;
+  height: 100%;
+  padding: 0 1rem;
+  z-index: 5;
+}
+
+.bb-header menu .action:after {
+  display: none;
+}
+
+.bb-header menu .action:last-child {
+  background-position: left center;
+  background-size: 0.2rem 100%;
+  margin-left: -0.2rem;
+  z-index: 1;
+}
+
+.bb-header menu .action[aria-disabled]  { /* Disabled state */
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/**
+ * Subheader
+ */
+
+.bb-subheader {
+  z-index: 0;
+  height: auto;
+}
+
+.bb-subheader h2 {
+  margin: 0;
+  padding: 0.8rem 3rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+/**
+ * Right to left tweaks
+ */
+
+html[dir="rtl"] .bb-header h1 {
+  text-align: right;
+  margin: 0 3rem 0 0;
+}
+
+html[dir="rtl"] .bb-header menu {
+  float: left;
+}
+
+html[dir="rtl"] .bb-header menu .action:last-child { /* Remove last-child rules */
+  background: none;
+  margin: 0;
+  z-index: inherit;
+}
+
+html[dir="rtl"] .bb-header menu .action:first-child { /* Last-child becomes first-child */
+  background-size: auto 4.8rem;
+  margin-right: -0.2rem;
+  z-index: 1;
+}
+
+html[dir="rtl"] .bb-header .action {
+  left: inherit;
+  right: 0;
+  background-position: 2.9rem top;
+}
+
+html[dir="rtl"] .bb-header .icon:before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .bb-header .action:after {
+  left: inherit;
+  right: 0;
+}
