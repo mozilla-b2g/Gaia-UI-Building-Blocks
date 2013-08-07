@@ -1,0 +1,13 @@
+/**
+ * Rotation support
+ */
+
+@media screen and (orientation: landscape) {
+
+  .bb-status p {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+}
+

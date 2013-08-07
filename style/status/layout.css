@@ -1,0 +1,35 @@
+/**
+ * Defaults & name spaces definition
+ */
+
+.bb-status {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  background-color: #404040;
+  background-image: url(status/images/ui/pattern.png);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.bb-status p {
+  margin: 1rem 3rem;
+  padding: 0;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.bb-status p strong {
+  font-weight: 500;
+}
+
+/**
+ * Right to left tweaks
+ */
+
+html[dir="rtl"] .bb-status p {
+  text-align: right;
+}
+
