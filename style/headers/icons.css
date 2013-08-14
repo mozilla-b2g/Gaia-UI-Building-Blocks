@@ -6,7 +6,7 @@
   font-size: 0;
  }
 
- .bb-header .icon:before {
+.bb-header .icon:before {
   content: "";
   position: absolute;
   left: 0;
