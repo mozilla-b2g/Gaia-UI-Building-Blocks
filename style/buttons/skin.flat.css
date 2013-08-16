@@ -1,0 +1,42 @@
+/**
+ * Flat skin, commonly used in lists
+ */
+
+.bbs-flat .bb-button {
+  background: #e7e7e7;
+  text-align: left;
+  /* For hacking box-shadows we need overflow:visible; so we lose text-overflows...*/
+  white-space: normal;
+  overflow: visible;
+}
+
+.bbs-flat .bb-button:after { /* Hacking box-shadow */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.bbs-flat .bb-button:active { /* Press state */
+  background-color: #008AAA;
+}
+
+.bbs-flat .bb-button:active:after {
+  opacity: 0;
+}
+
+.bbs-flat .bb-button:disabled {
+  background-image: none;
+  background-color: rgba(204, 204, 204, 0.4);
+  border-color: rgba(102, 102, 102, 0.3);
+  color: rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  pointer-events: none;
+}
+
+.bbs-flat .bb-button:disabled:after { /* Disabled */
+  background: none;
+}
