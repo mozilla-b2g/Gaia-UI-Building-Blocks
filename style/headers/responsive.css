@@ -5,26 +5,19 @@
 @media screen and (orientation: landscape) {
 
   .bb-header {
-    height: 3.5rem;
+    height: 3.7rem;
   }
 
   .bb-header h1 {
-    font-size: 1.8rem;
     line-height: 3.5rem;
   }
 
   .bb-header .action {
-    font-size: 1.2rem;
     line-height: 3.5rem;
   }
 
-  .bb-header .icon {
-    font-size: 0;
-  }
-
   .bb-subheader h2 {
-    font-size: 1.2rem;
-    line-height: 0.6rem;
+    line-height: 0.9rem;
   }
 
 }
