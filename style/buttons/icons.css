@@ -1,0 +1,38 @@
+/**
+ * Icons in buttons
+ */
+
+.bb-button.icon {
+  padding-right: 3rem;
+}
+
+.bb-button.icon:before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -1.5rem;
+  background: transparent no-repeat 1.6rem 0;
+  background-size: 1rem 9rem;
+  pointer-events: none;
+}
+
+.bb-button.icon-view:before {
+  background-image: url(images/icons/view.png);
+}
+
+.bb-button.icon-dialog:before {
+  background-image: url(images/icons/dialog.png);
+  top: 100%;
+  margin-top: -2.4rem;
+}
+
+.bb-button.icon:active:before { /* Pressed state */
+  background-position: 1.6rem -3rem;
+}
+
+.bb-button.icon:disabled:before { /* Disabled */
+  background-position: 1.6rem -6rem;
+}

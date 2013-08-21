@@ -2,25 +2,25 @@
  * Organic skin
  */
 
-.bb-organic .bb-header {
+.bbs-organic .bb-header {
   background-image: url(images/ui/organic/noise-pattern.png), url(images/ui/organic/header.png);
   background-size: auto;
 }
 
-.bb-organic .bb-header .action { /* Secondary actions (cancel, back, menu) */
+.bbs-organic .bb-header .action { /* Secondary actions (cancel, back, menu) */
   background: url(images/ui/organic/separator-large.png) no-repeat 2rem top;
 }
 
-.bb-organic .bb-header .action:after {
+.bbs-organic .bb-header .action:after {
   background: #23292b url(images/ui/organic/noise-pattern.png);
   background-size: auto;
 }
 
-.bb-organic .bb-header menu .action:last-child {
+.bbs-organic .bb-header menu .action:last-child {
   background-image: url(images/ui/organic/separator.png);
 }
 
-.bb-organic .bb-subheader h2 {
+.bbs-organic .bb-subheader h2 {
   background: #5c6a6d url(images/ui/organic/subheader.png);
   color: #fff;
   border: none;
@@ -30,6 +30,6 @@
  * Right to left tweaks
  */
 
-html[dir="rtl"] .bb-organic .bb-header menu .action:first-child { /* Theme tweak */
+html[dir="rtl"] .bbs-organic .bb-header menu .action:first-child { /* Theme tweak */
   background-image: url(images/ui/organic/separator.png);
 }
