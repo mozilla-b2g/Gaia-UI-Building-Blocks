@@ -1,0 +1,44 @@
+/**
+ * Default skin
+ */
+
+.bb-button {
+  background: #fafafa url(images/ui/default.png) repeat-x left bottom;
+  background-size: 1px 100%;
+  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+}
+
+.bb-button:active,
+.bb-button.recommend:active { /* Press (default & recommend) */
+  border-color: #008aaa;
+  background: #008aaa;
+  color: #333;
+}
+
+.bb-button.recommend { /* Recommend */
+  background-image: url(images/ui/recommend.png);
+  background-color: #00caf2;
+  border-color: #008eab;
+}
+
+.bb-button.danger { /* Danger */
+  background-image: url(images/ui/danger.png);
+  background-color: #b70404;
+  color: #fff;
+  text-shadow: none;
+  border-color: #820000;
+}
+
+.bb-button.danger:active { /* Danger Press */
+  background-image: url(images/ui/danger-press.png);
+  background-color: #890707;
+}
+
+.bb-button:disabled {
+  background-image: none;
+  background-color: rgba(204, 204, 204, 0.4);
+  border-color: rgba(102, 102, 102, 0.3);
+  color: rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  pointer-events: none;
+}
