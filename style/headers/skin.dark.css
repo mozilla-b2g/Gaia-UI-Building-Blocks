@@ -15,10 +15,6 @@
   background-color: transparent;
 }
 
-.bbs-dark .bb-header menu .action {
-  background-image: none;
-}
-
 .bbs-dark .bb-header menu .action:last-child {
   background-image: url(images/ui/dark/separator.png);
 }
@@ -27,6 +23,23 @@
   background: #2e3c3f url(images/ui/dark/subheader.png);
   color: #fff;
   border: none;
+}
+
+/**
+ * Repeated declarations among all skins to avoid !important usage
+ */
+
+.bbs-dark .bb-header .action:active:after { /* Pressed state */
+  background-color: #008aaa;
+  background-image: none;
+}
+
+.bbs-dark .bb-header menu .action {
+  background-image: none;
+}
+
+.bbs-dark .bb-header menu:active .action {
+  background-image: none; /* Prevent mess active colors with image borders */
 }
 
 /**

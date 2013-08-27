@@ -27,6 +27,19 @@
 }
 
 /**
+ * Repeated declarations among all skins to avoid !important usage
+ */
+
+.bbs-organic .bb-header .action:active:after { /* Pressed state */
+  background-color: #008aaa;
+  background-image: none;
+}
+
+.bbs-organic .bb-header menu:active .action {
+  background-image: none; /* Prevent mess active colors with image borders */
+}
+
+/**
  * Right to left tweaks
  */
 
