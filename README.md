@@ -101,6 +101,39 @@ Taxonomy
 
 **TODO:** define a taxonomy for **all** class names used in these stylesheets.
 
+Class names taxonomy
+--------------------
+* `.bb-…`: Component name space
+* `.bbs-…`: Component skin
+* `.icon`: Defines an icon structure
+* `.icon-…`: Sets a defined icon image
+
+Class names index
+--------------------
+* `.bb-header`: headers.css namespace
+* `.bb-status`: status.css namespace
+* `.bb-button`: buttons.css namespace
+
+* `.bbs-organic`: headers.css skin (widely used in settings views)
+* `.bbs-dark`: headers.css skin (used for media apps)
+* `.bbs-flat`: buttons.css skin (commonly applied to buttons lists)
+
+* `.icon-add`: headers.css icon
+* `.icon-compose`: headers.css icon
+* `.icon-edit`: headers.css icon
+* `.icon-send`: headers.css icon
+* `.icon-close`: headers.css icon
+* `.icon-back`: headers.css icon
+* `.icon-menu`: headers.css icon
+* `.icon-user`: headers.css icon
+* `.icon-reply`: headers.css icon
+* `.icon-view`: buttons.css icon
+* `.icon-dialog`: buttons.css icon
+
+* `.action`: User triggered actions
+* `.recommend`: Recommended action to be triggered by the user
+* `.danger`: Action that usually performs irreversible states
+
 Ideas
 ----------------
 * Rely on flex-box for v2 (Gaia 1.2+)
