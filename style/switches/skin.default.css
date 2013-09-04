@@ -1,0 +1,24 @@
+/**
+ * Default skin: on/off
+ */
+
+.bb-switch input + span {
+  margin: -1.05rem 0 0 -2.7rem;
+  width: 5.2rem;
+  height: 2.1rem;
+  border-radius: 1.2rem;
+  border: 0.1rem solid #c2c2c2;
+  background: #e6e6e6 url(images/switch/background_off.png) no-repeat -3.2rem 0;
+  background-size: 8.3rem 2.1rem;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.bb-switch input:checked + span { /* 'ON' state */
+  background: #e6e6e6 url(images/switch/background.png) no-repeat 0;
+  background-size: 8.3rem 2.1rem;
+  border-color: #00abcd;
+}
+
+.bb-switch.uninit input + span { /* avoid initialize at load */
+  transition: none;
+}
