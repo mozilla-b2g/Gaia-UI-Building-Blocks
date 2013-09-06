@@ -1,0 +1,49 @@
+/**
+ * Filters skin
+ */
+
+.skin-filter .bb-tabs {
+  background: #c7c7c7;
+  position: relative;
+  background: #eef2f5 url(images/ui/background.png) repeat-x left bottom;
+}
+
+.skin-filter .bb-tabs.bottom { /* Bottom alignment */
+  background-image: url(images/ui/background-revert.png);
+}
+
+.skin-filter .bb-tabs li {
+  color: #737272;
+  border-left: solid 0.1rem #b1b4b5;
+}
+
+.skin-filter .bb-tabs li:first-child {
+  border-left: none;
+}
+
+.skin-filter .bb-tabs a {
+  padding: 0 0.5rem;
+  background-color: transparent;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #737272;
+}
+
+.skin-filter .bb-tabs .icon {
+  font-size: 0;
+}
+
+.skin-filter .bb-tabs .icon:after {
+  background-position: center bottom;
+}
+
+.skin-filter .bb-tabs li[aria-selected] a { /* Selected state */
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+}
+
+.skin-filter .bb-tabs a:active { /* Pressed state */
+  background-color: #008aaa;
+  color: #fff;
+}

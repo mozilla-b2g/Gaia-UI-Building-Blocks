@@ -117,6 +117,7 @@ Class names index
 * `.bbs-organic`: headers.css skin (widely used in settings views)
 * `.bbs-dark`: headers.css skin (used for media apps)
 * `.bbs-flat`: buttons.css skin (commonly applied to buttons lists)
+* `.bbs-filter`: tabs.css skin (used for filtering content)
 
 * `.icon-add`: headers.css icon
 * `.icon-compose`: headers.css icon
@@ -133,6 +134,8 @@ Class names index
 * `.action`: User triggered actions
 * `.recommend`: Recommended action to be triggered by the user
 * `.danger`: Action that usually performs irreversible states
+
+* `.bottom`: Visual tweaks for components that will be placed at that position of the viewport.
 
 Ideas
 ----------------
