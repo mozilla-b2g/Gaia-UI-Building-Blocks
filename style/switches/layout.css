@@ -1,0 +1,32 @@
+/**
+ * Defaults & name space definition
+ */
+
+.bb-switch {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5.4rem; /* Avaliable touch area to cover component's width */
+  height: 5rem; /* Avaliable touch area */
+  position: relative;
+  background: none;
+}
+
+.bb-switch input {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bb-switch input + span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bb-switch input:disabled + span { /* disabled state */
+  opacity: 0.4;
+}

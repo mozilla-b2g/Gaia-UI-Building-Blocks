@@ -1,0 +1,56 @@
+/**
+ * Radio & Checkbox skin with danger variant
+ */
+
+.bbs-checkbox .bb-switch input +  span,
+.bbs-radio .bb-switch input + span {
+  margin: -1rem 0 0 -1rem;
+  -moz-box-sizing: border-box;
+  width: 2rem; /* Element visual wrapper size */
+  height: 2rem;
+  background: transparent no-repeat center center;
+  background-size: 3rem auto; /* All icons use to have 30px width */
+  border: solid 0.2rem #00CAF2;
+  transition: none;
+}
+
+.bbs-checkbox .bb-switch input + span { /* Checkbox */
+  border-radius: 0.4rem;
+}
+
+.bbs-checkbox .bb-switch input:checked + span { /* 'ON' state */
+  background-image: url(images/check/tick.png);
+  background-color: #00CAF2;
+}
+
+.bbs-radio .bb-switch input + span { /* Radio */
+  border-radius: 100%;
+  width: 2.2rem; /* Little bit larger than check because of full roundness, just for visual compensation */
+  height: 2.2rem;
+}
+
+.bbs-radio .bb-switch input + span:after { /* Inner circle */
+  content: "";
+  width: 1rem; /* Visual size of the element that reflects 'ON' state  */
+  height: 1rem;
+  background-color: #00CAF2;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -0.5rem 0 0 -0.5rem;
+  display: none;
+}
+
+.bbs-radio .bb-switch input:checked + span:after { /* 'ON' state */
+  display: block;
+}
+
+.bb-switch.danger input + span { /* 'Dangerous' */
+  border-color: #B90000;
+}
+
+.bbs-radio .bb-switch.danger input + span:after,
+.bbs-checkbox .bb-switch.danger input:checked + span { /* 'Dangerous' 'ON' state */
+  background-color: #B90000;
+}
