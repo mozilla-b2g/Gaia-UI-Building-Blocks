@@ -1,0 +1,56 @@
+/**
+ * Layout, icon & name space definition
+ */
+
+.bb-toolbar {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.bb-toolbar ul {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.bb-toolbar li { /* Start actions */
+  float: left;
+}
+
+.bb-toolbar ul:last-child { /* End actions */
+  float: right;
+}
+
+.bb-toolbar button { /* Action item */
+  width: 5.5rem;
+  height: 4rem;
+  padding: 0;
+  font-size: 0;
+  position: relative;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.bb-toolbar button:before { /* Icon defnition */
+  content: "";
+  background: transparent no-repeat center;
+  background-size: 3rem auto;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -1.5rem 0 0 -1.5rem;
+}
+
+.bb-toolbar button:active { /* Pressed state */
+  background-color: #008caa;
+}
