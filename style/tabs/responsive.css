@@ -1,0 +1,11 @@
+/**
+ * Rotation support
+ */
+
+@media screen and (orientation: landscape) {
+
+  .skin-filter .bb-tabs {
+    height: 3rem;
+  }
+
+}
