@@ -1,0 +1,31 @@
+/**
+ * Default skin
+ */
+
+.bb-tabs a {
+  font-size: 1.3rem;
+  color: #fff;
+  background: #000;
+}
+
+.bb-tabs a:active { /* Pressed state */
+  background-color: #008caa;
+  color: #fff;
+}
+
+.bb-tabs li[aria-selected] a { /* Selected state */
+  color: #00caf2
+}
+
+.bb-tabs li[aria-selected] .icon:after { /* Selected state icon */
+  background-position: center -4.5rem;
+}
+
+.bb-tabs li[aria-disabled] a { /* Disabled state */
+  color: #a1a1a2;
+  pointer-events: none;
+}
+
+.bb-tabs li[aria-disabled] .icon:after { /* Disabled state icon */
+  background-position: center -8.5rem;
+}
