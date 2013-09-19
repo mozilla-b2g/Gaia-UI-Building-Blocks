@@ -1,0 +1,25 @@
+/**
+ * Icon definitions
+ */
+
+.bb-scrolling li .icon {
+  font-size: 0;
+}
+
+.bb-scrolling li .icon:before {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+  background: transparent no-repeat center;
+  background-size: 1rem;
+}
+
+.bb-scrolling li .icon-search:before {
+  background-image: url(images/icons/search.png);
+}
+
+.bb-scrolling li .icon-favorites:before {
+  background-image: url(images/icons/favorites.png);
+}
