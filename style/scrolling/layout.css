@@ -1,0 +1,74 @@
+/**
+ * Defaults & name space definition
+ */
+
+.bb-scrolling {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-family: Sans-serif;
+ }
+
+/* Mirror */
+.bb-scrolling p {
+  position: absolute;
+  right: 4rem;
+  top: 30%;
+  margin: 0;
+  width: 10.5rem;
+  height: 10.5rem;
+  opacity: 0;
+  font-weight: 200;
+  font-size: 6rem;
+  line-height: 10.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  text-align: center;
+  transition: opacity;
+}
+
+.bb-scrolling ol {
+  padding: 0.3rem 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  opacity: 0.6;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-scrolling li {
+  font-size: 1rem;
+  line-height: 1.4em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 4.5rem;
+  flex: 1 1 0;
+}
+
+.bb-scrolling li a {
+  display: block;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.8rem; /* Allows to have some empty space as touchable area */
+  text-decoration: none;
+}
+
+/**
+ * Right to left tweaks
+ */
+
+html[dir="rtl"] .bb-scrolling {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .bb-scrolling li a {
+  padding-left: 0;
+  padding-right: 0.8rem;
+}
