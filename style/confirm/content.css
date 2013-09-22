@@ -1,0 +1,80 @@
+/* Specific component code */
+.bb-confirm section > h1 {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.bb-confirm p {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  line-height: 3rem;
+  word-wrap: break-word;
+  border-top: .1rem solid #686868;
+}
+
+.bb-confirm figure {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 1rem .5rem 0;
+  border-top: .1rem solid #686868;
+  line-height: normal;
+}
+
+.bb-confirm figure img {
+  min-width: 5.5rem;
+  margin: 0 1rem;
+}
+
+.bb-confirm figcaption {
+  margin: 0 1rem;
+}
+
+.bb-confirm figcaption h1 {
+  font-size: 2.2rem;
+  margin: .4rem 0 .6rem;
+  font-weight: lighter;
+}
+
+.bb-confirm figcaption h2 {
+  margin: 0;
+  color: #cbcbcb;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  font-weight: normal;
+}
+
+.bb-confirm dl {
+  margin: 1rem 0 0;
+  padding: 1rem 1.5rem 0;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  border-top: .1rem solid #686868;
+  overflow: hidden;
+}
+
+.bb-confirm dl dt {
+  clear: both;
+  float: left;
+  width: 7.5rem;
+  font-weight: 500;
+}
+
+.bb-confirm dl dd {
+  font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/**
+ * Right to left tweaks
+ */
+
+html[dir="rtl"] .bb-confirm dl dt {
+  float: right;
+}
+
